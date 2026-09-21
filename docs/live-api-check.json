@@ -1,0 +1,183 @@
+{
+  "checked_at": "2026-09-21T22:43:53.755519+08:00",
+  "rail": "dataset",
+  "qwen": {
+    "status": "LIVE",
+    "model": "qwen-plus",
+    "structured_output": true
+  },
+  "amap": {
+    "west_lake": {
+      "status": "ok",
+      "source": "amap_live",
+      "poi": {
+        "id": "B023B13L9M",
+        "name": "杭州西湖风景名胜区",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.121358,
+          "latitude": 30.222692,
+          "system": "GCJ-02"
+        },
+        "category": "attraction",
+        "environment": "unknown",
+        "visit_minutes": 90,
+        "ticket_price": null,
+        "opening_start": null,
+        "opening_end": null,
+        "evidence_id": "poi-杭州-attraction-af85e1b5",
+        "tags": []
+      }
+    },
+    "lingyin": {
+      "status": "ok",
+      "source": "amap_live",
+      "poi": {
+        "id": "B023B14CB8",
+        "name": "灵隐景区",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.100804,
+          "latitude": 30.240882,
+          "system": "GCJ-02"
+        },
+        "category": "attraction",
+        "environment": "unknown",
+        "visit_minutes": 90,
+        "ticket_price": null,
+        "opening_start": null,
+        "opening_end": null,
+        "evidence_id": "poi-杭州-attraction-5d05a7e8",
+        "tags": []
+      }
+    },
+    "weather": {
+      "status": "ok",
+      "data": [
+        {
+          "city": "杭州",
+          "date": "2026-09-21",
+          "condition": "多云",
+          "severity": "normal",
+          "temperature": "31",
+          "evidence_id": "weather-杭州"
+        },
+        {
+          "city": "杭州",
+          "date": "2026-09-22",
+          "condition": "多云",
+          "severity": "normal",
+          "temperature": "30",
+          "evidence_id": "weather-杭州"
+        },
+        {
+          "city": "杭州",
+          "date": "2026-09-23",
+          "condition": "多云",
+          "severity": "normal",
+          "temperature": "31",
+          "evidence_id": "weather-杭州"
+        },
+        {
+          "city": "杭州",
+          "date": "2026-09-24",
+          "condition": "多云",
+          "severity": "normal",
+          "temperature": "31",
+          "evidence_id": "weather-杭州"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "weather-杭州",
+          "provider": "AmapProvider",
+          "source_kind": "live",
+          "source": "amap_live",
+          "retrieved_at": "2026-09-21T22:43:57.255848+08:00",
+          "valid_for": [
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-24"
+          ],
+          "stale": false,
+          "notes": "高德 Web Service API"
+        }
+      ],
+      "error": null
+    },
+    "distance": {
+      "status": "ok",
+      "data": [
+        {
+          "meters": 6930,
+          "methodology": "drive",
+          "evidence_id": "distance-a3cad7ccf7"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "distance-a3cad7ccf7",
+          "provider": "AmapProvider",
+          "source_kind": "live",
+          "source": "amap_live",
+          "retrieved_at": "2026-09-21T22:43:57.575412+08:00",
+          "valid_for": [],
+          "stale": false,
+          "notes": "高德 Web Service API"
+        }
+      ],
+      "error": null
+    },
+    "route": {
+      "status": "ok",
+      "data": [
+        {
+          "id": "B023B13L9M:B023B14CB8:transit",
+          "origin": {
+            "id": "B023B13L9M",
+            "name": "杭州西湖风景名胜区",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.121358,
+              "latitude": 30.222692,
+              "system": "GCJ-02"
+            }
+          },
+          "destination": {
+            "id": "B023B14CB8",
+            "name": "灵隐景区",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.100804,
+              "latitude": 30.240882,
+              "system": "GCJ-02"
+            }
+          },
+          "mode": "transit",
+          "duration": 76,
+          "distance": 7853,
+          "price": 500,
+          "evidence_id": "route-B023B13L9M:B023B14CB8:transit"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "route-B023B13L9M:B023B14CB8:transit",
+          "provider": "AmapProvider",
+          "source_kind": "live",
+          "source": "amap_live",
+          "retrieved_at": "2026-09-21T22:43:58.040237+08:00",
+          "valid_for": [],
+          "stale": false,
+          "notes": "高德 Web Service API"
+        }
+      ],
+      "error": null
+    }
+  },
+  "map_configuration": {
+    "js_key": "configured",
+    "security_code": "configured"
+  }
+}

@@ -1,0 +1,49 @@
+# Secrets (the example is intentionally tracked)
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local tools and Python
+.tooling/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Node and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+.cache/
+*.log
+test-results/
+playwright-report/
+
+# Local data / editor / OS
+*.sqlite*
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+.vscode/
+.idea/
+*.swp
+*.swo

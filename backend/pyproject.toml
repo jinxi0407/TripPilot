@@ -1,0 +1,14 @@
+[project]
+name = "trippilot-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Constraint-aware multi-agent travel planner"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"

@@ -1,0 +1,13 @@
+export type Status = 'queued'|'running'|'needs_clarification'|'completed'|'partial'|'conflict'|'failed'|'cancelled'
+export interface Place {id:string;name:string;city:string;coordinates:{longitude:number;latitude:number;system:string}|null}
+export interface POI extends Place {category:string;environment:string;ticket_price:number|null;tags:string[];evidence_id:string}
+export interface RailLeg {train_no:string;origin_station:Place;destination_station:Place;departure_time:string;arrival_time:string;duration:number;price:number|null;availability:string;evidence_id:string}
+export interface Route {id:string;origin:Place;destination:Place;mode:string;duration:number;distance:number;price:number|null;evidence_id:string}
+export interface Day {day:number;date:string;city:string;origin_city:string;rail:{id:string;direct:boolean;legs:RailLeg[];transfer_minutes:number[]}|null;activities:{poi:POI;start:string;end:string}[];local_legs:{route:Route;departure:string;arrival:string}[];costs:{id:string;category:string;amount:number|null;label:string;source:string}[];estimated_cost:number}
+export interface Itinerary {version:number;title:string;days:Day[];costs:{categories:Record<string,number>;estimated_total:number;unknown_items:string[];budget:number|null;delta:number|null};assumptions:string[];warnings:string[]}
+export interface Trace {sequence:number;agent:string;status:string;summary:string;timestamp:string;duration_ms:number;itinerary_version:number}
+export interface Evidence {id:string;provider:string;source_kind:string;notes:string;retrieved_at:string;valid_for:string[]}
+export interface Constraint {origin?:string;destinations?:string[];days?:number;start_date?:string;total_budget?:number;preferences?:string[]}
+export interface ProviderStatus {state:"LIVE"|"MOCK"|"DATASET"|"PENDING"|"FAILED"|"UNCONFIGURED";model?:string|null;error_code?:string|null}
+export interface Run {provider_status:Record<string,ProviderStatus>;simulated_rain:boolean;run_id:string;task_id:string;status:Status;revision:number;itinerary_version:number;parent_id:string|null;mode:string;poll_url:string;constraints:Constraint|null;questions:string[];itinerary:Itinerary|null;validation:{valid:boolean;issues:{type:string;severity:string;message:string;suggestion:string;day:number|null}[];unverified_checks:string[];passed_checks:number;total_checks:number}|null;trace:Trace[];evidence:Evidence[];metrics:{agent_steps:Record<string,number>;tool_attempts:number;model_attempts:number;tokens:number|null;replanning_count:number};error:{code:string;message:string}|null}
+export interface PlanInput {query:string;mode:'auto'|'fixture'|'live';demo:boolean;constraints?:Constraint;scenario?:'normal'|'rain'|'outage'|'transport'}

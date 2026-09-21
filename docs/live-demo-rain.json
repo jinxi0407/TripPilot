@@ -1,0 +1,2016 @@
+{
+  "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+  "task_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+  "status": "partial",
+  "revision": 1,
+  "itinerary_version": 2,
+  "parent_id": "488574b9-984b-4626-b4a4-97a652deeb36",
+  "mode": "qwen",
+  "provider_status": {
+    "qwen": {
+      "state": "LIVE",
+      "model": "qwen-plus",
+      "error_code": null
+    },
+    "amap": {
+      "state": "LIVE",
+      "model": null,
+      "error_code": null
+    },
+    "rail": {
+      "state": "DATASET",
+      "model": null,
+      "error_code": null
+    }
+  },
+  "simulated_rain": true,
+  "poll_url": "/api/v1/plans/fa28c96d-655b-4f4c-a072-88461a1893e8",
+  "constraints": {
+    "origin": "上海",
+    "destinations": [
+      "杭州",
+      "南京",
+      "苏州"
+    ],
+    "start_date": "2026-10-10",
+    "end_date": null,
+    "days": 5,
+    "total_budget": 400000,
+    "preferences": [
+      "历史景点",
+      "夜景"
+    ],
+    "passengers": 1,
+    "max_attractions": 3,
+    "max_local_minutes": 120,
+    "station_buffer": 45,
+    "transfer_buffer": 30,
+    "activity_start": "09:00:00",
+    "activity_end": "20:00:00",
+    "max_walk_minutes": null,
+    "assumptions": [
+      "一键演示采用 2026-10-10 起的合成日期与证据。"
+    ]
+  },
+  "questions": [],
+  "itinerary": {
+    "version": 2,
+    "title": "江南慢行 · 城市之间",
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-10-10",
+        "city": "杭州",
+        "origin_city": "上海",
+        "rail": {
+          "id": "rail-上海-杭州-2026-10-10-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G120",
+              "origin_station": {
+                "id": "sh-station",
+                "name": "上海虹桥站",
+                "city": "上海",
+                "coordinates": {
+                  "longitude": 121.327,
+                  "latitude": 31.2,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-10T10:20:00+08:00",
+              "arrival_time": "2026-10-10T11:20:00+08:00",
+              "duration": 60,
+              "train_type": "高铁",
+              "price": 7300,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-上海-杭州-2026-10-10"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "activities": [
+          {
+            "poi": {
+              "id": "B023B15DKJ",
+              "name": "浙江自然博物院",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.164581,
+                "latitude": 30.276814,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-杭州-attraction-b69153f0",
+              "tags": []
+            },
+            "start": "2026-10-10T11:55:00+08:00",
+            "end": "2026-10-10T13:25:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "hz-station:B023B15DKJ:transit",
+              "origin": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B023B15DKJ",
+                "name": "浙江自然博物院",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.164581,
+                  "latitude": 30.276814,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 20,
+              "distance": 5805,
+              "price": 300,
+              "evidence_id": "route-hz-station:B023B15DKJ:transit"
+            },
+            "departure": "2026-10-10T11:35:00+08:00",
+            "arrival": "2026-10-10T11:55:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "0-rail-0",
+            "category": "inter_city",
+            "amount": 7300,
+            "label": "上海虹桥站 → 杭州东站",
+            "source": "dataset"
+          },
+          {
+            "id": "0-ticket-B023B15DKJ",
+            "category": "tickets",
+            "amount": null,
+            "label": "浙江自然博物院",
+            "source": "live"
+          },
+          {
+            "id": "0-local-0",
+            "category": "local_transport",
+            "amount": 300,
+            "label": "杭州东站 → 浙江自然博物院",
+            "source": "live"
+          },
+          {
+            "id": "0-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "0-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "0-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 40600
+      },
+      {
+        "day": 2,
+        "date": "2026-10-11",
+        "city": "杭州",
+        "origin_city": "杭州",
+        "rail": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B023B15DKJ",
+              "name": "浙江自然博物院",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.164581,
+                "latitude": 30.276814,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-杭州-attraction-b69153f0",
+              "tags": []
+            },
+            "start": "2026-10-11T09:00:00+08:00",
+            "end": "2026-10-11T10:30:00+08:00"
+          }
+        ],
+        "local_legs": [],
+        "costs": [
+          {
+            "id": "1-ticket-B023B15DKJ",
+            "category": "tickets",
+            "amount": null,
+            "label": "浙江自然博物院",
+            "source": "live"
+          },
+          {
+            "id": "1-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "1-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "1-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 33000
+      },
+      {
+        "day": 3,
+        "date": "2026-10-12",
+        "city": "南京",
+        "origin_city": "杭州",
+        "rail": {
+          "id": "rail-杭州-南京-2026-10-12-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G230",
+              "origin_station": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-12T10:20:00+08:00",
+              "arrival_time": "2026-10-12T12:00:00+08:00",
+              "duration": 100,
+              "train_type": "高铁",
+              "price": 11700,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-杭州-南京-2026-10-12"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "activities": [
+          {
+            "poi": {
+              "id": "B001907TGR",
+              "name": "南京博物院",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.825064,
+                "latitude": 32.040802,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-南京-attraction-5b6fa541",
+              "tags": []
+            },
+            "start": "2026-10-12T13:10:00+08:00",
+            "end": "2026-10-12T14:40:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "B023B15DKJ:hz-station:transit",
+              "origin": {
+                "id": "B023B15DKJ",
+                "name": "浙江自然博物院",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.164581,
+                  "latitude": 30.276814,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 20,
+              "distance": 5804,
+              "price": 300,
+              "evidence_id": "route-B023B15DKJ:hz-station:transit"
+            },
+            "departure": "2026-10-12T09:00:00+08:00",
+            "arrival": "2026-10-12T09:20:00+08:00"
+          },
+          {
+            "route": {
+              "id": "nj-station:B001907TGR:transit",
+              "origin": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B001907TGR",
+                "name": "南京博物院",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.825064,
+                  "latitude": 32.040802,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 55,
+              "distance": 16255,
+              "price": 400,
+              "evidence_id": "route-nj-station:B001907TGR:transit"
+            },
+            "departure": "2026-10-12T12:15:00+08:00",
+            "arrival": "2026-10-12T13:10:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "2-rail-0",
+            "category": "inter_city",
+            "amount": 11700,
+            "label": "杭州东站 → 南京南站",
+            "source": "dataset"
+          },
+          {
+            "id": "2-ticket-B001907TGR",
+            "category": "tickets",
+            "amount": null,
+            "label": "南京博物院",
+            "source": "live"
+          },
+          {
+            "id": "2-local-0",
+            "category": "local_transport",
+            "amount": 300,
+            "label": "浙江自然博物院 → 杭州东站",
+            "source": "live"
+          },
+          {
+            "id": "2-local-1",
+            "category": "local_transport",
+            "amount": 400,
+            "label": "南京南站 → 南京博物院",
+            "source": "live"
+          },
+          {
+            "id": "2-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "2-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "2-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 45400
+      },
+      {
+        "day": 4,
+        "date": "2026-10-13",
+        "city": "南京",
+        "origin_city": "南京",
+        "rail": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B001907TGR",
+              "name": "南京博物院",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.825064,
+                "latitude": 32.040802,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-南京-attraction-5b6fa541",
+              "tags": []
+            },
+            "start": "2026-10-13T09:00:00+08:00",
+            "end": "2026-10-13T10:30:00+08:00"
+          }
+        ],
+        "local_legs": [],
+        "costs": [
+          {
+            "id": "3-ticket-B001907TGR",
+            "category": "tickets",
+            "amount": null,
+            "label": "南京博物院",
+            "source": "live"
+          },
+          {
+            "id": "3-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "3-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "3-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 33000
+      },
+      {
+        "day": 5,
+        "date": "2026-10-14",
+        "city": "苏州",
+        "origin_city": "南京",
+        "rail": {
+          "id": "rail-南京-苏州-2026-10-14-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G340",
+              "origin_station": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "sz-station",
+                "name": "苏州站",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.61,
+                  "latitude": 31.326,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-14T10:20:00+08:00",
+              "arrival_time": "2026-10-14T11:40:00+08:00",
+              "duration": 80,
+              "train_type": "高铁",
+              "price": 10000,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-南京-苏州-2026-10-14"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "activities": [
+          {
+            "poi": {
+              "id": "B020001285",
+              "name": "苏州博物馆(本馆)",
+              "city": "苏州",
+              "coordinates": {
+                "longitude": 120.627856,
+                "latitude": 31.322948,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-苏州-attraction-67faa83b",
+              "tags": []
+            },
+            "start": "2026-10-14T12:45:00+08:00",
+            "end": "2026-10-14T14:15:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "B001907TGR:nj-station:transit",
+              "origin": {
+                "id": "B001907TGR",
+                "name": "南京博物院",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.825064,
+                  "latitude": 32.040802,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 54,
+              "distance": 16190,
+              "price": 400,
+              "evidence_id": "route-B001907TGR:nj-station:transit"
+            },
+            "departure": "2026-10-14T08:41:00+08:00",
+            "arrival": "2026-10-14T09:35:00+08:00"
+          },
+          {
+            "route": {
+              "id": "sz-station:B020001285:transit",
+              "origin": {
+                "id": "sz-station",
+                "name": "苏州站",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.61,
+                  "latitude": 31.326,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B020001285",
+                "name": "苏州博物馆(本馆)",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.627856,
+                  "latitude": 31.322948,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 50,
+              "distance": 7847,
+              "price": 200,
+              "evidence_id": "route-sz-station:B020001285:transit"
+            },
+            "departure": "2026-10-14T11:55:00+08:00",
+            "arrival": "2026-10-14T12:45:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "4-rail-0",
+            "category": "inter_city",
+            "amount": 10000,
+            "label": "南京南站 → 苏州站",
+            "source": "dataset"
+          },
+          {
+            "id": "4-ticket-B020001285",
+            "category": "tickets",
+            "amount": null,
+            "label": "苏州博物馆(本馆)",
+            "source": "live"
+          },
+          {
+            "id": "4-local-0",
+            "category": "local_transport",
+            "amount": 400,
+            "label": "南京博物院 → 南京南站",
+            "source": "live"
+          },
+          {
+            "id": "4-local-1",
+            "category": "local_transport",
+            "amount": 200,
+            "label": "苏州站 → 苏州博物馆(本馆)",
+            "source": "live"
+          },
+          {
+            "id": "4-accommodation",
+            "category": "accommodation",
+            "amount": 0,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "4-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "4-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 23600
+      }
+    ],
+    "costs": {
+      "categories": {
+        "inter_city": 29000,
+        "local_transport": 1600,
+        "accommodation": 80000,
+        "tickets": 0,
+        "food": 50000,
+        "reserve": 15000
+      },
+      "estimated_total": 175600,
+      "unknown_items": [
+        "0-ticket-B023B15DKJ",
+        "1-ticket-B023B15DKJ",
+        "2-ticket-B001907TGR",
+        "3-ticket-B001907TGR",
+        "4-ticket-B020001285"
+      ],
+      "budget": 400000,
+      "delta": -224400
+    },
+    "assumptions": [
+      "一键演示采用 2026-10-10 起的合成日期与证据。",
+      "住宿为预算占位，不包含酒店预订；餐饮与备用金为估算。",
+      "首日从出发火车站开始；未提供住址和酒店位置，不含其接驳。"
+    ],
+    "warnings": [],
+    "evidence_ids": [
+      "rail-上海-杭州-2026-10-10",
+      "rail-杭州-南京-2026-10-12",
+      "rail-南京-苏州-2026-10-14",
+      "poi-杭州-attraction-af85e1b5",
+      "poi-杭州-attraction-b69153f0",
+      "poi-杭州-attraction-e3b0c442",
+      "weather-杭州",
+      "simulated-rain-杭州",
+      "route-B023B15DKJ:hz-station:transit",
+      "route-hz-station:B023B15DKJ:transit",
+      "route-hz-station:B023B13L9M:transit",
+      "poi-南京-attraction-d465c12e",
+      "poi-南京-attraction-5b6fa541",
+      "poi-南京-attraction-e3b0c442",
+      "weather-南京",
+      "simulated-rain-南京",
+      "route-B001907TGR:nj-station:transit",
+      "route-nj-station:B001907TGR:transit",
+      "route-nj-station:B00190ANHZ:transit",
+      "poi-苏州-attraction-bc0d35aa",
+      "poi-苏州-attraction-67faa83b",
+      "poi-苏州-attraction-e3b0c442",
+      "weather-苏州",
+      "simulated-rain-苏州",
+      "route-B020001285:sz-station:transit",
+      "route-sz-station:B020001285:transit",
+      "route-sz-station:B020001R2Q:transit"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "issues": [
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 1,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 2,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 3,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 4,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 5,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "BUDGET_UNKNOWN",
+        "severity": "medium",
+        "message": "部分费用未知，不能确认预算合规。",
+        "suggestion": "确认缺失票价与费用。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      }
+    ],
+    "checked_constraints": [
+      "DAY_COUNT",
+      "MISSING_DESTINATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_RISK",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_RISK",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TRAIN_DEPARTURE_RISK",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_RISK",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "LOCAL_DURATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_RISK",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TRAIN_DEPARTURE_RISK",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_RISK",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "LOCAL_DURATION",
+      "COST_RECONCILIATION",
+      "DAILY_COST_TOTAL",
+      "BUDGET_EXCEEDED",
+      "BUDGET_UNKNOWN"
+    ],
+    "unverified_checks": [
+      "OPENING_TIME_UNKNOWN:1",
+      "OPENING_TIME_UNKNOWN:2",
+      "OPENING_TIME_UNKNOWN:3",
+      "OPENING_TIME_UNKNOWN:4",
+      "OPENING_TIME_UNKNOWN:5",
+      "BUDGET_UNKNOWN:trip"
+    ],
+    "passed_checks": 59,
+    "total_checks": 65
+  },
+  "trace": [
+    {
+      "sequence": 1,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Supervisor",
+      "status": "running",
+      "summary": "正在理解旅行需求与约束",
+      "timestamp": "2026-09-21T23:06:00.173285+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 2,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Supervisor",
+      "status": "succeeded",
+      "summary": "约束已提取，已选择所需研究智能体",
+      "timestamp": "2026-09-21T23:06:04.822541+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 3,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "正在查询上海至杭州高铁",
+      "timestamp": "2026-09-21T23:06:04.823690+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 4,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "铁路信息查询进行中",
+      "timestamp": "2026-09-21T23:06:04.823762+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 5,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "铁路信息查询已完成",
+      "timestamp": "2026-09-21T23:06:04.829393+08:00",
+      "duration_ms": 6,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 6,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "已获得带来源的铁路选项",
+      "timestamp": "2026-09-21T23:06:04.829406+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 7,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "正在查询杭州至南京高铁",
+      "timestamp": "2026-09-21T23:06:04.829411+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 8,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "铁路信息查询进行中",
+      "timestamp": "2026-09-21T23:06:04.829426+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 9,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "铁路信息查询已完成",
+      "timestamp": "2026-09-21T23:06:04.832556+08:00",
+      "duration_ms": 3,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 10,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "已获得带来源的铁路选项",
+      "timestamp": "2026-09-21T23:06:04.832571+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 11,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "正在查询南京至苏州高铁",
+      "timestamp": "2026-09-21T23:06:04.832577+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 12,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "running",
+      "summary": "铁路信息查询进行中",
+      "timestamp": "2026-09-21T23:06:04.832595+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 13,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "铁路信息查询已完成",
+      "timestamp": "2026-09-21T23:06:04.835909+08:00",
+      "duration_ms": 3,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 14,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "已获得带来源的铁路选项",
+      "timestamp": "2026-09-21T23:06:04.835919+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 15,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "正在搜索杭州的历史景点与室内备选",
+      "timestamp": "2026-09-21T23:06:04.836515+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 16,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:04.836533+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 17,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:05.863741+08:00",
+      "duration_ms": 1027,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 18,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:05.863835+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 19,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:06.765275+08:00",
+      "duration_ms": 901,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 20,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:06.765426+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 21,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:07.251053+08:00",
+      "duration_ms": 486,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 22,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "已收集景点候选及来源",
+      "timestamp": "2026-09-21T23:06:07.251077+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 23,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "running",
+      "summary": "目的地天气查询进行中",
+      "timestamp": "2026-09-21T23:06:07.251122+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 24,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "failed",
+      "summary": "目的地天气查询未完成，保留数据缺口",
+      "timestamp": "2026-09-21T23:06:07.534317+08:00",
+      "duration_ms": 283,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 25,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:07.534472+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 26,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:08.144435+08:00",
+      "duration_ms": 610,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 27,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:08.144538+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 28,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:08.603845+08:00",
+      "duration_ms": 459,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 29,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:08.603980+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 30,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:09.673524+08:00",
+      "duration_ms": 1070,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 31,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "正在搜索南京的历史景点与室内备选",
+      "timestamp": "2026-09-21T23:06:09.673563+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 32,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:09.673609+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 33,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:11.102728+08:00",
+      "duration_ms": 1429,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 34,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:11.102799+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 35,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:11.543865+08:00",
+      "duration_ms": 441,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 36,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:11.543936+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 37,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:12.303885+08:00",
+      "duration_ms": 760,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 38,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "已收集景点候选及来源",
+      "timestamp": "2026-09-21T23:06:12.303927+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 39,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "running",
+      "summary": "目的地天气查询进行中",
+      "timestamp": "2026-09-21T23:06:12.303988+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 40,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "failed",
+      "summary": "目的地天气查询未完成，保留数据缺口",
+      "timestamp": "2026-09-21T23:06:12.821544+08:00",
+      "duration_ms": 518,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 41,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:12.821805+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 42,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:13.201758+08:00",
+      "duration_ms": 380,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 43,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:13.201889+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 44,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:14.781978+08:00",
+      "duration_ms": 1580,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 45,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:14.782049+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 46,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:15.183243+08:00",
+      "duration_ms": 401,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 47,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "正在搜索苏州的历史景点与室内备选",
+      "timestamp": "2026-09-21T23:06:15.183288+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 48,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:15.183333+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 49,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:15.894494+08:00",
+      "duration_ms": 711,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 50,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:15.894570+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 51,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:17.599297+08:00",
+      "duration_ms": 1705,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 52,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "running",
+      "summary": "本地景点查询进行中",
+      "timestamp": "2026-09-21T23:06:17.599372+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 53,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "本地景点查询已完成",
+      "timestamp": "2026-09-21T23:06:18.045511+08:00",
+      "duration_ms": 446,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 54,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "已收集景点候选及来源",
+      "timestamp": "2026-09-21T23:06:18.045553+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 55,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "running",
+      "summary": "目的地天气查询进行中",
+      "timestamp": "2026-09-21T23:06:18.045603+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 56,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Weather",
+      "status": "failed",
+      "summary": "目的地天气查询未完成，保留数据缺口",
+      "timestamp": "2026-09-21T23:06:18.540575+08:00",
+      "duration_ms": 495,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 57,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:18.540767+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 58,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:19.204690+08:00",
+      "duration_ms": 664,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 59,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:19.204852+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 60,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:19.635836+08:00",
+      "duration_ms": 431,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 61,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Local Travel",
+      "status": "succeeded",
+      "summary": "本地景点、天气与交通研究已汇总",
+      "timestamp": "2026-09-21T23:06:19.635870+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 62,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在组合景点、交通与每日节奏",
+      "timestamp": "2026-09-21T23:06:19.637039+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 63,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在查询补充证据，完善景点间交通",
+      "timestamp": "2026-09-21T23:06:24.401425+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 64,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-21T23:06:24.401468+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 65,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-21T23:06:25.804439+08:00",
+      "duration_ms": 1403,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 66,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Travel Planner",
+      "status": "succeeded",
+      "summary": "行程草案已生成，交由 Critic 校验",
+      "timestamp": "2026-09-21T23:06:31.722048+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 67,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Critic",
+      "status": "running",
+      "summary": "正在校验时间、天气、路线与预算约束",
+      "timestamp": "2026-09-21T23:06:31.723207+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 68,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Critic",
+      "status": "failed",
+      "summary": "检测到约束冲突，开始有限次数的调整",
+      "timestamp": "2026-09-21T23:06:31.724902+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 69,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Supervisor",
+      "status": "running",
+      "summary": "正在理解旅行需求与约束",
+      "timestamp": "2026-09-21T23:06:31.726144+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 70,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Supervisor",
+      "status": "succeeded",
+      "summary": "已保留原始约束，将校验反馈交给规划器",
+      "timestamp": "2026-09-21T23:06:31.726160+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 71,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在组合景点、交通与每日节奏",
+      "timestamp": "2026-09-21T23:06:31.727010+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 72,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Travel Planner",
+      "status": "succeeded",
+      "summary": "行程草案已生成，交由 Critic 校验",
+      "timestamp": "2026-09-21T23:06:37.992001+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 73,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Critic",
+      "status": "running",
+      "summary": "正在校验时间、天气、路线与预算约束",
+      "timestamp": "2026-09-21T23:06:37.992975+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 74,
+      "run_id": "fa28c96d-655b-4f4c-a072-88461a1893e8",
+      "itinerary_version": 2,
+      "agent": "Critic",
+      "status": "succeeded",
+      "summary": "已完成约束校验",
+      "timestamp": "2026-09-21T23:06:37.994927+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "rail-上海-杭州-2026-10-10",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-10"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "rail-杭州-南京-2026-10-12",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-12"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "rail-南京-苏州-2026-10-14",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-14"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "poi-杭州-attraction-af85e1b5",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:06.765072+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-杭州-attraction-b69153f0",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:07.251018+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-杭州-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:05.863600+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-杭州",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:07.534245+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "simulated-rain-杭州",
+      "provider": "UserWeatherSimulation",
+      "source_kind": "mock",
+      "source": "weather_simulation",
+      "retrieved_at": "2026-09-21T23:06:00.168885+08:00",
+      "valid_for": [
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "stale": false,
+      "notes": "用户主动模拟暴雨；不是高德真实天气预报。"
+    },
+    {
+      "id": "route-B023B15DKJ:hz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:08.144430+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-hz-station:B023B15DKJ:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:08.603802+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-hz-station:B023B13L9M:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:09.673420+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-d465c12e",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:11.543828+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-5b6fa541",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:12.303840+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:11.102747+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-南京",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:12.821569+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "simulated-rain-南京",
+      "provider": "UserWeatherSimulation",
+      "source_kind": "mock",
+      "source": "weather_simulation",
+      "retrieved_at": "2026-09-21T23:06:00.168885+08:00",
+      "valid_for": [
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      "stale": false,
+      "notes": "用户主动模拟暴雨；不是高德真实天气预报。"
+    },
+    {
+      "id": "route-B001907TGR:nj-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:13.201818+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-nj-station:B001907TGR:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:14.782190+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-nj-station:B00190ANHZ:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:15.183320+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-苏州-attraction-bc0d35aa",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:17.599460+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-苏州-attraction-67faa83b",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:18.045523+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-苏州-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:15.894579+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-苏州",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:18.540788+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "simulated-rain-苏州",
+      "provider": "UserWeatherSimulation",
+      "source_kind": "mock",
+      "source": "weather_simulation",
+      "retrieved_at": "2026-09-21T23:06:00.168885+08:00",
+      "valid_for": [
+        "2026-10-14"
+      ],
+      "stale": false,
+      "notes": "用户主动模拟暴雨；不是高德真实天气预报。"
+    },
+    {
+      "id": "route-B020001285:sz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:19.204825+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-sz-station:B020001285:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:19.636112+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-sz-station:B020001R2Q:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-21T23:06:25.804832+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    }
+  ],
+  "metrics": {
+    "agent_steps": {
+      "Travel Planner": 3
+    },
+    "tool_attempts": 24,
+    "model_attempts": 4,
+    "tokens": 23396,
+    "replanning_count": 1
+  },
+  "error": null
+}

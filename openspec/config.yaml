@@ -1,0 +1,22 @@
+schema: spec-driven
+context: |
+  TripPilot — Multi-Agent AI Travel Planner. Greenfield local portfolio demo
+  for mainland Chinese travel, approximately two focused implementation days.
+  Python >=3.11, FastAPI, Pydantic, LangGraph; Qwen via DashScope;
+  React/Vite/TypeScript. Five logical agents: Supervisor, Travel Planner,
+  Transport, Local Travel, Critic. Controlled Tool Registry and Amap tools.
+  RailProvider abstraction with mock/dataset baseline and optional authorized
+  real adapter. No scraping, purchases, hotel booking, authentication, cloud,
+  microservices, GPUs, or implemented MCP/A2A in V0.1.
+  Follow root AGENTS.md. The user approved implementation after the initial specification-only session.
+  Use Chinese progress reports. Do not commit or push without explicit approval.
+rules:
+  proposal:
+    - Define explicit scope and non-goals and name each new capability.
+  design:
+    - Include typed contracts, loop limits, provenance, failure paths, and a two-day scope budget.
+  specs:
+    - Every requirement needs testable WHEN/THEN scenarios and SHALL or MUST wording.
+  tasks:
+    - Organize small testable unchecked tasks into phases A through K.
+    - Include acceptance criteria and measured evaluation without invented results.

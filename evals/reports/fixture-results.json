@@ -1,0 +1,1522 @@
+{
+  "suite": "TripPilot V0.1 fixture evaluation",
+  "measured_at": "2026-09-21T20:50:43.567223+08:00",
+  "model_comparison": {
+    "status": "not_run",
+    "reason": "未配置或未授权付费真实模型调用；fixture 不是 LLM 质量评估。",
+    "results": []
+  },
+  "hashes": {
+    "backend/app/providers/fixtures.py": "b55c008b8c4be253835f1c03f42b7e747f38231b47cd2e8dccdb306b5aa1bd29",
+    "backend/app/providers/amap.py": "41dabb4d64d417048150a9eceadabf0b5e35d5a77bd01a38c6606e07ee77d249",
+    "backend/app/providers/data/rail.json": "2bc42fd9dc961ef87e24cba94bc089af24a9ecbb0410a2f7b778d10f4ca44252",
+    "evals/cases.jsonl": "7c805066454a10d73ae234b75000ea1a61624bf8bae654e6fd0b4f307a239c30"
+  },
+  "prompt_version": "structured-planning-v1",
+  "summary": {
+    "passed": 24,
+    "total": 24,
+    "latency_mean_ms": 20.509,
+    "latency_median_ms": 14.8555,
+    "latency_p95_ms": 53.325,
+    "average_planner_steps": 2.4166666666666665
+  },
+  "cases": [
+    {
+      "case_id": "01",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 25.021,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 30,
+          "total": 30
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 94,
+          "total": 94
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 13,
+          "total": 13
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 21
+        },
+        "agent_steps": {
+          "Travel Planner": 4
+        },
+        "tool_attempts": 30,
+        "model_attempts": 5,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 5
+        }
+      }
+    },
+    {
+      "case_id": "02",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 9.566,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 19,
+          "total": 19
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 8,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "03",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 12.38,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 38,
+          "total": 38
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 4
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 10,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "04",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "transfer_only",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 14.753,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 9,
+          "total": 9
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 40,
+          "total": 40
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 5,
+          "total": 5
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 14
+        },
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 9,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "05",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "needs_clarification",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 4.411,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 0,
+          "total": 0
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 0,
+          "total": 0
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 0,
+          "total": 0
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {},
+        "tool_attempts": 0,
+        "model_attempts": 1,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 1
+        }
+      }
+    },
+    {
+      "case_id": "06",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-09T23:30:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 12.778,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 38,
+          "total": 38
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 4
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 10,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "07",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "failed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 63.522,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 0,
+          "total": 0
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 0,
+          "total": 0
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 0,
+          "total": 0
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {},
+        "tool_attempts": 0,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "08",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "density",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "EXCESSIVE_DENSITY",
+        "LOCAL_ROUTE_FEASIBILITY",
+        "TIME_CONFLICT"
+      ],
+      "latency_ms": 13.168,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 18,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "09",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "closed",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "ACTIVITY_WINDOW",
+        "LOCAL_ROUTE_FEASIBILITY",
+        "OPENING_TIME_CONFLICT",
+        "TIME_CONFLICT"
+      ],
+      "latency_ms": 15.741,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 18,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "10",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "train_risk",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "TRAIN_DEPARTURE_RISK"
+      ],
+      "latency_ms": 34.386,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 30,
+          "total": 30
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 93,
+          "total": 93
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 13,
+          "total": 13
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 21
+        },
+        "agent_steps": {
+          "Travel Planner": 5
+        },
+        "tool_attempts": 30,
+        "model_attempts": 6,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "case_id": "11",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "transfer_risk",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "LOCAL_ROUTE_FEASIBILITY",
+        "TRANSFER_RISK",
+        "TRANSPORT_HALLUCINATION"
+      ],
+      "latency_ms": 22.038,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 38,
+          "total": 38
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 4
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 3
+        },
+        "tool_attempts": 10,
+        "model_attempts": 4,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "case_id": "12",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "overnight",
+      "comparison_eligible": true,
+      "status": "partial",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "overnight_single_fare": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "LOCAL_ROUTE_FEASIBILITY"
+      ],
+      "latency_ms": 17.873,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 25,
+          "total": 26
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 3
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 10,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "13",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "conflict",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "BUDGET_EXCEEDED"
+      ],
+      "latency_ms": 34.591,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 21,
+          "total": 21
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 58,
+          "total": 59
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 8,
+          "total": 8
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 14
+        },
+        "agent_steps": {
+          "Travel Planner": 6
+        },
+        "tool_attempts": 21,
+        "model_attempts": 7,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 7
+        }
+      }
+    },
+    {
+      "case_id": "14",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "expensive",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "BUDGET_EXCEEDED"
+      ],
+      "latency_ms": 15.126,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 33,
+          "total": 33
+        },
+        "budget_compliance": {
+          "passed": 1,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 2,
+          "total": 2
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "15",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "unknown_fare",
+      "comparison_eligible": true,
+      "status": "partial",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "BUDGET_UNKNOWN"
+      ],
+      "latency_ms": 14.958,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 38,
+          "total": 39
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 1
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 4
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 10,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "16",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "rain",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "WEATHER_RISK"
+      ],
+      "latency_ms": 13.445,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 18,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "17",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "normal",
+      "comparison_eligible": true,
+      "status": "partial",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "WEATHER_UNKNOWN"
+      ],
+      "latency_ms": 8.897,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 16,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 8,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "18",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "inefficient",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "ROUTE_INEFFICIENCY"
+      ],
+      "latency_ms": 13.413,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 8
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 19,
+          "total": 19
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "19",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "missing_city",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "expected_issue": true,
+        "issue_repaired": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "MISSING_DESTINATION"
+      ],
+      "latency_ms": 27.295,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 30,
+          "total": 30
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 93,
+          "total": 93
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 13,
+          "total": 13
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 21
+        },
+        "agent_steps": {
+          "Travel Planner": 5
+        },
+        "tool_attempts": 30,
+        "model_attempts": 6,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "case_id": "20",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "transport",
+      "comparison_eligible": true,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 10.868,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 9,
+          "total": 9
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 37,
+          "total": 37
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 4
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 7
+        },
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 9,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "21",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "outage",
+      "comparison_eligible": false,
+      "status": "failed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "EMPTY_DAY",
+        "MISSING_DESTINATION"
+      ],
+      "latency_ms": 53.325,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 2,
+          "total": 2
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 6,
+          "total": 8
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 0,
+          "total": 0
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 3,
+        "model_attempts": 2,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 2
+        }
+      }
+    },
+    {
+      "case_id": "22",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "duplicate",
+      "comparison_eligible": false,
+      "status": "partial",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "duplicate_stopped": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 12.881,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 10,
+          "total": 10
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 18,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 9,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    },
+    {
+      "case_id": "23",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "max_steps",
+      "comparison_eligible": false,
+      "status": "partial",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "max_steps": true
+      },
+      "passed": true,
+      "issues_observed": [
+        "LOCAL_ROUTE_FEASIBILITY"
+      ],
+      "latency_ms": 29.679,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 26,
+          "total": 26
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 54,
+          "total": 56
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 4,
+          "total": 8
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 14
+        },
+        "agent_steps": {
+          "Travel Planner": 8
+        },
+        "tool_attempts": 19,
+        "model_attempts": 9,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 9
+        }
+      }
+    },
+    {
+      "case_id": "24",
+      "system": "TripPilot-fixture",
+      "model_id": "deterministic-fixture-policy",
+      "repetition": 1,
+      "parameters": {
+        "temperature": null
+      },
+      "fixed_now": "2026-10-01T08:00:00+08:00",
+      "fixture_version": "synthetic-jiangnan-v1",
+      "fixture_override": "injection",
+      "comparison_eligible": false,
+      "status": "completed",
+      "checks": {
+        "expected_status": true,
+        "routing": true,
+        "bounded": true,
+        "no_unsupported_transport": true,
+        "write_denied": true,
+        "trace_sanitized": true
+      },
+      "passed": true,
+      "issues_observed": [],
+      "latency_ms": 12.1,
+      "metrics": {
+        "routing_correctness": {
+          "passed": 1,
+          "total": 1
+        },
+        "tool_selection": {
+          "passed": 8,
+          "total": 9
+        },
+        "missing_tool_categories": [],
+        "constraint_satisfaction": {
+          "passed": 18,
+          "total": 18
+        },
+        "budget_compliance": {
+          "passed": 0,
+          "total": 0
+        },
+        "route_feasibility": {
+          "passed": 1,
+          "total": 1
+        },
+        "transport_hallucination": {
+          "unsupported": 0,
+          "claims": 0
+        },
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 8,
+        "model_attempts": 3,
+        "token_usage": null,
+        "usage_coverage": {
+          "reported": 0,
+          "calls": 3
+        }
+      }
+    }
+  ]
+}

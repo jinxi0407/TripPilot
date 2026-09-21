@@ -1,0 +1,39 @@
+{
+  "error_messages": [],
+  "http_errors": [],
+  "console_errors": 0,
+  "page_errors": 0,
+  "codes": [],
+  "failed_resources": [],
+  "map_responses": 16,
+  "init_response": {
+    "content_type": "application/javascript",
+    "query_keys": [
+      "eventId",
+      "s",
+      "product",
+      "platform",
+      "logversion",
+      "t",
+      "csid",
+      "appname",
+      "label",
+      "value",
+      "resolution",
+      "mob",
+      "vt",
+      "dpr",
+      "sdkversion",
+      "key",
+      "scale",
+      "callback"
+    ],
+    "is_json": false,
+    "is_jsonp": true,
+    "body_length": 92
+  },
+  "state": "live",
+  "message": "● 高德地图 LIVE · 当天景点",
+  "canvases": 1,
+  "markers": 0
+}
