@@ -23,8 +23,18 @@ def build_graph(context: RunContext, planner: Node, critic: Node):
         return node
 
     graph.add_node("supervisor", bind(supervise))
-    graph.add_node("transport", bind(research_transport))
-    graph.add_node("local", bind(research_local))
+    async def transport(state, ctx):
+        if ctx.protocols:
+            return await ctx.protocols.a2a.call("transport", state, research_transport)
+        return await research_transport(state, ctx)
+
+    async def local(state, ctx):
+        if ctx.protocols:
+            return await ctx.protocols.a2a.call("local", state, research_local)
+        return await research_local(state, ctx)
+
+    graph.add_node("transport", bind(transport))
+    graph.add_node("local", bind(local))
     graph.add_node("planner", bind(planner))
     graph.add_node("critic", bind(critic))
     graph.add_edge(START, "supervisor")

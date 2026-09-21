@@ -7,3 +7,5 @@ langgraph
 pytest
 pytest-asyncio
 ruff
+mcp==2.2.0
+a2a-sdk[http-server]==1.1.5

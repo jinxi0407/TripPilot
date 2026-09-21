@@ -12,6 +12,7 @@ from app.core.errors import ControlledError
 from app.core.logging import configure_logging
 from app.core.middleware import RequestSizeLimit
 from app.schemas.api import HealthResponse
+from app.services.protocols import runtime_health
 from app.services.runs import RunService
 
 
@@ -25,7 +26,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         yield
         await service.close()
 
-    app = FastAPI(title="TripPilot", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="TripPilot", version="1.1.0", lifespan=lifespan)
     app.state.runs = service
     app.include_router(router)
     app.include_router(maps_router)
@@ -51,10 +52,17 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.get("/health", response_model=HealthResponse)
     async def health() -> dict:
+        runtime = await runtime_health(settings)
         return {
+            "runtime_status": runtime,
+            "main_backend": "ONLINE",
+            "qwen": {"state": "PENDING" if settings.model_ready else "UNCONFIGURED"},
+            "amap": {"state": "PENDING" if settings.amap_ready else "MOCK"},
+            "rail": {"mode": settings.rail_provider or "mock"},
+            **{k: runtime[k] for k in ["mcp", "a2a_transport", "a2a_local", "harness"]},
             "status": "ok",
             "service": "TripPilot",
-            "version": "0.1.0",
+            "version": "1.1.0",
             "mode": "live" if settings.model_ready else "fixture",
             "providers": {
                 "qwen": settings.model_ready,

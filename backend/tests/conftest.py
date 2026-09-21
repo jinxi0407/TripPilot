@@ -1,3 +1,5 @@
+import os
+
 import httpx
 import pytest
 
@@ -13,6 +15,9 @@ def isolated_configuration(monkeypatch):
     for field in Settings.model_fields:
         monkeypatch.delenv(field.upper(), raising=False)
     monkeypatch.delenv("QWEN_CHAT_MODEL", raising=False)
+    for name in list(os.environ):
+        if name.startswith("RUNTIME_POLICY__"):
+            monkeypatch.delenv(name, raising=False)
 
 
 @pytest.fixture(autouse=True)

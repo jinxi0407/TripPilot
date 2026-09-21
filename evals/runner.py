@@ -100,13 +100,13 @@ def prepare_context(case: EvalCase):
             lambda p: {"kind": "action", "tool": "amap_route", "arguments": q}
         )
     elif scenario == "max_steps":
-        context.model = MockModelClient(
-            lambda p: {
-                "kind": "action",
-                "tool": "amap_weather",
-                "arguments": {"city": "杭州", "dates": ["2026-10-10"]},
-            }
-        )
+        # Distinct valid actions isolate the step guard from the new duplicate guard.
+        attempts = [0]
+        def step_action(payload):
+            attempts[0] += 1
+            return {"kind": "action", "tool": "amap_poi",
+                    "arguments": {"city": "杭州", "keywords": f"step-{attempts[0]}"}}
+        context.model = MockModelClient(step_action)
     elif scenario == "injection":
         attempts = [0]
 

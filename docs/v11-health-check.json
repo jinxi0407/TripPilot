@@ -1,0 +1,140 @@
+{
+  "main_backend": "ONLINE",
+  "qwen": {
+    "state": "PENDING"
+  },
+  "amap": {
+    "state": "PENDING"
+  },
+  "rail": {
+    "mode": "dataset"
+  },
+  "mcp": {
+    "state": "CONNECTED",
+    "tools": [
+      "calculate_distance",
+      "get_weather",
+      "plan_route",
+      "search_poi",
+      "search_rail"
+    ]
+  },
+  "a2a_transport": {
+    "state": "ONLINE",
+    "skills": [
+      "rail-search",
+      "transfer-analysis",
+      "transport-feasibility"
+    ]
+  },
+  "a2a_local": {
+    "state": "ONLINE",
+    "skills": [
+      "poi-search",
+      "weather-search",
+      "local-route-planning",
+      "distance-calculation"
+    ]
+  },
+  "harness": {
+    "state": "ACTIVE",
+    "policy": {
+      "max_react_steps": 8,
+      "max_replanning_attempts": 2,
+      "max_tool_calls": 40,
+      "max_model_calls": 30,
+      "max_external_calls": 160,
+      "total_timeout_seconds": 180,
+      "react_timeout_seconds": 90,
+      "tool_timeout_seconds": 10,
+      "model_timeout_seconds": 30,
+      "a2a_timeout_seconds": 60,
+      "mcp_timeout_seconds": 15,
+      "health_timeout_seconds": 3,
+      "max_retries": 1,
+      "duplicate_call_threshold": 2,
+      "transport_tool_allowance": 6,
+      "local_tool_allowance": 30
+    }
+  },
+  "status": "ok",
+  "service": "TripPilot",
+  "version": "1.1.0",
+  "mode": "live",
+  "providers": {
+    "qwen": true,
+    "amap": true,
+    "rail": "dataset"
+  },
+  "provider_status": {
+    "qwen": {
+      "state": "PENDING",
+      "model": null,
+      "error_code": null
+    },
+    "amap": {
+      "state": "PENDING",
+      "model": null,
+      "error_code": null
+    },
+    "rail": {
+      "state": "PENDING",
+      "model": null,
+      "error_code": null
+    }
+  },
+  "runtime_status": {
+    "mcp": {
+      "state": "CONNECTED",
+      "tools": [
+        "calculate_distance",
+        "get_weather",
+        "plan_route",
+        "search_poi",
+        "search_rail"
+      ]
+    },
+    "a2a": {
+      "transport": "ONLINE",
+      "local": "ONLINE"
+    },
+    "a2a_transport": {
+      "state": "ONLINE",
+      "skills": [
+        "rail-search",
+        "transfer-analysis",
+        "transport-feasibility"
+      ]
+    },
+    "a2a_local": {
+      "state": "ONLINE",
+      "skills": [
+        "poi-search",
+        "weather-search",
+        "local-route-planning",
+        "distance-calculation"
+      ]
+    },
+    "harness": {
+      "state": "ACTIVE",
+      "policy": {
+        "max_react_steps": 8,
+        "max_replanning_attempts": 2,
+        "max_tool_calls": 40,
+        "max_model_calls": 30,
+        "max_external_calls": 160,
+        "total_timeout_seconds": 180,
+        "react_timeout_seconds": 90,
+        "tool_timeout_seconds": 10,
+        "model_timeout_seconds": 30,
+        "a2a_timeout_seconds": 60,
+        "mcp_timeout_seconds": 15,
+        "health_timeout_seconds": 3,
+        "max_retries": 1,
+        "duplicate_call_threshold": 2,
+        "transport_tool_allowance": 6,
+        "local_tool_allowance": 30
+      }
+    }
+  }
+}

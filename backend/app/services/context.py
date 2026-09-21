@@ -4,6 +4,7 @@ from typing import Any
 from uuid import uuid4
 
 from app.core.budget import ExecutionBudget
+from app.core.config import Settings
 from app.graph.state import TraceEvent
 from app.providers.fixtures import FIXED_NOW
 from app.services.model_client import ModelClient, Usage
@@ -25,6 +26,9 @@ class RunContext:
     local_provider: Any = field(default=None, repr=False)
     rail_mode: str = "mock"
     simulated_rain: bool = False
+    settings: Settings = field(default_factory=Settings, repr=False)
+    protocols: Any = field(default=None, repr=False)
+    remote_provider_status: dict = field(default_factory=dict)
 
     def provider_status(self) -> dict:
         amap_failures = [
@@ -40,7 +44,7 @@ class RunContext:
             if not rail_calls
             else (self.rail_mode.upper() if any(r["status"] == "ok" for r in rail_calls) else "FAILED")
         )
-        return {
+        status = {
             "qwen": {
                 "state": getattr(self.model, "status", "MOCK"),
                 "model": getattr(self.model, "actual_model", None),
@@ -56,7 +60,25 @@ class RunContext:
             "rail": {"state": rail_state if rail_state != "REAL" else "FAILED"},
         }
 
+        status.update(self.remote_provider_status)
+        return status
+
+    def runtime_status(self) -> dict:
+        protocols = self.protocols.snapshot() if self.protocols else {
+            "mcp": {"state": "DISABLED", "tools": []},
+            "a2a": {"transport": "DISABLED", "local": "DISABLED"},
+        }
+        return {**protocols, "harness": self.runtime.snapshot()}
+
+    @property
+    def runtime(self):
+        return self.registry.runtime
+
     def __post_init__(self) -> None:
+        self.budget.runtime = self.runtime
+        def runtime_event(event):
+            self.emit(event.component, event.status, event.code.replace("_FALLBACK", " FALLBACK"))
+        self.runtime.on_event = runtime_event
         labels = {
             "rail_search": "Rail Search",
             "amap_poi": "Amap POI",

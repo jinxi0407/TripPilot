@@ -31,6 +31,6 @@ export function ItineraryPanel({run,itinerary,busy,selected,onSelect,onRevise}:P
    {run?.validation?.issues.length?<details className="issues" open={run.status==='conflict'}><summary><AlertCircle size={15}/>查看 {run.validation.issues.length} 条校验提示</summary>{run.validation.issues.map((i,n)=><p key={n}><strong>{i.day?`Day ${i.day} · `:''}{i.type}</strong>{i.message}<small>{i.suggestion}</small></p>)}</details>:null}
    <details className="assumptions"><summary>费用说明与规划假设</summary>{[...itinerary.assumptions,...itinerary.warnings].map((a,i)=><p key={i}>{a}</p>)}</details>
   </>}
-  <footer className="main-footer"><span>用更少的匆忙，换更多的风景。</span><span>TRIPPILOT / V0.1</span></footer>
+  <footer className="main-footer"><span>用更少的匆忙，换更多的风景。</span><span>TRIPPILOT / V1.1</span></footer>
  </main>
 }

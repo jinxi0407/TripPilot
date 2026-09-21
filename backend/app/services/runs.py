@@ -146,6 +146,7 @@ class RunService:
             "parent_id": record.parent_id,
             "mode": record.context.model.name,
             "provider_status": record.context.provider_status(),
+            "runtime_status": record.context.runtime_status(),
             "simulated_rain": record.context.simulated_rain,
             "poll_url": f"/api/v1/plans/{record.context.run_id}",
             "constraints": dump(state.get("constraints")),

@@ -1,6 +1,6 @@
 [project]
 name = "trippilot-backend"
-version = "0.1.0"
+version = "1.1.0"
 requires-python = ">=3.11"
 description = "Constraint-aware multi-agent travel planner"
 

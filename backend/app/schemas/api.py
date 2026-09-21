@@ -28,10 +28,10 @@ class RevisionRequest(Schema):
 
 class RunMetrics(Schema):
     agent_steps: dict[str, int]
-    tool_attempts: int = Field(ge=0, le=40)
-    model_attempts: int = Field(ge=0, le=30)
+    tool_attempts: int = Field(ge=0, le=200)
+    model_attempts: int = Field(ge=0, le=100)
     tokens: int | None = None
-    replanning_count: int = Field(ge=0, le=2)
+    replanning_count: int = Field(ge=0, le=5)
 
 
 class PlanResponse(Schema):
@@ -43,6 +43,7 @@ class PlanResponse(Schema):
     parent_id: str | None
     mode: Literal["fixture", "qwen"]
     provider_status: dict[str, "ProviderStatus"] = Field(default_factory=dict)
+    runtime_status: dict = Field(default_factory=dict)
     simulated_rain: bool = False
     poll_url: str
     constraints: Constraints | None
@@ -56,12 +57,21 @@ class PlanResponse(Schema):
 
 
 class HealthResponse(Schema):
+    main_backend: str = "ONLINE"
+    qwen: dict = Field(default_factory=dict)
+    amap: dict = Field(default_factory=dict)
+    rail: dict = Field(default_factory=dict)
+    mcp: dict = Field(default_factory=dict)
+    a2a_transport: dict = Field(default_factory=dict)
+    a2a_local: dict = Field(default_factory=dict)
+    harness: dict = Field(default_factory=dict)
     status: Literal["ok"]
     service: Literal["TripPilot"]
     version: str
     mode: Literal["fixture", "live"]
     providers: dict[str, bool | str]
     provider_status: dict[str, "ProviderStatus"] = Field(default_factory=dict)
+    runtime_status: dict = Field(default_factory=dict)
 
 
 class ProviderStatus(Schema):

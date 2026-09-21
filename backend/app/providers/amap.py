@@ -139,9 +139,10 @@ class MockAmapProvider:
 
 
 class AmapProvider:
-    def __init__(self, key: str, transport: httpx.AsyncBaseTransport | None = None) -> None:
+    def __init__(self, key: str, transport: httpx.AsyncBaseTransport | None = None, timeout: float = 10) -> None:
         self._key = key
         self.transport = transport
+        self.timeout = timeout
         self.status = "PENDING" if key else "UNCONFIGURED"
         self.error_code: str | None = None
 
@@ -160,7 +161,7 @@ class AmapProvider:
         if not self._key:
             raise ControlledError("AUTH_REQUIRED")
         try:
-            async with httpx.AsyncClient(timeout=10, transport=self.transport) as client:
+            async with httpx.AsyncClient(timeout=self.timeout, transport=self.transport) as client:
                 response = await client.get(
                     "https://restapi.amap.com/v3/" + path, params={**params, "key": self._key}
                 )

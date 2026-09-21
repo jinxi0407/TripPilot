@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field, ValidationError
 from app.core.budget import ExecutionBudget
 from app.core.config import Settings
 from app.core.errors import ControlledError
+from app.harness.runtime import RuntimeHarness
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -72,7 +73,7 @@ class QwenClient:
             url = parsed._replace(path="/compatible-mode/v1").geturl()
         endpoint = url if url.endswith("/chat/completions") else url + "/chat/completions"
         try:
-            async with httpx.AsyncClient(timeout=30, transport=self.transport) as client:
+            async with httpx.AsyncClient(timeout=self.settings.runtime_policy.model_timeout_seconds, transport=self.transport) as client:
                 response = await client.post(
                     endpoint,
                     headers={
@@ -139,38 +140,37 @@ async def structured_call(
     budget: ExecutionBudget,
     usage: list[Usage | None],
     on_attempt: Callable[[], None] | None = None,
-    timeout: float = 30,
+    timeout: float | None = None,
 ) -> T:
     request = dict(payload)
-    for attempt in range(2):
+    runtime = getattr(budget, "runtime", None) or RuntimeHarness(budget)
+
+    async def attempt():
         if on_attempt:
             on_attempt()
-        budget.consume("model")
         recorded = False
         try:
-            async with asyncio.timeout(min(timeout, budget.remaining)):
-                reply = await client.complete(request, schema.model_json_schema())
+            reply = await client.complete(request, schema.model_json_schema())
             usage.append(reply.usage)
             recorded = True
-            budget.check()
             return schema.model_validate_json(reply.content)
         except (ValidationError, ValueError):
-            error = ControlledError("INVALID_OUTPUT", retryable=True)
             request["repair"] = "上一条输出不符合 schema，请重新输出有效 JSON。"
-        except TimeoutError:
-            usage.append(None)
-            error = ControlledError("TIMEOUT", retryable=True)
-        except ControlledError as exc:
+            raise ControlledError("INVALID_OUTPUT", retryable=True) from None
+        finally:
             if not recorded:
                 usage.append(None)
-            error = exc
-        if attempt or not error.error.retryable:
-            if isinstance(client, QwenClient):
-                client.status = "FAILED"
-                client.error_code = error.error.code
-            raise error
-        await budget.backoff()
-    raise ControlledError("INVALID_OUTPUT")
+
+    try:
+        return await runtime.invoke(
+            attempt, component="Qwen", kind="model", external=isinstance(client, QwenClient),
+            timeout=timeout or runtime.policy.model_timeout_seconds,
+        )
+    except ControlledError as exc:
+        if isinstance(client, QwenClient):
+            client.status = "FAILED"
+            client.error_code = exc.error.code
+        raise
 
 
 def get_model(settings: Settings, mode: str, responder: Callable | None = None) -> ModelClient:

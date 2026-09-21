@@ -25,7 +25,10 @@ def create_context(
     scenario: str = "normal",
     now: datetime | None = None,
 ) -> RunContext:
-    budget = ExecutionBudget()
+    policy = settings.runtime_policy
+    budget = ExecutionBudget(seconds=policy.total_timeout_seconds, max_tools=policy.max_tool_calls,
+                             max_models=policy.max_model_calls, max_external=policy.max_external_calls,
+                             policy=policy)
     model = get_model(settings, mode)
     rail = {"mock": MockRailProvider, "dataset": DatasetRailProvider, "real": RealRailProvider}[
         settings.rail_provider or "mock"
@@ -34,20 +37,26 @@ def create_context(
         rail.disruption = scenario == "transport"
     use_live = mode != "fixture" and settings.amap_ready
     local = (
-        AmapProvider(settings.amap_api_key.get_secret_value())
+        AmapProvider(settings.amap_api_key.get_secret_value(), timeout=policy.tool_timeout_seconds)
         if use_live
         else MockAmapProvider(severe_rain=scenario == "rain", outage=scenario == "outage")
     )
-    return RunContext(
+    context = RunContext(
         model,
         create_registry(rail, local, budget),
         budget,
+        settings=settings,
         demo=demo,
         local_provider=local,
         rail_mode=settings.rail_provider or "mock",
         simulated_rain=scenario == "rain",
         now=now or (FIXED_NOW if model.name == "fixture" else datetime.now(TZ)),
     )
+
+    if settings.protocols_enabled and (mode != "fixture" or settings.protocol_fixture):
+        from app.services.protocols import ProtocolRuntime
+        context.protocols = ProtocolRuntime(context, "fixture" if model.name == "fixture" else "live")
+    return context
 
 
 async def execute(state: AgentState, context: RunContext, recursion_limit: int = 64) -> AgentState:

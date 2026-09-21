@@ -46,7 +46,7 @@ class AmapWeatherTool(Tool):
 
 
 def create_registry(rail: RailProvider, local: LocalProvider, budget: ExecutionBudget) -> ToolRegistry:
-    return ToolRegistry(
+    registry = ToolRegistry(
         [
             Tool(
                 "rail_search",
@@ -62,3 +62,7 @@ def create_registry(rail: RailProvider, local: LocalProvider, budget: ExecutionB
         ],
         budget,
     )
+
+    for name, tool in registry.tools.items():
+        tool.external = name.startswith("amap_") and hasattr(local, "status")
+    return registry

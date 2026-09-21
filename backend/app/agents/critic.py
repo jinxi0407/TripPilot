@@ -8,8 +8,6 @@ from app.schemas.travel import Constraints, Issue, Itinerary, ValidationResult
 from app.services.context import RunContext
 from app.services.costing import reconcile
 
-MAX_REPLANNING_ATTEMPTS = 2
-
 
 def validate_itinerary(itinerary: Itinerary, constraints: Constraints, state: AgentState) -> ValidationResult:
     result = ValidationResult(valid=True)
@@ -307,7 +305,7 @@ async def critique(state: AgentState, context: RunContext) -> dict:
     count = state.get("replanning_count", 0)
     replan = (
         bool(actionable)
-        and count < MAX_REPLANNING_ATTEMPTS
+        and count < context.runtime.policy.max_replanning_attempts
         and signature != state.get("issue_signature")
         and not state.get("stop_reason")
     )

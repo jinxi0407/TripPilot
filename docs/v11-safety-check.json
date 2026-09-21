@@ -1,0 +1,28 @@
+{
+  "reviewed_files": 175,
+  "credential_file_hits": [],
+  "credential_log_hits": [],
+  "backend_secret_bundle_hits": [],
+  "env_ignored": true,
+  "env_tracked": false,
+  "example_placeholders_only": true,
+  "old_changes_modified": false,
+  "logs": {
+    "backend.log": {
+      "error_lines": 0,
+      "tracebacks": 0
+    },
+    "mcp.log": {
+      "error_lines": 0,
+      "tracebacks": 0
+    },
+    "transport.log": {
+      "error_lines": 0,
+      "tracebacks": 0
+    },
+    "local.log": {
+      "error_lines": 0,
+      "tracebacks": 0
+    }
+  }
+}

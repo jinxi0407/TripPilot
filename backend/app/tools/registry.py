@@ -1,13 +1,13 @@
-import asyncio
 import json
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pydantic import BaseModel, TypeAdapter, ValidationError
+from pydantic import BaseModel, ValidationError
 
 from app.core.budget import ExecutionBudget
 from app.core.errors import ControlledError
+from app.harness.runtime import TOOL_NAMES, RuntimeHarness
 from app.schemas.travel import ToolResult
 
 
@@ -18,7 +18,8 @@ class Tool:
     output_schema: Any
     handler: Callable[[Any], Awaitable[Any]]
     allowed_agents: frozenset[str]
-    timeout: float = 10
+    timeout: float | None = None
+    external: bool = False
     read_only: bool = True
     version: str = "1"
 
@@ -27,6 +28,7 @@ class ToolRegistry:
     def __init__(self, tools: list[Tool], budget: ExecutionBudget) -> None:
         self.tools = {t.name: t for t in tools}
         self.budget = budget
+        self.runtime = RuntimeHarness(budget)
         self.cache: dict[str, ToolResult] = {}
         self.failed: set[str] = set()
         self.calls: list[dict[str, Any]] = []
@@ -39,6 +41,7 @@ class ToolRegistry:
         }
 
     async def call(self, agent: str, name: str, arguments: dict) -> ToolResult:
+        name = {v: k for k, v in TOOL_NAMES.items()}.get(name, name)
         record = {"agent": agent, "tool": name, "status": "requested", "cached": False}
         self.calls.append(record)
         started = self.budget.clock()
@@ -47,8 +50,7 @@ class ToolRegistry:
         try:
             self.budget.check()
             tool = self.tools.get(name)
-            if tool is None or agent not in tool.allowed_agents or not tool.read_only:
-                raise ControlledError("TOOL_DENIED")
+            self.runtime.permit(agent, name, tool.allowed_agents if tool else frozenset(), bool(tool and tool.read_only))
             try:
                 query = tool.input_schema.model_validate(arguments)
             except ValidationError:
@@ -56,39 +58,31 @@ class ToolRegistry:
             key = f"{self.evidence_revision}:{name}:" + json.dumps(
                 query.model_dump(mode="json"), sort_keys=True
             )
+            self.runtime.duplicate(key, key in self.failed)
             if key in self.cache:
                 record.update(status="ok", cached=True)
                 return self.cache[key].model_copy(deep=True)
-            if key in self.failed:
-                raise ControlledError("DUPLICATE_ACTION")
-            for attempt in range(2):
-                self.budget.consume("tool")
-                try:
-                    async with asyncio.timeout(min(tool.timeout, self.budget.remaining)):
-                        raw = await tool.handler(query)
-                    self.budget.check()
-                    result = TypeAdapter(tool.output_schema).validate_python(raw)
-                    if result.status == "error" and result.error:
-                        raise ControlledError(result.error.code, result.error.retryable)
-                    record["status"] = result.status
-                    if result.status in ("ok", "empty"):
-                        self.cache[key] = result
-                    else:
-                        self.failed.add(key)
-                    return result
-                except TimeoutError:
-                    error = ControlledError("TIMEOUT", retryable=True)
-                except (ValidationError, ValueError, TypeError, KeyError):
-                    error = ControlledError("INVALID_OUTPUT")
-                except ControlledError as exc:
-                    error = exc
-                except Exception:  # noqa: BLE001 - external provider boundary; never expose raw errors
-                    error = ControlledError("PROVIDER_FAILURE")
-                if attempt or not error.error.retryable:
-                    self.failed.add(key)
-                    raise error
-                await self.budget.backoff()
-            raise ControlledError("PROVIDER_FAILURE")
+            async def attempt():
+                raw = await tool.handler(query)
+                result = self.runtime.validate(tool.output_schema, raw)
+                if result.status == "error" and result.error:
+                    raise ControlledError(result.error.code, result.error.retryable)
+                return result
+
+            try:
+                result = await self.runtime.invoke(
+                    attempt, component="Tool", kind="tool", external=tool.external,
+                    timeout=tool.timeout or self.runtime.policy.tool_timeout_seconds,
+                )
+            except ControlledError:
+                self.failed.add(key)
+                raise
+            record["status"] = result.status
+            if result.status in ("ok", "empty"):
+                self.cache[key] = result
+            else:
+                self.failed.add(key)
+            return result
         except ControlledError as exc:
             record["status"] = exc.error.code
             return ToolResult(status="error", error=exc.error)

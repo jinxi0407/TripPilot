@@ -10,8 +10,6 @@ from app.services.context import RunContext
 from app.services.itinerary import DaySelection, assemble, default_selections
 from app.services.model_client import MockModelClient, structured_call
 
-MAX_STEPS = 8
-
 
 class PlannerDecision(Schema):
     kind: Literal["action", "final"]
@@ -31,6 +29,8 @@ class PlannerDecision(Schema):
 async def plan(state: AgentState, context: RunContext) -> dict:
     context.emit("Travel Planner", "running", "正在组合景点、交通与每日节奏")
     started = context.budget.clock()
+    policy = context.runtime.policy
+    scope = "planner-" + str(len(context.trace))
     pass_steps = 0
     working = dict(state)
     selections = default_selections(state)
@@ -40,10 +40,11 @@ async def plan(state: AgentState, context: RunContext) -> dict:
 
     def consume_step() -> None:
         nonlocal pass_steps
-        if pass_steps >= MAX_STEPS:
+        if pass_steps >= policy.max_react_steps:
             raise ControlledError("MAX_STEPS")
-        if context.budget.clock() - started >= 90:
+        if context.budget.clock() - started >= policy.react_timeout_seconds:
             raise ControlledError("DEADLINE_EXCEEDED")
+        context.runtime.step(scope)
         pass_steps += 1
         context.steps["Travel Planner"] = context.steps.get("Travel Planner", 0) + 1
 
@@ -58,8 +59,8 @@ async def plan(state: AgentState, context: RunContext) -> dict:
         else context.model
     )
     try:
-        async with asyncio.timeout(min(90, context.budget.remaining)):
-            while pass_steps < MAX_STEPS:
+        async with asyncio.timeout(min(policy.react_timeout_seconds, context.budget.remaining)):
+            while pass_steps < policy.max_react_steps:
                 context.budget.check()
                 decision = await structured_call(
                     client,
@@ -139,6 +140,7 @@ async def plan(state: AgentState, context: RunContext) -> dict:
     except ControlledError as exc:
         stop_reason = exc.error.code
     if stop_reason:
+        context.runtime.record("ReAct", stop_reason)
         draft.warnings.append("规划触及执行限制，当前展示可用草案，部分信息可能未完成。")
         context.emit("Travel Planner", "failed", "已触发执行保护，保留当前草案进行校验")
     return {
