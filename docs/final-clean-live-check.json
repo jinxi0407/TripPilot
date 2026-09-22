@@ -1,0 +1,230 @@
+{
+  "date": "2026-09-22",
+  "cases": [
+    {
+      "id": "normal",
+      "status": "conflict",
+      "latency_seconds": 55.162,
+      "model": "qwen-plus",
+      "providers": {
+        "qwen": "LIVE",
+        "amap": "LIVE",
+        "rail": "DATASET",
+        "flight": "DATASET",
+        "hotel": "LIVE"
+      },
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "rail_dataset": true,
+        "flight_dataset": true,
+        "mcp_7": true,
+        "a2a_2": true,
+        "harness": true,
+        "memory": true,
+        "itinerary": true,
+        "hotels": true,
+        "safe_trace": true
+      },
+      "validation": {
+        "valid": false,
+        "issues": {
+          "unverified": 17,
+          "confirmed": 2,
+          "informational": 2
+        },
+        "blocking_confirmed_count": 2,
+        "confirmed_conflicts": [
+          {
+            "type": "EXCESSIVE_TRAVEL",
+            "day": 3,
+            "observed": "123",
+            "allowed": "120",
+            "blocking": true
+          },
+          {
+            "type": "EXCESSIVE_TRANSIT",
+            "day": 3,
+            "observed": null,
+            "allowed": null,
+            "blocking": true
+          }
+        ]
+      },
+      "integration_passed": true,
+      "replanning_count": 1
+    },
+    {
+      "id": "transport",
+      "status": "partial",
+      "latency_seconds": 21.121,
+      "model": "qwen-plus",
+      "providers": {
+        "qwen": "LIVE",
+        "amap": "LIVE",
+        "rail": "DATASET",
+        "flight": "DATASET",
+        "hotel": "LIVE"
+      },
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "rail_dataset": true,
+        "flight_dataset": true,
+        "mcp_7": true,
+        "a2a_2": true,
+        "harness": true,
+        "memory": true,
+        "itinerary": true,
+        "hotels": true,
+        "safe_trace": true,
+        "rail_flight_comparison": true
+      },
+      "validation": {
+        "valid": true,
+        "issues": {
+          "unverified": 9,
+          "informational": 6
+        },
+        "blocking_confirmed_count": 0,
+        "confirmed_conflicts": []
+      },
+      "integration_passed": true,
+      "replanning_count": 0
+    }
+  ],
+  "maps": [
+    {
+      "day": 1,
+      "markers": 1,
+      "names_match": true,
+      "within_view": true,
+      "passed": true
+    },
+    {
+      "day": 2,
+      "markers": 2,
+      "names_match": true,
+      "within_view": true,
+      "passed": true
+    },
+    {
+      "day": 3,
+      "markers": 1,
+      "names_match": true,
+      "within_view": true,
+      "passed": true
+    },
+    {
+      "day": 4,
+      "markers": 2,
+      "names_match": true,
+      "within_view": false,
+      "passed": false
+    },
+    {
+      "day": 5,
+      "markers": 1,
+      "names_match": true,
+      "within_view": true,
+      "passed": true
+    }
+  ],
+  "console_errors": 0,
+  "page_errors": 0,
+  "http_errors": [],
+  "checks": {
+    "health": true,
+    "traveler_default": true,
+    "hotel_ui": true,
+    "trace": true,
+    "traveler": true,
+    "preferences": true,
+    "demo": true,
+    "comparison_ui": true
+  },
+  "initial_acceptance_passed": false,
+  "map_recheck": {
+    "method": "Saved LIVE itinerary replay with actual Amap JS SDK; no fresh planning request",
+    "checks": [
+      {
+        "width": 1440,
+        "day": 1,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 1440,
+        "day": 2,
+        "markers": 2,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 1440,
+        "day": 3,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 1440,
+        "day": 4,
+        "markers": 2,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 1440,
+        "day": 5,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 390,
+        "day": 1,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 390,
+        "day": 2,
+        "markers": 2,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 390,
+        "day": 3,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 390,
+        "day": 4,
+        "markers": 2,
+        "names_match": true,
+        "within_view": true
+      },
+      {
+        "width": 390,
+        "day": 5,
+        "markers": 1,
+        "names_match": true,
+        "within_view": true
+      }
+    ],
+    "console_errors": 0,
+    "page_errors": 0,
+    "passed": true
+  },
+  "integration_passed": true,
+  "all_plans_critic_valid": false,
+  "interpretation": "协议、真实 Provider、UI 与修正后的地图通过集成验收；normal 为真实交通确认冲突，transport 为 partial、无确认阻塞。integration_passed 不代表全部行程满足约束。保留首次地图检查失败，后续使用保存的真实结果和实际 SDK 复验，不把回放称为新的端到端规划。"
+}

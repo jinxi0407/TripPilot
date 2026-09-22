@@ -67,7 +67,8 @@ export function LiveMap({day,enabled=true}:{day:Day|undefined;enabled?:boolean})
       // escapes untrusted POI names before serializing that HTML.
       return new window.AMap!.Marker({position:[poi.coordinates!.longitude,poi.coordinates!.latitude],title:poi.name,label:{content:label.outerHTML,direction:'top'}})
     })
-    if(markers.length){map.add(markers);map.setFitView(markers,true,[80,35,65,35],15)}
+    // Amap uses top/bottom/left/right padding; leave room for POI name labels.
+    if(markers.length){map.add(markers);map.setFitView(markers,true,[80,35,85,85],15)}
   },[ready,day])
   return <><div ref={container} className="live-map" aria-label="高德实时地图" data-map-state={ready&&!error?'live':error?'failed':'loading'} data-marker-count={ready?day?.activities.filter(a=>a.poi.coordinates).length??0:0}/><div className="map-notice" role="status">{error|| (ready?'● 高德地图 LIVE · 当天景点':'正在加载高德地图…')}</div></>
 }

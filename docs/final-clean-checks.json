@@ -1,0 +1,378 @@
+{
+  "date": "2026-09-22",
+  "base_commit": "a6e1d1cfa16786f8bc0555cde9340cdd571d2667",
+  "cleanup": {
+    "deleted_files": [
+      {
+        "path": ".tooling/v12-flow-edit.py",
+        "bytes": 5071
+      },
+      {
+        "path": ".tooling/v12-protocol-edit.py",
+        "bytes": 7560
+      },
+      {
+        "path": ".tooling/v12-frontend-edit.py",
+        "bytes": 5476
+      },
+      {
+        "path": ".tooling/v12-itinerary-edit.py",
+        "bytes": 7166
+      },
+      {
+        "path": ".tooling/v12-schema-edit.py",
+        "bytes": 2324
+      },
+      {
+        "path": ".tooling/v12-memory-api-edit.py",
+        "bytes": 7323
+      },
+      {
+        "path": ".tooling/v121/edit_critic.py",
+        "bytes": 2875
+      },
+      {
+        "path": ".tooling/v122/benchmark-version.py",
+        "bytes": 3806
+      },
+      {
+        "path": ".tooling/v122/browser-tests.py",
+        "bytes": 1116
+      },
+      {
+        "path": ".tooling/v122/specs.py",
+        "bytes": 7924
+      },
+      {
+        "path": ".tooling/v122/edit-backend.py",
+        "bytes": 16913
+      },
+      {
+        "path": ".tooling/v122/add-tests.py",
+        "bytes": 921
+      },
+      {
+        "path": ".tooling/v122/refine2.py",
+        "bytes": 2166
+      },
+      {
+        "path": ".tooling/v122/frontend.py",
+        "bytes": 3505
+      },
+      {
+        "path": ".tooling/v122/refine.py",
+        "bytes": 3584
+      },
+      {
+        "path": "docs/screenshots/v121-initial.png",
+        "bytes": 210823
+      },
+      {
+        "path": "docs/screenshots/v121-loading.png",
+        "bytes": 249042
+      },
+      {
+        "path": ".tooling/release/eval-hashes.json",
+        "bytes": 3050
+      },
+      {
+        "path": ".tooling/release/readme-rendered.html",
+        "bytes": 8859
+      },
+      {
+        "path": ".tooling/release/remote.py",
+        "bytes": 1394
+      },
+      {
+        "path": ".tooling/release/github-verify.py",
+        "bytes": 3661
+      },
+      {
+        "path": ".tooling/release/github-verification.json",
+        "bytes": 593
+      },
+      {
+        "path": ".tooling/release/backend-tests.log",
+        "bytes": 806
+      },
+      {
+        "path": ".tooling/release/github-readme.html",
+        "bytes": 13182
+      },
+      {
+        "path": ".tooling/release/staged.diff",
+        "bytes": 6247184
+      },
+      {
+        "path": ".tooling/release/scan.py",
+        "bytes": 2848
+      },
+      {
+        "path": ".tooling/release/remote.json",
+        "bytes": 284
+      },
+      {
+        "path": ".tooling/release/verify.py",
+        "bytes": 2358
+      },
+      {
+        "path": ".tooling/release/scan.json",
+        "bytes": 363
+      },
+      {
+        "path": ".tooling/release/staged.py",
+        "bytes": 1480
+      },
+      {
+        "path": ".tooling/release/browser-tests.log",
+        "bytes": 3082
+      },
+      {
+        "path": ".tooling/readme-preview/agent-workflow.png",
+        "bytes": 232279
+      }
+    ],
+    "deleted_files_count": 32,
+    "tracked_deleted": 2,
+    "ignored_deleted": 30,
+    "deleted_bytes": 7059018,
+    "css": {
+      "classes": [
+        "activity-details",
+        "day-number",
+        "edition",
+        "feature-row",
+        "finish",
+        "floating-label",
+        "map-journey",
+        "map-road",
+        "map-schematic",
+        "map-water",
+        "mode-indicator",
+        "rail-line",
+        "route-dot",
+        "route-illustration",
+        "route-line",
+        "ticket-label",
+        "train-leg",
+        "train-middle",
+        "train-ticket",
+        "nav-active"
+      ],
+      "selectors": [
+        ".topbar nav",
+        ".nav-active",
+        "nav a",
+        ".mode-indicator",
+        ".mode-indicator>span",
+        ".edition",
+        ".feature-row",
+        ".feature-row span",
+        ".route-illustration",
+        ".route-dot",
+        ".route-dot.start",
+        ".route-dot.finish",
+        ".route-line",
+        ".floating-label",
+        ".day-number",
+        ".train-ticket",
+        ".ticket-label",
+        ".ticket-label span",
+        ".train-leg",
+        ".train-leg>div:first-child",
+        ".train-leg>div:last-child",
+        ".train-leg>div:last-child",
+        ".train-leg strong",
+        ".train-leg>div>span",
+        ".train-middle",
+        ".train-middle span",
+        ".train-middle small",
+        ".rail-line",
+        ".rail-line:before",
+        ".rail-line:after",
+        ".rail-line:after",
+        ".activity-details",
+        ".activity-details span",
+        ".map-schematic",
+        ".map-schematic svg",
+        ".map-water",
+        ".map-road",
+        ".map-journey",
+        ".map-schematic circle",
+        ".map-schematic text",
+        ".map-schematic>span",
+        ".edition",
+        ".map-schematic",
+        ".feature-row",
+        ".feature-row span",
+        ".topbar nav a",
+        ".topbar nav",
+        ".mode-indicator",
+        ".route-illustration",
+        ".activity-panel .map-schematic svg",
+        ".map-schematic>span",
+        ".day-number",
+        ".train-ticket",
+        ".train-leg strong",
+        ".train-middle span",
+        ".train-middle small",
+        ".activity-details",
+        ".topbar nav"
+      ],
+      "before_bytes": 34022,
+      "after_bytes": 29812
+    },
+    "dependencies_removed": [],
+    "core_backend_changed": false,
+    "feature_removed": false,
+    "map_adjustment": "setFitView [80,35,65,35] -> [80,35,85,85]; top,bottom,left,right"
+  },
+  "tests": {
+    "backend": {
+      "passed": 215,
+      "failed": 0,
+      "warnings": 1
+    },
+    "frontend_unit": {
+      "passed": 1,
+      "failed": 0
+    },
+    "browser": {
+      "passed": 24,
+      "failed": 0
+    },
+    "ruff": "passed",
+    "build": "passed",
+    "openspec_strict": {
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "benchmark": {
+    "files_checked": 31,
+    "changed": [],
+    "versions": {
+      "v1_2": {
+        "trippilot": {
+          "rows": 50,
+          "live_model_rows": 50,
+          "recomputed_metrics_equal": true,
+          "task_success": {
+            "passed": 44,
+            "total": 50,
+            "rate": 0.88
+          }
+        },
+        "baseline": {
+          "rows": 50,
+          "live_model_rows": 50,
+          "recomputed_metrics_equal": true,
+          "task_success": {
+            "passed": 32,
+            "total": 50,
+            "rate": 0.64
+          }
+        }
+      },
+      "v1_2_2": {
+        "trippilot": {
+          "rows": 50,
+          "live_model_rows": 50,
+          "recomputed_metrics_equal": true,
+          "task_success": {
+            "passed": 48,
+            "total": 50,
+            "rate": 0.96
+          }
+        },
+        "baseline": {
+          "rows": 50,
+          "live_model_rows": 50,
+          "recomputed_metrics_equal": true,
+          "task_success": {
+            "passed": 32,
+            "total": 50,
+            "rate": 0.64
+          }
+        }
+      }
+    }
+  },
+  "security": {
+    "scan": {
+      "files_scanned": 306,
+      "history_objects_scanned": 497,
+      "working_candidates": {},
+      "history_candidates": {},
+      "log_candidates": {},
+      "ignored": {
+        ".env": true,
+        ".env.local": true,
+        ".env.test.local": true,
+        ".tooling/preferences.sqlite3": true,
+        "local.sqlite3": true
+      },
+      "env_tracked": false,
+      "benchmark_frozen_files_changed": []
+    },
+    "image_ocr": {
+      "files_scanned": 36,
+      "candidates": [],
+      "failures": [],
+      "method": "Local Tesseract OCR; exact configured-secret and credential/private-path pattern matching; OCR text not retained"
+    },
+    "private_paths_in_current_text_files": 0
+  },
+  "runtime": {
+    "mcp_tools": 7,
+    "a2a_services": 2,
+    "qwen": "LIVE",
+    "amap": "LIVE",
+    "hotel": "LIVE",
+    "rail": "DATASET",
+    "flight": "DATASET",
+    "live_report": "final-clean-live-check.json",
+    "backend_log_errors": 0,
+    "service_log_checks": [
+      {
+        "file": ".tooling/v11/backend.log",
+        "tracebacks": 0,
+        "error_lines": 0,
+        "http5xx": 0
+      },
+      {
+        "file": ".tooling/v11/mcp.log",
+        "tracebacks": 0,
+        "error_lines": 0,
+        "http5xx": 0
+      },
+      {
+        "file": ".tooling/v11/transport.log",
+        "tracebacks": 0,
+        "error_lines": 0,
+        "http5xx": 0
+      },
+      {
+        "file": ".tooling/v11/local.log",
+        "tracebacks": 0,
+        "error_lines": 0,
+        "http5xx": 0
+      }
+    ]
+  },
+  "resume_claims": {
+    "SUPPORTED": 28,
+    "PARTIAL": 0,
+    "NOT SUPPORTED": 0
+  },
+  "github_visibility_before": "public",
+  "retained_checkpoints": [
+    "209918f",
+    "b66dc59"
+  ],
+  "documentation": {
+    "checked": 214,
+    "broken": [],
+    "svg_xml_valid": true
+  }
+}

@@ -54,7 +54,7 @@ TripPilot 是一个面向多城市自由行的 AI 旅行规划项目。输入目
 
 双方使用相同的 `qwen-plus`、固定 Provider 数据和评估器。这是项目内部单次评测，不代表真实出行成功率；正确识别不可满足的约束也可计为任务成功。
 
-工程回归覆盖 **215 项后端测试、24 项浏览器测试**，包含协议集成、运行保护、记忆与约束校验。
+工程回归覆盖 **215 项后端测试、24 项浏览器测试**，另有 1 项前端配置单元测试。最终精简后已全部重跑通过，包含协议集成、运行保护、记忆与约束校验。
 
 [完整评测与失败案例](evals/v1_2_2/summary.md) · [评测方法](evals/v1_2_2/semantics.md)
 
@@ -87,4 +87,4 @@ Qwen 与高德 API 已完成真实联调。铁路、航班使用固定数据集�
 
 本项目为本地工程化 Demo，不提供支付、购票或商业生产部署。
 
-[演示指南](docs/demo-guide.md) · [开发与测试](docs/local-development.md) · [OpenSpec 开发记录](openspec/)
+[演示指南](docs/demo-guide.md) · [开发与测试](docs/local-development.md) · [最终代码与 LIVE 审计](docs/final-code-audit.md) · [简历声明核验](docs/resume-claim-audit-final.md) · [OpenSpec 开发记录](openspec/)

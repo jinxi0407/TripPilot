@@ -31,7 +31,6 @@ npm --prefix frontend ci
 | `VITE_AMAP_JS_KEY` | 浏览器地图 SDK 的 JS API Key，与 Web Service Key 分开 |
 | `VITE_AMAP_SECURITY_CODE` | 配套安全码；由后端读取并代理附加，不编入浏览器代码 |
 | `RAIL_PROVIDER` | 空或 `mock` / `dataset` / `real` |
-| `RAIL_API_KEY` | 未来授权铁路适配器预留，当前不使用 |
 | `FLIGHT_PROVIDER` | 留空默认为 `dataset`；`real` 为未接入的授权接口边界 |
 | `MEMORY_DATABASE` | 留空采用 `.tooling/preferences.sqlite3` 本地偏好库 |
 
