@@ -36,16 +36,9 @@ TripPilot 是一个面向多城市自由行的 AI 旅行规划项目。输入目
 
 ## 系统设计
 
-五个 Agent 分工完成需求理解、专业研究、行程编排和约束校验：
+五个 Agent 分工协作：蓝色实线表示任务委派，绿色实线表示结果流转，虚线表示有界重规划。
 
-```mermaid
-flowchart LR
-    S["Supervisor<br/>理解需求"] --> R["专业研究<br/>Transport · Local Travel"]
-    R --> P["Travel Planner<br/>ReAct 编排行程"]
-    P --> C["Critic<br/>约束校验"]
-    C --> F["行程结果"]
-    C -.->|有界重规划| P
-```
+![TripPilot 多智能体协作：A2A 任务委派、研究结果回传、ReAct 编排与 Critic 有界重规划](docs/images/agent-workflow.svg)
 
 - **协作与工具**：Supervisor 通过 A2A 依次委派两个独立专家服务；MCP 统一提供交通、POI、酒店、天气、距离和路线等 **7 个工具**。
 - **运行保护**：Harness 统一约束调用额度、超时、重试、权限与重复调用，并记录降级和执行摘要。
