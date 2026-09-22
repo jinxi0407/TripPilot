@@ -1,136 +1,97 @@
 # TripPilot
 
-**Multi-Agent AI Travel Planner**
+**Multi-Agent AI Travel Planner · 从一句旅行想法，到一份清晰的行程。**
 
-面向中国大陆多城市自由行的 AI 旅行规划系统。根据日期、预算和偏好，协同研究交通、景点、住宿、天气与路线，生成可修订的每日行程；通过记忆与约束校验，明确区分确认冲突、待验证信息和演示数据。
+TripPilot 是一个面向多城市自由行的 AI 旅行规划项目。输入目的地、日期、预算和偏好，即可获得包含城际交通、每日景点、住宿建议与地图的行程；需求或天气变化时，可以继续对话调整计划。
 
-## Demo
+`LangGraph` · `Qwen` · `MCP` · `A2A` · `FastAPI` · `React` · `SQLite`
 
-“三城慢游 · 历史与夜色”：上海出发，5 天游玩杭州、南京和苏州，预算 4000 元。
+## 项目演示
 
-![旅行模式：行程与地图](docs/screenshots/v122-traveler.png)
+> 我想从上海出发，用 5 天游玩杭州、南京和苏州。预算 4000 元，喜欢历史景点和夜景，不想每天太赶。
+
+<img src="docs/screenshots/v122-traveler.png" alt="TripPilot 旅行模式：五天三城行程、每日活动、住宿建议与高德地图" width="760" />
 
 <details>
-<summary>演示模式与每日行程</summary>
+<summary>查看每日行程与 Agent 执行视图</summary>
 
-![演示模式：Provider 状态与执行摘要](docs/screenshots/v122-demo.png)
-![每日行程：活动、天气与待确认信息](docs/screenshots/v122-day.png)
+**每日行程**：活动时间、交通衔接、天气与费用集中展示。
+
+![每日行程](docs/screenshots/v122-day.png)
+
+**演示模式**：查看 Agent 执行摘要、工具来源与约束校验结果。
+
+![Agent 执行视图](docs/screenshots/v122-demo.png)
 
 </details>
 
-截图来自 V1.2.2 本地真实联调：Qwen、高德 Web Service 和 JS 地图为 LIVE，Rail / Flight 为 DATASET。未来天气和部分价格、开放时间仍待确认，行程状态为 `partial`。参见 [演示指南](docs/demo-guide.md)、[真实验收记录](docs/v1.2.2-validation-report.md) 与 [移动端截图](docs/screenshots/v122-mobile.png)。
+## 核心体验
 
-## Architecture
+- **多城市规划**：结合日期、预算与旅行节奏，安排交通、景点和每日活动。
+- **交通与住宿建议**：比较铁路和航班的门到门时间，围绕景点位置推荐住宿区域。
+- **地图与天气**：高德地图展示当天景点，天气摘要自然融入每日行程。
+- **可持续调整**：保留会话上下文与长期偏好，支持修改预算、节奏或活动安排。
+- **约束校验与重规划**：检查预算、时间、天气和交通冲突，在限定次数内尝试修订。
+- **明确的信息来源**：区分实时数据、演示数据和待确认信息，便于判断行程的可靠程度。
+
+## 系统设计
+
+五个 Agent 分工完成需求理解、专业研究、行程编排和约束校验：
 
 ```mermaid
-flowchart TD
-    U[User] --> UI[React]
-    UI --> API[FastAPI]
-    API --> S[LangGraph Supervisor]
-    S -->|A2A| T[Transport Agent]
-    T -->|研究结果回传后| L[Local Travel Agent]
-    S -.->|同城请求 / A2A| L
-    T -->|MCP| M[Travel MCP Server]
-    L -->|MCP| M
-    M --> R[Rail / Flight DATASET]
-    M --> A[Amap POI / Hotel / Weather / Distance / Route]
-    L --> P[Travel Planner / ReAct]
-    P -->|Action / Observation| M
-    P --> C[Critic]
-    C -->|confirmed + blocking / 有界重规划| S
-    S -->|重规划直接进入 Planner| P
-    C --> F[Final Itinerary / 待确认 / 约束冲突]
-    H[Harness: timeout / retry / budgets / guard / fallback / trace] -.-> S
-    H -.-> T
-    H -.-> L
-    H -.-> P
-    API <--> MEM[Session Memory / SQLite Preferences]
+flowchart LR
+    S["Supervisor<br/>理解需求"] --> R["专业研究<br/>Transport · Local Travel"]
+    R --> P["Travel Planner<br/>ReAct 编排行程"]
+    P --> C["Critic<br/>约束校验"]
+    C --> F["行程结果"]
+    C -.->|有界重规划| P
 ```
 
-五个逻辑 Agent；Transport 与 Local Travel 是两个独立 A2A 服务，由主进程依次委派。MCP 服务暴露 7 个工具。Critic 为确定性校验器，只有确认且阻断的冲突触发最多两次自动重规划。Trace 展示执行摘要，不展示模型私有推理。
+- **协作与工具**：Supervisor 通过 A2A 依次委派两个独立专家服务；MCP 统一提供交通、POI、酒店、天气、距离和路线等 **7 个工具**。
+- **运行保护**：Harness 统一约束调用额度、超时、重试、权限与重复调用，并记录降级和执行摘要。
+- **校验与记忆**：确认冲突才由 Supervisor 再次调度 Planner；待验证信息保留提示。Session 保存会话上下文，SQLite 保存用户选择记住的结构化偏好。
 
-## 核心能力
+前端使用 React，后端使用 FastAPI，LangGraph 负责流程编排。上图展示主要职责与修订关系，具体调度见 [工作流实现](backend/app/graph/workflow.py)。
 
-- LangGraph 多 Agent 规划与可追溯的行程修订。
-- A2A 专业 Agent 委派、类型化任务与结果回传。
-- MCP 统一交通、景点、酒店、天气、距离和路线工具。
-- 受控 ReAct 与 Critic 预算、时间、天气、交通约束校验。
-- Runtime Harness：额度、超时、重试、权限、去重、校验和显式降级。
-- Session Memory 与 SQLite 结构化长期旅行偏好。
-- 住宿区域推荐、铁路与航班门到门比较，清楚标注数据边界。
-- 高德真实地图、每日 POI Marker、紧凑天气摘要及旅行/演示模式。
+## 评测结果
 
-## Benchmark
-
-| Metric | TripPilot | Single-Agent |
+| 任务成功率 | TripPilot | Single-Agent Baseline |
 | --- | ---: | ---: |
-| Task Success | 48/50 (96%) | 32/50 (64%) |
+| 50 个固定旅行任务 | **48/50 · 96%** | 32/50 · 64% |
 
-项目内部 **50 个固定旅行任务**，双方使用相同 `qwen-plus`、相同 Provider fixtures、相同 evaluator。模型调用为真实 Qwen，旅行数据为固定证据；这是单次离线评测，**不代表生产环境真实成功率，也不证明架构的因果性能提升**。正确拒绝不可满足约束可计为任务成功。
+双方使用相同的 `qwen-plus`、固定 Provider 数据和评估器。这是项目内部单次评测，不代表真实出行成功率；正确识别不可满足的约束也可计为任务成功。
 
-V1.2 历史结果为 44/50（88%）；V1.2.1 未单独运行正式 Benchmark。跨版本包含多项修复及模型运行波动，不能将提升全部归因于 Critic。严格重规划恢复为 1/3，仍有未解决预算案例。
+工程回归覆盖 **215 项后端测试、24 项浏览器测试**，包含协议集成、运行保护、记忆与约束校验。
 
-[固定任务](evals/v1_2/benchmark_50.jsonl) · [最终结果与失败案例](evals/v1_2_2/summary.md) · [原始 TripPilot 结果](evals/v1_2_2/results_tripilot.jsonl) · [原始 Baseline 结果](evals/v1_2_2/results_baseline.jsonl) · [历史结果](evals/v1_2/summary.md) · [评测语义](evals/v1_2_2/semantics.md) · [简历声明核验](docs/resume-claim-audit.md)
+[完整评测与失败案例](evals/v1_2_2/summary.md) · [评测方法](evals/v1_2_2/semantics.md)
 
-## Limitations
+## 本地运行
 
-- **Rail = DATASET，Flight = DATASET**，日期覆盖有限，不代表实时班次或余票；不爬取 12306。
-- Hotel 来自高德 POI；不提供实时房价、库存、支付或预订。
-- 未来天气、景点开放时间和部分费用需要临行确认；未知信息不会被当作已验证事实。
-- 故障恢复受预算和 deadline 限制，不保证所有请求都能生成完整行程。
-- 当前是本地工程化 Demo，无生产认证或商业部署声明；会话随服务重启清空，仅结构化偏好持久化。
-
-## Quick Start
-
-需要 **Python >=3.11、Node 22**；已验证 Python 3.13.2 / Node 22.23.2。从仓库根目录执行：
+需要 **Python ≥ 3.11、Node.js 22**。在项目根目录安装依赖：
 
 ```sh
 python3 -m venv backend/.venv
 backend/.venv/bin/python -m pip install -r backend/requirements.txt
 npm --prefix frontend ci
-# 仅首次创建，不覆盖已有本地配置
 test -f .env || cp .env.example .env
 ```
 
-本机编辑 `.env`：
-
-| 变量 | 用途 |
-| --- | --- |
-| `DASHSCOPE_API_KEY` | Qwen API Key |
-| `QWEN_CHAT_MODEL` | 模型名，例如 `qwen-plus`；优先于兼容旧名 `QWEN_MODEL` |
-| `DASHSCOPE_BASE_URL` | 可选，账户对应的 OpenAI-compatible Base URL |
-| `AMAP_API_KEY` | 高德 Web Service Key |
-| `VITE_AMAP_JS_KEY` | 高德 Web 端 JS API Key |
-| `VITE_AMAP_SECURITY_CODE` | 配套安全码，由后端地图代理使用 |
-| `RAIL_PROVIDER` | 填 `dataset`；Flight 默认 `dataset` |
-
-`.env.example` 只有空占位符；`.env` 与本地 SQLite 均被忽略。后端和 Vite 读取根目录配置，安全码不注入前端包。无凭据可选择页面 Fixture 模式体验合成数据。
-
-终端 1：统一启动 Backend、MCP 和两个 A2A 服务。
+参照 [配置说明](docs/local-development.md#环境变量与-mock-mode) 填写本地 `.env`，分别在两个终端启动：
 
 ```sh
+# 终端 1：Backend、MCP 和两个 A2A 服务
 ./scripts/dev_v1_2.sh
-```
 
-终端 2：
-
-```sh
+# 终端 2：Frontend
 npm --prefix frontend run dev
 ```
 
-访问 <http://127.0.0.1:5173>；API 文档 <http://127.0.0.1:8000/docs>。修改 `.env` 后重启服务。Demo 固定日期为 2026-10-10 起五天，超出预报范围会显示待确认。
+打开 **http://127.0.0.1:5173**。未配置 API 凭据时，可选择 Mock 模式体验。
 
-[完整开发与测试命令](docs/local-development.md) · [最终发布验证](docs/portfolio-release-report.md)
+## 数据与使用边界
 
-## 项目结构
+Qwen 与高德 API 已完成真实联调。铁路、航班使用固定数据集，不代表实时班次或余票；酒店推荐来自高德 POI，不提供实时房价、库存或预订。超出预报范围的天气及缺少证据的开放时间会显示待确认。
 
-```text
-backend/   Agent、协议、Provider、Harness、API 与测试
-frontend/  React UI 与浏览器回归
-evals/    固定任务、Baseline、原始结果及评测报告
-openspec/  规范与开发历史
-docs/     架构、验收、简历核验与截图
-scripts/   本地统一启动脚本
-```
+本项目为本地工程化 Demo，不提供支付、购票或商业生产部署。
 
-最终回归：**215 后端测试、1 前端单元测试、24 浏览器测试通过**；Ruff、构建与 OpenSpec strict validation 通过。MCP/A2A 集成测试使用真实本地协议、受控 Provider；LIVE 验收单独留证。本次发布未重新运行昂贵的 50+50 Benchmark。
+[演示指南](docs/demo-guide.md) · [开发与测试](docs/local-development.md) · [OpenSpec 开发记录](openspec/)
