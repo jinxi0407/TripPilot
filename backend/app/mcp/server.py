@@ -9,11 +9,16 @@ from app.harness.budget import ExecutionBudget
 from app.harness.runtime import RuntimeHarness
 from app.mcp.schemas import CONTRACTS, MCPReply
 from app.providers.amap import AmapProvider, MockAmapProvider
+from app.providers.flight import DatasetFlightProvider, RealFlightProvider
+from app.providers.hotel import hotel_provider
 from app.providers.rail import DatasetRailProvider, MockRailProvider
+from app.schemas.product import HotelCandidate, HotelQuery
 from app.schemas.travel import (
     POI,
     DistanceQuery,
     DistanceResult,
+    FlightOption,
+    FlightQuery,
     POIQuery,
     RailOption,
     RailQuery,
@@ -31,7 +36,13 @@ def create_server(settings: Settings | None = None) -> MCPServer:
 
     async def invoke(name, query, source_mode, simulated_rain=False):
         live = source_mode == "live" and not settings.protocol_fixture
-        if name == "search_rail":
+        if name == "search_flights":
+            provider = (
+                DatasetFlightProvider() if settings.flight_provider == "dataset" else RealFlightProvider()
+            )
+            state = provider.status
+            external = False
+        elif name == "search_rail":
             provider = DatasetRailProvider() if settings.rail_provider == "dataset" else MockRailProvider()
             state = "DATASET" if settings.rail_provider == "dataset" else "MOCK"
             external = False
@@ -46,6 +57,8 @@ def create_server(settings: Settings | None = None) -> MCPServer:
             )
             state = "PENDING" if isinstance(provider, AmapProvider) else "MOCK"
             external = isinstance(provider, AmapProvider)
+        if name == "search_hotels":
+            provider = hotel_provider(provider)
         runtime = RuntimeHarness(ExecutionBudget(policy=settings.runtime_policy))
         try:
             result = await runtime.invoke(
@@ -96,6 +109,20 @@ def create_server(settings: Settings | None = None) -> MCPServer:
     ) -> MCPReply[ToolResult[list[RouteOption]]]:
         """Plan local transit with typed route duration and provenance."""
         return await invoke("plan_route", query, source_mode)
+
+    @server.tool()
+    async def search_flights(
+        query: FlightQuery, source_mode: Literal["live", "fixture"] = "live"
+    ) -> MCPReply[ToolResult[list[FlightOption]]]:
+        """Search clearly labelled flight datasets; no live inventory or booking."""
+        return await invoke("search_flights", query, source_mode)
+
+    @server.tool()
+    async def search_hotels(
+        query: HotelQuery, source_mode: Literal["live", "fixture"] = "live"
+    ) -> MCPReply[ToolResult[list[HotelCandidate]]]:
+        """Find hotel POIs through the existing Amap client; prices and availability unknown."""
+        return await invoke("search_hotels", query, source_mode)
 
     return server
 

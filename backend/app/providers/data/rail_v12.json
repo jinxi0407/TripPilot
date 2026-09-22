@@ -1,0 +1,2778 @@
+{
+  "version": "rail_dataset_v12",
+  "description": "北京城市对合成扩展；不代表实际车次",
+  "options": [
+    {
+      "id": "rail-v12-北京-上海-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV100",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV101",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV102",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV103",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV104",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV105",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV106",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV107",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV108",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV109",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-10-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV110",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T08:00:00+08:00",
+          "arrival_time": "2026-10-10T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-10-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-10-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV111",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-10T10:00:00+08:00",
+          "arrival_time": "2026-10-10T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-10-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV112",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV113",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV114",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV115",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV116",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV117",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV118",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV119",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV120",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV121",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-11-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV122",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T08:00:00+08:00",
+          "arrival_time": "2026-10-11T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-11-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-11-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV123",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-11T10:00:00+08:00",
+          "arrival_time": "2026-10-11T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-11-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV124",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV125",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV126",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV127",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV128",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV129",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV130",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV131",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV132",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV133",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-12-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV134",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T08:00:00+08:00",
+          "arrival_time": "2026-10-12T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-12-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-12-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV135",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-12T10:00:00+08:00",
+          "arrival_time": "2026-10-12T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-12-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV136",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV137",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV138",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV139",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV140",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV141",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV142",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV143",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV144",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV145",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-13-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV146",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T08:00:00+08:00",
+          "arrival_time": "2026-10-13T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-13-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-13-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV147",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-13T10:00:00+08:00",
+          "arrival_time": "2026-10-13T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-13-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV148",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV149",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV150",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV151",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV152",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV153",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV154",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV155",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV156",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV157",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-14-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV158",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T08:00:00+08:00",
+          "arrival_time": "2026-10-14T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-14-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-14-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV159",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-14T10:00:00+08:00",
+          "arrival_time": "2026-10-14T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-14-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV160",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV161",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV162",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV163",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV164",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV165",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV166",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV167",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV168",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV169",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-15-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV170",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T08:00:00+08:00",
+          "arrival_time": "2026-10-15T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-15-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-15-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV171",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-15T10:00:00+08:00",
+          "arrival_time": "2026-10-15T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-15-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV172",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-上海-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV173",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-上海-2026-10-16-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV174",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T12:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-上海-北京-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV175",
+          "origin_station": {
+            "id": "sh-station",
+            "name": "上海虹桥站",
+            "city": "上海",
+            "coordinates": {
+              "longitude": 121.327,
+              "latitude": 31.2,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T14:30:00+08:00",
+          "duration": 270,
+          "price": 55000,
+          "evidence_id": "rail-v12-上海-北京-2026-10-16-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV176",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-杭州-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV177",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-杭州-2026-10-16-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV178",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T13:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-杭州-北京-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV179",
+          "origin_station": {
+            "id": "hz-station",
+            "name": "杭州东站",
+            "city": "杭州",
+            "coordinates": {
+              "longitude": 120.212,
+              "latitude": 30.291,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T15:00:00+08:00",
+          "duration": 300,
+          "price": 55000,
+          "evidence_id": "rail-v12-杭州-北京-2026-10-16-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV180",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-北京-南京-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV181",
+          "origin_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-北京-南京-2026-10-16-1"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-16-0",
+      "legs": [
+        {
+          "train_no": "DEMO-GV182",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T08:00:00+08:00",
+          "arrival_time": "2026-10-16T11:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-16-0"
+        }
+      ]
+    },
+    {
+      "id": "rail-v12-南京-北京-2026-10-16-1",
+      "legs": [
+        {
+          "train_no": "DEMO-GV183",
+          "origin_station": {
+            "id": "nj-station",
+            "name": "南京南站",
+            "city": "南京",
+            "coordinates": {
+              "longitude": 118.797,
+              "latitude": 31.969,
+              "system": "GCJ-02"
+            }
+          },
+          "destination_station": {
+            "id": "bj-station",
+            "name": "北京南站",
+            "city": "北京",
+            "coordinates": {
+              "longitude": 116.379,
+              "latitude": 39.865,
+              "system": "GCJ-02"
+            }
+          },
+          "departure_time": "2026-10-16T10:00:00+08:00",
+          "arrival_time": "2026-10-16T13:40:00+08:00",
+          "duration": 220,
+          "price": 55000,
+          "evidence_id": "rail-v12-南京-北京-2026-10-16-1"
+        }
+      ]
+    }
+  ]
+}

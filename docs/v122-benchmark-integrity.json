@@ -1,0 +1,15 @@
+{
+  "total_rows": 100,
+  "unique_per_system": {
+    "trippilot": 50,
+    "baseline": 50
+  },
+  "all_qwen_live": true,
+  "max_qwen_calls_per_case": 12,
+  "model_calls_total": 456,
+  "tokens_total": 2199331,
+  "configuration_equal_excluding_files": true,
+  "dataset_hash_unchanged": true,
+  "frozen_files_changed": [],
+  "graph_topology_unchanged": true
+}

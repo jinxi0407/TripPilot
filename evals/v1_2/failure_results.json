@@ -1,0 +1,898 @@
+{
+  "scenario_count": 10,
+  "model_mode": "controlled injection, not LIVE quality evaluation",
+  "detection": {
+    "passed": 10,
+    "total": 10,
+    "rate": 1.0
+  },
+  "graceful_recovery": {
+    "passed": 6,
+    "total": 10,
+    "rate": 0.6
+  },
+  "fallback_success": {
+    "passed": 4,
+    "total": 4,
+    "rate": 1.0
+  },
+  "safe_failure_count": 4,
+  "scenarios": [
+    {
+      "scenario": "mcp_offline",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": true,
+      "fallback_success": true,
+      "outcome": "recovered",
+      "codes": [
+        "PROVIDER_FAILURE",
+        "RETRY",
+        "MCP_FALLBACK"
+      ],
+      "status": "completed",
+      "runtime": {
+        "mcp": {
+          "state": "FALLBACK",
+          "tools": []
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 5.0,
+            "mcp_timeout_seconds": 1.0,
+            "health_timeout_seconds": 0.2,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 30,
+          "external_calls": 10,
+          "model_calls": 5,
+          "elapsed_ms": 237,
+          "failure_reason": "PROVIDER_FAILURE",
+          "events": [
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 115
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 116
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 183
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 183
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 183
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 184
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 188
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 188
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 225
+            },
+            {
+              "component": "MCP",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 225
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 225
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 229
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 231
+            }
+          ]
+        },
+        "memory": {
+          "state": "DISABLED"
+        }
+      }
+    },
+    {
+      "scenario": "mcp_timeout",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": true,
+      "fallback_success": true,
+      "outcome": "recovered",
+      "codes": [
+        "TIMEOUT",
+        "RETRY",
+        "MCP_FALLBACK"
+      ],
+      "status": "completed",
+      "runtime": {
+        "mcp": {
+          "state": "FALLBACK",
+          "tools": []
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 5.0,
+            "mcp_timeout_seconds": 0.05,
+            "health_timeout_seconds": 0.2,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 30,
+          "external_calls": 10,
+          "model_calls": 5,
+          "elapsed_ms": 599,
+          "failure_reason": "TIMEOUT",
+          "events": [
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 219
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 392
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 451
+            },
+            {
+              "component": "MCP",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 451
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 576
+            },
+            {
+              "component": "MCP",
+              "code": "TIMEOUT",
+              "status": "failed",
+              "elapsed_ms": 576
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 576
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 585
+            },
+            {
+              "component": "MCP",
+              "code": "MCP_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 592
+            }
+          ]
+        },
+        "memory": {
+          "state": "DISABLED"
+        }
+      }
+    },
+    {
+      "scenario": "a2a_transport_offline",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": true,
+      "fallback_success": true,
+      "outcome": "recovered",
+      "codes": [
+        "PROVIDER_FAILURE",
+        "RETRY",
+        "A2A_FALLBACK"
+      ],
+      "status": "completed",
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "FALLBACK",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 5.0,
+            "mcp_timeout_seconds": 1.0,
+            "health_timeout_seconds": 0.2,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 30,
+          "external_calls": 36,
+          "model_calls": 5,
+          "elapsed_ms": 565,
+          "failure_reason": "PROVIDER_FAILURE",
+          "events": [
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 32
+            },
+            {
+              "component": "A2A",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 32
+            },
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 107
+            },
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 107
+            },
+            {
+              "component": "A2A",
+              "code": "A2A_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 107
+            }
+          ]
+        },
+        "memory": {
+          "state": "DISABLED"
+        }
+      }
+    },
+    {
+      "scenario": "a2a_local_offline",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": true,
+      "fallback_success": true,
+      "outcome": "recovered",
+      "codes": [
+        "PROVIDER_FAILURE",
+        "RETRY",
+        "A2A_FALLBACK"
+      ],
+      "status": "completed",
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "FALLBACK"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 5.0,
+            "mcp_timeout_seconds": 1.0,
+            "health_timeout_seconds": 0.2,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 30,
+          "external_calls": 36,
+          "model_calls": 5,
+          "elapsed_ms": 513,
+          "failure_reason": "PROVIDER_FAILURE",
+          "events": [
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 111
+            },
+            {
+              "component": "A2A",
+              "code": "RETRY",
+              "status": "running",
+              "elapsed_ms": 111
+            },
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 174
+            },
+            {
+              "component": "A2A",
+              "code": "PROVIDER_FAILURE",
+              "status": "failed",
+              "elapsed_ms": 174
+            },
+            {
+              "component": "A2A",
+              "code": "A2A_FALLBACK",
+              "status": "running",
+              "elapsed_ms": 174
+            }
+          ]
+        },
+        "memory": {
+          "state": "DISABLED"
+        }
+      }
+    },
+    {
+      "scenario": "amap_timeout",
+      "detected": true,
+      "recovered": false,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "safe_failure",
+      "codes": [
+        "TIMEOUT",
+        "RETRY",
+        "TIMEOUT"
+      ],
+      "reason": "持续超时按设计保留数据缺口，不伪造LIVE或静默换Mock。"
+    },
+    {
+      "scenario": "qwen_transient_failure",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "recovered",
+      "codes": [
+        "PROVIDER_FAILURE",
+        "RETRY"
+      ],
+      "reason": "受控HTTP故障注入，真实共享Qwen adapter与Harness重试/结构修复；不声称本项为LIVE模型故障。"
+    },
+    {
+      "scenario": "invalid_structured_output",
+      "detected": true,
+      "recovered": true,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "recovered",
+      "codes": [
+        "INVALID_OUTPUT",
+        "RETRY"
+      ],
+      "reason": "受控HTTP故障注入，真实共享Qwen adapter与Harness重试/结构修复；不声称本项为LIVE模型故障。"
+    },
+    {
+      "scenario": "duplicate_tool_loop",
+      "detected": true,
+      "recovered": false,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "safe_failure",
+      "codes": [
+        "DUPLICATE_TOOL_CALL"
+      ],
+      "reason": "按设计拒绝继续执行，不把安全停止计为任务恢复。"
+    },
+    {
+      "scenario": "tool_budget_exceeded",
+      "detected": true,
+      "recovered": false,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "safe_failure",
+      "codes": [
+        "TOOL_BUDGET_EXCEEDED"
+      ],
+      "reason": "按设计拒绝继续执行，不把安全停止计为任务恢复。"
+    },
+    {
+      "scenario": "forbidden_tool_request",
+      "detected": true,
+      "recovered": false,
+      "fallback_attempted": false,
+      "fallback_success": null,
+      "outcome": "safe_failure",
+      "codes": [
+        "TOOL_NOT_ALLOWED"
+      ],
+      "reason": "按设计拒绝继续执行，不把安全停止计为任务恢复。"
+    }
+  ]
+}

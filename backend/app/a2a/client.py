@@ -77,7 +77,7 @@ class SpecialistClient:
                             for k in ["constraints", "city_schedule", "travel_dates", "evidence"]
                         }
                     ),
-                    source_mode="fixture" if ctx.model.name == "fixture" else "live",
+                    source_mode=ctx.source_mode,
                     simulated_rain=ctx.simulated_rain,
                     tool_allowance=tools,
                     external_allowance=external,
@@ -110,12 +110,14 @@ class SpecialistClient:
                     send, component="A2A", external=True, timeout=rt.policy.a2a_timeout_seconds, retries=0
                 )
             allowed = (
-                {"transport_options", "evidence"}
+                {"transport_options", "flight_options", "transport_comparisons", "evidence"}
                 if role == "transport"
-                else {"poi_candidates", "weather_data", "route_data", "evidence"}
+                else {"poi_candidates", "weather_data", "route_data", "accommodation", "evidence"}
             )
             actual = {k for k in type(reply.delta).model_fields if getattr(reply.delta, k) is not None}
-            if not actual <= allowed or set(reply.providers) != {"rail" if role == "transport" else "amap"}:
+            if not actual <= allowed or set(reply.providers) != (
+                {"rail", "flight"} if role == "transport" else {"amap", "hotel"}
+            ):
                 raise ControlledError("INVALID_OUTPUT")
             ctx.budget.settle(lease, reply.tool_calls, reply.external_calls)
             self.states[role] = "ONLINE"

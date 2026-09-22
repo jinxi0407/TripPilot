@@ -1,0 +1,19 @@
+{
+  "files_scanned": 259,
+  "credential_matches": [],
+  "log_credential_matches": [],
+  "private_bundle_matches": [],
+  "env_ignored": true,
+  "env_tracked": false,
+  "staged_files": [],
+  "backend_log_error_counts": {
+    "backend.log": 0,
+    "mcp.log": 0,
+    "transport.log": 0,
+    "local.log": 0
+  },
+  "protected_changed": [],
+  "branch": "feat/v1.2-travel-product-benchmark",
+  "head": "b66dc59",
+  "passed": true
+}

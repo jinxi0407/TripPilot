@@ -139,7 +139,9 @@ class MockAmapProvider:
 
 
 class AmapProvider:
-    def __init__(self, key: str, transport: httpx.AsyncBaseTransport | None = None, timeout: float = 10) -> None:
+    def __init__(
+        self, key: str, transport: httpx.AsyncBaseTransport | None = None, timeout: float = 10
+    ) -> None:
         self._key = key
         self.transport = transport
         self.timeout = timeout
@@ -331,6 +333,12 @@ class AmapProvider:
                                 condition=condition,
                                 severity=severity,
                                 temperature=str(cast.get("daytemp", "")),
+                                min_temperature=float(cast["nighttemp"])
+                                if cast.get("nighttemp") not in (None, "", [])
+                                else None,
+                                max_temperature=float(cast["daytemp"])
+                                if cast.get("daytemp") not in (None, "", [])
+                                else None,
                                 evidence_id=eid,
                             )
                         )

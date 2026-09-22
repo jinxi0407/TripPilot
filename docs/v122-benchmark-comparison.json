@@ -1,0 +1,198 @@
+{
+  "versions": {
+    "v1.2": "historical complete",
+    "v1.2.1": "not run",
+    "v1.2.2": "complete"
+  },
+  "executed": {
+    "trippilot": 50,
+    "baseline": 50
+  },
+  "declines": [
+    {
+      "system": "baseline",
+      "metric": "constraint_satisfaction",
+      "before": 0.8793103448275862,
+      "after": 0.8318965517241379,
+      "percentage_point_change": -4.741379310344829
+    },
+    {
+      "system": "baseline",
+      "metric": "tool_exact_match",
+      "before": 0.5,
+      "after": 0.46,
+      "percentage_point_change": -3.9999999999999982
+    },
+    {
+      "system": "baseline",
+      "metric": "tool_recall",
+      "before": 0.8538812785388128,
+      "after": 0.8264840182648402,
+      "percentage_point_change": -2.73972602739726
+    },
+    {
+      "system": "baseline",
+      "metric": "tool_f1",
+      "before": 0.9012048192771084,
+      "after": 0.900497512437811,
+      "percentage_point_change": -0.0707306839297428
+    },
+    {
+      "system": "baseline",
+      "metric": "preference_adherence",
+      "before": 0.7142857142857143,
+      "after": 0.5714285714285714,
+      "percentage_point_change": -14.28571428571429
+    },
+    {
+      "system": "baseline",
+      "metric": "memory_override",
+      "before": 0.6666666666666666,
+      "after": 0.3333333333333333,
+      "percentage_point_change": -33.33333333333333
+    },
+    {
+      "system": "baseline",
+      "metric": "accommodation_validity",
+      "before": 0.8,
+      "after": 0.7,
+      "percentage_point_change": -10.000000000000009
+    },
+    {
+      "system": "baseline",
+      "metric": "transport_feasibility",
+      "before": 0.6571428571428571,
+      "after": 0.6285714285714286,
+      "percentage_point_change": -2.857142857142858
+    }
+  ],
+  "case_regressions": {
+    "trippilot": [
+      "B02"
+    ],
+    "baseline": [
+      "A01",
+      "A06",
+      "B02",
+      "C02",
+      "E02"
+    ]
+  },
+  "strict_replanning_opportunities": [
+    {
+      "case_id": "B01",
+      "success": false,
+      "history": [
+        {
+          "pass": 0,
+          "replanning_requested": true,
+          "blocking_types": [
+            "BUDGET_EXCEEDED"
+          ]
+        },
+        {
+          "pass": 1,
+          "replanning_requested": true,
+          "blocking_types": [
+            "BUDGET_EXCEEDED"
+          ]
+        },
+        {
+          "pass": 2,
+          "replanning_requested": false,
+          "blocking_types": [
+            "BUDGET_EXCEEDED"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "B05",
+      "success": false,
+      "history": [
+        {
+          "pass": 0,
+          "replanning_requested": true,
+          "blocking_types": [
+            "ARRIVAL_DEADLINE"
+          ]
+        },
+        {
+          "pass": 1,
+          "replanning_requested": false,
+          "blocking_types": [
+            "ARRIVAL_DEADLINE"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "success": true,
+      "history": [
+        {
+          "pass": 0,
+          "replanning_requested": true,
+          "blocking_types": [
+            "WEATHER_CONFLICT"
+          ]
+        },
+        {
+          "pass": 1,
+          "replanning_requested": false,
+          "blocking_types": []
+        }
+      ]
+    }
+  ],
+  "strict_replanning_na": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "B02",
+    "B03",
+    "B04",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "C01",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10"
+  ],
+  "signature": "9b19cc7704bb665656216d2b4bdc7ff9fb98d6078001354624f3fbe8f1539579"
+}

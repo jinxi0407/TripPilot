@@ -1,0 +1,32 @@
+{
+  "purpose": "修复前预检/中间运行的真实消耗，不计入最终模型比较，未挑选替换正式结果。",
+  "runs": [
+    {
+      "archive": ".tooling/v12-pilot",
+      "cases": 2,
+      "qwen_calls": 11,
+      "reported_tokens": 66144,
+      "usage_missing_calls": 2,
+      "included_in_final_metrics": false
+    },
+    {
+      "archive": ".tooling/v12-pre-baseline-contract-fix",
+      "cases": 58,
+      "qwen_calls": 239,
+      "reported_tokens": 1336086,
+      "usage_missing_calls": 0,
+      "included_in_final_metrics": false
+    },
+    {
+      "archive": ".tooling/v12-pre-session-fix",
+      "cases": 29,
+      "qwen_calls": 126,
+      "reported_tokens": 794703,
+      "usage_missing_calls": 0,
+      "included_in_final_metrics": false
+    }
+  ],
+  "total_qwen_calls": 376,
+  "total_reported_tokens": 2196933,
+  "limitation": "仅统计已落盘案例；进程中止时尚未落盘的请求可能已有额外消耗，未核对服务账单，不能将此当作总账单用量。"
+}

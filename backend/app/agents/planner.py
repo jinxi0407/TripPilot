@@ -70,6 +70,10 @@ async def plan(state: AgentState, context: RunContext) -> dict:
                         "city_schedule": state["city_schedule"],
                         "tools": context.registry.schemas("Travel Planner"),
                         "pois": [p.model_dump(mode="json") for p in working.get("poi_candidates", [])],
+                        "flights": [f.model_dump(mode="json") for f in working.get("flight_options", [])],
+                        "transport_comparisons": [
+                            c.model_dump(mode="json") for c in working.get("transport_comparisons", [])
+                        ],
                         "rails": [r.model_dump(mode="json") for r in working.get("transport_options", [])],
                         "weather": [w.model_dump(mode="json") for w in working.get("weather_data", [])],
                         "routes": [r.model_dump(mode="json") for r in working.get("route_data", [])],
@@ -84,7 +88,7 @@ async def plan(state: AgentState, context: RunContext) -> dict:
                             and any(w.severity == "severe" for w in working.get("weather_data", [])),
                             "rule": "暴雨修复时，每个受影响日期都只能使用室内候选。安全优先于景点去重：候选有限时允许同城多天再次参观同一室内场馆，不能换回户外景点。遵循 suggested_selections。",
                         },
-                        "instruction": "先检查 missing_routes：非空则本步必须返回 kind=action，复制其中第一个查询的完整参数调用 amap_route，不要返回 final，不要重复已有路线。missing_routes 为空时返回 kind=final。优先采用 suggested_selections，它已按真实交通安排轻松节奏；跨城市移动当天只安排一个活动，避免超过市内交通120分钟。完成时只引用已有 POI/rail ID，不得遗漏城市或铁路，每天至少一个活动。Critic 反馈严重天气时只能选 environment=indoor。未知开放时间和预报不能靠重复查询解决。预算单位为分。",
+                        "instruction": "先检查 missing_routes：非空则本步必须返回 kind=action，复制其中第一个查询的完整参数调用 amap_route，不要返回 final，不要重复已有路线。missing_routes 为空时返回 kind=final。优先采用 suggested_selections，完整慢游日通常2–4项、紧凑日3–5项（受max_attractions上限约束），转场日1–3项。按实际交通、游览耗时、餐食缓冲与开放时间裁减，不能机械一天一个景点。夜景偏好优先在合适城市安排夜间街区。不得新增没有工具证据的POI或天气。完成时只引用已有 POI/rail ID，不得遗漏城市或铁路，每天至少一个活动。Critic 反馈严重天气时只能选 environment=indoor。未知开放时间和预报不能靠重复查询解决。预算单位为分。",
                     },
                     PlannerDecision,
                     context.budget,
@@ -143,7 +147,13 @@ async def plan(state: AgentState, context: RunContext) -> dict:
         context.runtime.record("ReAct", stop_reason)
         draft.warnings.append("规划触及执行限制，当前展示可用草案，部分信息可能未完成。")
         context.emit("Travel Planner", "failed", "已触发执行保护，保留当前草案进行校验")
+    from app.services.accommodation import reselect_for_itinerary
+
+    accommodation = reselect_for_itinerary(
+        working.get("accommodation", []), draft, state["constraints"].accommodation_preferences
+    )
     return {
+        "accommodation": accommodation,
         **{
             field: working.get(field, [])
             for field in ("route_data", "poi_candidates", "transport_options", "weather_data")

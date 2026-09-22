@@ -1,0 +1,2784 @@
+{
+  "session_id": "9e84809a-637a-4969-aa8b-86df5c54dd24",
+  "memory": {
+    "state": "ACTIVE",
+    "long_term_loaded": false,
+    "session_loaded": false,
+    "preferences": {
+      "travel_pace": "relaxed",
+      "interests": [
+        "history",
+        "night_view"
+      ]
+    }
+  },
+  "accommodation": [
+    {
+      "city": "杭州",
+      "days": [
+        1,
+        2
+      ],
+      "recommended_area": "杭州西湖风景名胜区 / 浙江自然博物院周边活动区域",
+      "reasons": [
+        "按当天景点坐标中心检索，优先减少往返距离。",
+        "综合酒店至主要景点及铁路站点的可用路线。"
+      ],
+      "candidates": [
+        {
+          "id": "B023B02UB8",
+          "name": "杭州新新饭店",
+          "city": "杭州",
+          "coordinates": {
+            "longitude": 120.14386,
+            "latitude": 30.255994,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "杭州新新饭店",
+          "address": "北山路58号(紧邻西湖)",
+          "district": "西湖区",
+          "source": "amap_live",
+          "evidence_id": "hotel-d16b3a92f921",
+          "distance_meters": 700,
+          "distance_kind": "provider",
+          "route": {
+            "id": "B023B02UB8:B023B13L9M:transit",
+            "origin": {
+              "id": "B023B02UB8",
+              "name": "杭州新新饭店",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.14386,
+                "latitude": 30.255994,
+                "system": "GCJ-02"
+              }
+            },
+            "destination": {
+              "id": "B023B13L9M",
+              "name": "杭州西湖风景名胜区",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.121358,
+                "latitude": 30.222692,
+                "system": "GCJ-02"
+              }
+            },
+            "mode": "transit",
+            "duration": 56,
+            "distance": 8549,
+            "price": 200,
+            "evidence_id": "route-B023B02UB8:B023B13L9M:transit"
+          },
+          "station_route": {
+            "id": "B023B02UB8:hz-station:transit",
+            "origin": {
+              "id": "B023B02UB8",
+              "name": "杭州新新饭店",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.14386,
+                "latitude": 30.255994,
+                "system": "GCJ-02"
+              }
+            },
+            "destination": {
+              "id": "hz-station",
+              "name": "杭州东站",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.212,
+                "latitude": 30.291,
+                "system": "GCJ-02"
+              }
+            },
+            "mode": "transit",
+            "duration": 124,
+            "distance": 9994,
+            "price": 650,
+            "evidence_id": "route-B023B02UB8:hz-station:transit"
+          },
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B0LBR5HTNL",
+          "name": "杭州香格里拉饭店·水知心居",
+          "city": "杭州",
+          "coordinates": {
+            "longitude": 120.1381,
+            "latitude": 30.253559,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "杭州香格里拉饭店·水知心居",
+          "address": "北山街78号",
+          "district": "西湖区",
+          "source": "amap_live",
+          "evidence_id": "hotel-d16b3a92f921",
+          "distance_meters": 631,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B023B01F50",
+          "name": "杭州香格里拉饭店",
+          "city": "杭州",
+          "coordinates": {
+            "longitude": 120.137602,
+            "latitude": 30.253052,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "杭州香格里拉饭店",
+          "address": "北山街78号",
+          "district": "西湖区",
+          "source": "amap_live",
+          "evidence_id": "hotel-d16b3a92f921",
+          "distance_meters": 633,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        }
+      ],
+      "selected_hotel_id": "B0LBR5HTNL",
+      "main_poi_ids": [
+        "B023B13L9M",
+        "B023B15DKJ"
+      ],
+      "station_id": "hz-station",
+      "reselected": true,
+      "disclaimer": "酒店候选来自 POI；实时房价和房态需在 OTA 平台确认，未接入预订。"
+    },
+    {
+      "city": "南京",
+      "days": [
+        3,
+        4
+      ],
+      "recommended_area": "南京夫子庙 / 南京博物院周边活动区域",
+      "reasons": [
+        "按当天景点坐标中心检索，优先减少往返距离。",
+        "综合酒店至主要景点及铁路站点的可用路线。"
+      ],
+      "candidates": [
+        {
+          "id": "B0HR6K7BSZ",
+          "name": "南京江楫坞民宿(瑞金路分店)",
+          "city": "南京",
+          "coordinates": {
+            "longitude": 118.805081,
+            "latitude": 32.031121,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "南京江楫坞民宿(瑞金路分店)",
+          "address": "瑞金路二号四号小区",
+          "district": "秦淮区",
+          "source": "amap_live",
+          "evidence_id": "hotel-1dbe0c03de3b",
+          "distance_meters": 184,
+          "distance_kind": "provider",
+          "route": {
+            "id": "B0HR6K7BSZ:B00190ANHZ:transit",
+            "origin": {
+              "id": "B0HR6K7BSZ",
+              "name": "南京江楫坞民宿(瑞金路分店)",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.805081,
+                "latitude": 32.031121,
+                "system": "GCJ-02"
+              }
+            },
+            "destination": {
+              "id": "B00190ANHZ",
+              "name": "南京夫子庙",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.788899,
+                "latitude": 32.02066,
+                "system": "GCJ-02"
+              }
+            },
+            "mode": "transit",
+            "duration": 31,
+            "distance": 3101,
+            "price": 200,
+            "evidence_id": "route-B0HR6K7BSZ:B00190ANHZ:transit"
+          },
+          "station_route": {
+            "id": "B0HR6K7BSZ:nj-station:transit",
+            "origin": {
+              "id": "B0HR6K7BSZ",
+              "name": "南京江楫坞民宿(瑞金路分店)",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.805081,
+                "latitude": 32.031121,
+                "system": "GCJ-02"
+              }
+            },
+            "destination": {
+              "id": "nj-station",
+              "name": "南京南站",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.797,
+                "latitude": 31.969,
+                "system": "GCJ-02"
+              }
+            },
+            "mode": "transit",
+            "duration": 48,
+            "distance": 9730,
+            "price": 300,
+            "evidence_id": "route-B0HR6K7BSZ:nj-station:transit"
+          },
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B0KRAS3LSK",
+          "name": "古南都逸居酒店(南京博物院瑞金路店)",
+          "city": "南京",
+          "coordinates": {
+            "longitude": 118.809635,
+            "latitude": 32.031414,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "古南都逸居酒店(南京博物院瑞金路店)",
+          "address": "解放南路68-9号",
+          "district": "秦淮区",
+          "source": "amap_live",
+          "evidence_id": "hotel-1dbe0c03de3b",
+          "distance_meters": 261,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B0G3D72ATA",
+          "name": "好季酒店(南京瑞金路东部战区总医院店)",
+          "city": "南京",
+          "coordinates": {
+            "longitude": 118.808783,
+            "latitude": 32.031953,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "好季酒店(南京瑞金路东部战区总医院店)",
+          "address": "瑞金路8号小区北门旁",
+          "district": "秦淮区",
+          "source": "amap_live",
+          "evidence_id": "hotel-1dbe0c03de3b",
+          "distance_meters": 217,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        }
+      ],
+      "selected_hotel_id": "B0KRAS3LSK",
+      "main_poi_ids": [
+        "B00190ANHZ",
+        "B001907TGR"
+      ],
+      "station_id": "nj-station",
+      "reselected": true,
+      "disclaimer": "酒店候选来自 POI；实时房价和房态需在 OTA 平台确认，未接入预订。"
+    },
+    {
+      "city": "苏州",
+      "days": [
+        5
+      ],
+      "recommended_area": "拙政园周边活动区域",
+      "reasons": [
+        "按当天景点坐标中心检索，优先减少往返距离。",
+        "综合酒店至主要景点及铁路站点的可用路线。"
+      ],
+      "candidates": [
+        {
+          "id": "B0K2LSE8CD",
+          "name": "苏州安拙·雅舍民宿(平江路拙政园苏博地铁站店)",
+          "city": "苏州",
+          "coordinates": {
+            "longitude": 120.62785,
+            "latitude": 31.325447,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "苏州安拙·雅舍民宿(平江路拙政园苏博地铁站店)",
+          "address": "渔郎桥浜16号8栋",
+          "district": "姑苏区",
+          "source": "amap_live",
+          "evidence_id": "hotel-df9eb8dc3a61",
+          "distance_meters": 218,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B0JB9PVLQU",
+          "name": "拙政书苑民宿",
+          "city": "苏州",
+          "coordinates": {
+            "longitude": 120.628753,
+            "latitude": 31.322318,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "拙政书苑民宿",
+          "address": "平江街道焦言浜22号(靠近狮子林平江路博物馆)",
+          "district": "姑苏区",
+          "source": "amap_live",
+          "evidence_id": "hotel-df9eb8dc3a61",
+          "distance_meters": 141,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": {
+            "id": "B0JB9PVLQU:sz-station:transit",
+            "origin": {
+              "id": "B0JB9PVLQU",
+              "name": "拙政书苑民宿",
+              "city": "苏州",
+              "coordinates": {
+                "longitude": 120.628753,
+                "latitude": 31.322318,
+                "system": "GCJ-02"
+              }
+            },
+            "destination": {
+              "id": "sz-station",
+              "name": "苏州站",
+              "city": "苏州",
+              "coordinates": {
+                "longitude": 120.61,
+                "latitude": 31.326,
+                "system": "GCJ-02"
+              }
+            },
+            "mode": "transit",
+            "duration": 51,
+            "distance": 8111,
+            "price": 200,
+            "evidence_id": "route-B0JB9PVLQU:sz-station:transit"
+          },
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        },
+        {
+          "id": "B0KBXYGE6I",
+          "name": "影宿(苏州拙政园平江路店)",
+          "city": "苏州",
+          "coordinates": {
+            "longitude": 120.628765,
+            "latitude": 31.321833,
+            "system": "GCJ-02"
+          },
+          "hotel_name": "影宿(苏州拙政园平江路店)",
+          "address": "平江街道潘儒巷28号",
+          "district": "姑苏区",
+          "source": "amap_live",
+          "evidence_id": "hotel-df9eb8dc3a61",
+          "distance_meters": 194,
+          "distance_kind": "provider",
+          "route": null,
+          "station_route": null,
+          "metro_access": "unknown",
+          "realtime_price": null,
+          "availability_status": "unknown"
+        }
+      ],
+      "selected_hotel_id": "B0JB9PVLQU",
+      "main_poi_ids": [
+        "B020001R2Q"
+      ],
+      "station_id": "sz-station",
+      "reselected": true,
+      "disclaimer": "酒店候选来自 POI；实时房价和房态需在 OTA 平台确认，未接入预订。"
+    }
+  ],
+  "transport_comparisons": [
+    {
+      "origin": "上海",
+      "destination": "杭州",
+      "day": 1,
+      "candidates": [
+        {
+          "id": "rail-上海-杭州-2026-10-10-0",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 7300,
+          "transfers": 0,
+          "departure": "2026-10-10T10:20:00+08:00",
+          "arrival": "2026-10-10T11:20:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 60,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 165,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 172.3,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        },
+        {
+          "id": "rail-上海-杭州-2026-10-10-1",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 7300,
+          "transfers": 0,
+          "departure": "2026-10-10T12:20:00+08:00",
+          "arrival": "2026-10-10T13:20:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 60,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 165,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 172.3,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        }
+      ],
+      "recommended_id": "rail-上海-杭州-2026-10-10-0",
+      "recommendation": "推荐候选：高铁；综合门到门估计、费用与偏好排序，接驳仍需核对。"
+    },
+    {
+      "origin": "杭州",
+      "destination": "南京",
+      "day": 3,
+      "candidates": [
+        {
+          "id": "rail-杭州-南京-2026-10-12-0",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 11700,
+          "transfers": 0,
+          "departure": "2026-10-12T10:20:00+08:00",
+          "arrival": "2026-10-12T12:00:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 100,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 205,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 216.7,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        },
+        {
+          "id": "rail-杭州-南京-2026-10-12-1",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 11700,
+          "transfers": 0,
+          "departure": "2026-10-12T12:20:00+08:00",
+          "arrival": "2026-10-12T14:00:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 100,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 205,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 216.7,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        }
+      ],
+      "recommended_id": "rail-杭州-南京-2026-10-12-0",
+      "recommendation": "推荐候选：高铁；综合门到门估计、费用与偏好排序，接驳仍需核对。"
+    },
+    {
+      "origin": "南京",
+      "destination": "苏州",
+      "day": 5,
+      "candidates": [
+        {
+          "id": "rail-南京-苏州-2026-10-14-0",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 10000,
+          "transfers": 0,
+          "departure": "2026-10-14T10:20:00+08:00",
+          "arrival": "2026-10-14T11:40:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 80,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 185,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 195,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        },
+        {
+          "id": "rail-南京-苏州-2026-10-14-1",
+          "mode": "rail",
+          "provider_mode": "DATASET",
+          "source": "DatasetRailProvider",
+          "cost": 10000,
+          "transfers": 0,
+          "departure": "2026-10-14T12:20:00+08:00",
+          "arrival": "2026-10-14T13:40:00+08:00",
+          "estimate": {
+            "local_access_minutes": 30,
+            "recommended_buffer_minutes": 45,
+            "scheduled_duration_minutes": 80,
+            "arrival_transfer_minutes": 30,
+            "estimated_total_minutes": 185,
+            "access_source": "estimated",
+            "assumptions": [
+              "市中心出发/抵达的通用估计；未提供住址，需按真实地址核对接驳。"
+            ]
+          },
+          "score": 195,
+          "reasons": [
+            "铁路接驳/缓冲已纳入门到门估计"
+          ]
+        }
+      ],
+      "recommended_id": "rail-南京-苏州-2026-10-14-0",
+      "recommendation": "推荐候选：高铁；综合门到门估计、费用与偏好排序，接驳仍需核对。"
+    }
+  ],
+  "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+  "task_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+  "status": "partial",
+  "revision": 1,
+  "itinerary_version": 1,
+  "parent_id": null,
+  "mode": "qwen",
+  "provider_status": {
+    "qwen": {
+      "state": "LIVE",
+      "model": "qwen-plus",
+      "error_code": null
+    },
+    "amap": {
+      "state": "LIVE",
+      "model": null,
+      "error_code": null
+    },
+    "rail": {
+      "state": "DATASET",
+      "model": null,
+      "error_code": null
+    },
+    "flight": {
+      "state": "DATASET",
+      "model": null,
+      "error_code": null
+    },
+    "hotel": {
+      "state": "LIVE",
+      "model": null,
+      "error_code": null
+    }
+  },
+  "runtime_status": {
+    "mcp": {
+      "state": "CONNECTED",
+      "tools": [
+        "calculate_distance",
+        "get_weather",
+        "plan_route",
+        "search_flights",
+        "search_hotels",
+        "search_poi",
+        "search_rail"
+      ]
+    },
+    "a2a": {
+      "transport": "ONLINE",
+      "local": "ONLINE"
+    },
+    "harness": {
+      "state": "ACTIVE",
+      "policy": {
+        "max_react_steps": 8,
+        "max_replanning_attempts": 2,
+        "max_tool_calls": 60,
+        "max_model_calls": 30,
+        "max_external_calls": 160,
+        "total_timeout_seconds": 180,
+        "react_timeout_seconds": 90,
+        "tool_timeout_seconds": 10,
+        "model_timeout_seconds": 30,
+        "a2a_timeout_seconds": 60,
+        "mcp_timeout_seconds": 15,
+        "health_timeout_seconds": 3,
+        "max_retries": 1,
+        "duplicate_call_threshold": 2,
+        "transport_tool_allowance": 6,
+        "local_tool_allowance": 42
+      },
+      "tool_calls": 39,
+      "external_calls": 83,
+      "model_calls": 4,
+      "elapsed_ms": 37253,
+      "failure_reason": null,
+      "events": []
+    },
+    "memory": {
+      "state": "ACTIVE",
+      "long_term_loaded": false,
+      "session_loaded": false
+    }
+  },
+  "simulated_rain": false,
+  "poll_url": "/api/v1/plans/7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+  "constraints": {
+    "travel_pace": "relaxed",
+    "transport_preference": "no_preference",
+    "transport_mode": null,
+    "avoid_early_departure": false,
+    "walking_tolerance": "medium",
+    "accommodation_preferences": [],
+    "indoor_days": [],
+    "recommend_hotels": true,
+    "compare_transport": true,
+    "arrival_deadline": null,
+    "origin": "上海",
+    "destinations": [
+      "杭州",
+      "南京",
+      "苏州"
+    ],
+    "start_date": "2026-10-10",
+    "end_date": null,
+    "days": 5,
+    "total_budget": 400000,
+    "preferences": [
+      "历史",
+      "夜景"
+    ],
+    "passengers": 1,
+    "max_attractions": 2,
+    "max_local_minutes": 120,
+    "station_buffer": 45,
+    "transfer_buffer": 30,
+    "activity_start": "09:00:00",
+    "activity_end": "21:30:00",
+    "max_walk_minutes": null,
+    "assumptions": [
+      "默认 1 位成人；费用为人民币估算；不自动添加返程。",
+      "一键演示采用 2026-10-10 起的合成日期与证据。"
+    ]
+  },
+  "questions": [],
+  "itinerary": {
+    "version": 1,
+    "title": "江南慢行 · 城市之间",
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-10-10",
+        "city": "杭州",
+        "origin_city": "上海",
+        "rail": {
+          "id": "rail-上海-杭州-2026-10-10-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G120",
+              "origin_station": {
+                "id": "sh-station",
+                "name": "上海虹桥站",
+                "city": "上海",
+                "coordinates": {
+                  "longitude": 121.327,
+                  "latitude": 31.2,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-10T10:20:00+08:00",
+              "arrival_time": "2026-10-10T11:20:00+08:00",
+              "duration": 60,
+              "train_type": "高铁",
+              "price": 7300,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-上海-杭州-2026-10-10"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "flight": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B023B13L9M",
+              "name": "杭州西湖风景名胜区",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.121358,
+                "latitude": 30.222692,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "unknown",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-杭州-attraction-af85e1b5",
+              "tags": []
+            },
+            "start": "2026-10-10T12:46:00+08:00",
+            "end": "2026-10-10T14:16:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "hz-station:B023B13L9M:transit",
+              "origin": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B023B13L9M",
+                "name": "杭州西湖风景名胜区",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.121358,
+                  "latitude": 30.222692,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 71,
+              "distance": 17933,
+              "price": 600,
+              "evidence_id": "route-hz-station:B023B13L9M:transit"
+            },
+            "departure": "2026-10-10T11:35:00+08:00",
+            "arrival": "2026-10-10T12:46:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "0-rail-0",
+            "category": "inter_city",
+            "amount": 7300,
+            "label": "上海虹桥站 → 杭州东站",
+            "source": "dataset"
+          },
+          {
+            "id": "0-ticket-B023B13L9M",
+            "category": "tickets",
+            "amount": null,
+            "label": "杭州西湖风景名胜区",
+            "source": "live"
+          },
+          {
+            "id": "0-local-0",
+            "category": "local_transport",
+            "amount": 600,
+            "label": "杭州东站 → 杭州西湖风景名胜区",
+            "source": "live"
+          },
+          {
+            "id": "0-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "0-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "0-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 40900
+      },
+      {
+        "day": 2,
+        "date": "2026-10-11",
+        "city": "杭州",
+        "origin_city": "杭州",
+        "rail": null,
+        "flight": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B023B15DKJ",
+              "name": "浙江自然博物院",
+              "city": "杭州",
+              "coordinates": {
+                "longitude": 120.164581,
+                "latitude": 30.276814,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-杭州-attraction-b69153f0",
+              "tags": []
+            },
+            "start": "2026-10-11T09:00:00+08:00",
+            "end": "2026-10-11T10:30:00+08:00"
+          }
+        ],
+        "local_legs": [],
+        "costs": [
+          {
+            "id": "1-ticket-B023B15DKJ",
+            "category": "tickets",
+            "amount": null,
+            "label": "浙江自然博物院",
+            "source": "live"
+          },
+          {
+            "id": "1-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "1-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "1-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 33000
+      },
+      {
+        "day": 3,
+        "date": "2026-10-12",
+        "city": "南京",
+        "origin_city": "杭州",
+        "rail": {
+          "id": "rail-杭州-南京-2026-10-12-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G230",
+              "origin_station": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-12T10:20:00+08:00",
+              "arrival_time": "2026-10-12T12:00:00+08:00",
+              "duration": 100,
+              "train_type": "高铁",
+              "price": 11700,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-杭州-南京-2026-10-12"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "flight": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B00190ANHZ",
+              "name": "南京夫子庙",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.788899,
+                "latitude": 32.02066,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "unknown",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-南京-attraction-d465c12e",
+              "tags": []
+            },
+            "start": "2026-10-12T12:50:00+08:00",
+            "end": "2026-10-12T14:20:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "B023B15DKJ:hz-station:transit",
+              "origin": {
+                "id": "B023B15DKJ",
+                "name": "浙江自然博物院",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.164581,
+                  "latitude": 30.276814,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "hz-station",
+                "name": "杭州东站",
+                "city": "杭州",
+                "coordinates": {
+                  "longitude": 120.212,
+                  "latitude": 30.291,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 20,
+              "distance": 5804,
+              "price": 300,
+              "evidence_id": "route-B023B15DKJ:hz-station:transit"
+            },
+            "departure": "2026-10-12T09:00:00+08:00",
+            "arrival": "2026-10-12T09:20:00+08:00"
+          },
+          {
+            "route": {
+              "id": "nj-station:B00190ANHZ:transit",
+              "origin": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B00190ANHZ",
+                "name": "南京夫子庙",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.788899,
+                  "latitude": 32.02066,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 35,
+              "distance": 7739,
+              "price": 300,
+              "evidence_id": "route-nj-station:B00190ANHZ:transit"
+            },
+            "departure": "2026-10-12T12:15:00+08:00",
+            "arrival": "2026-10-12T12:50:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "2-rail-0",
+            "category": "inter_city",
+            "amount": 11700,
+            "label": "杭州东站 → 南京南站",
+            "source": "dataset"
+          },
+          {
+            "id": "2-ticket-B00190ANHZ",
+            "category": "tickets",
+            "amount": null,
+            "label": "南京夫子庙",
+            "source": "live"
+          },
+          {
+            "id": "2-local-0",
+            "category": "local_transport",
+            "amount": 300,
+            "label": "浙江自然博物院 → 杭州东站",
+            "source": "live"
+          },
+          {
+            "id": "2-local-1",
+            "category": "local_transport",
+            "amount": 300,
+            "label": "南京南站 → 南京夫子庙",
+            "source": "live"
+          },
+          {
+            "id": "2-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "2-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "2-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 45300
+      },
+      {
+        "day": 4,
+        "date": "2026-10-13",
+        "city": "南京",
+        "origin_city": "南京",
+        "rail": null,
+        "flight": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B001907TGR",
+              "name": "南京博物院",
+              "city": "南京",
+              "coordinates": {
+                "longitude": 118.825064,
+                "latitude": 32.040802,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "indoor",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-南京-attraction-5b6fa541",
+              "tags": []
+            },
+            "start": "2026-10-13T09:00:00+08:00",
+            "end": "2026-10-13T10:30:00+08:00"
+          }
+        ],
+        "local_legs": [],
+        "costs": [
+          {
+            "id": "3-ticket-B001907TGR",
+            "category": "tickets",
+            "amount": null,
+            "label": "南京博物院",
+            "source": "live"
+          },
+          {
+            "id": "3-accommodation",
+            "category": "accommodation",
+            "amount": 20000,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "3-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "3-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 33000
+      },
+      {
+        "day": 5,
+        "date": "2026-10-14",
+        "city": "苏州",
+        "origin_city": "南京",
+        "rail": {
+          "id": "rail-南京-苏州-2026-10-14-0",
+          "legs": [
+            {
+              "train_no": "DEMO-G340",
+              "origin_station": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination_station": {
+                "id": "sz-station",
+                "name": "苏州站",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.61,
+                  "latitude": 31.326,
+                  "system": "GCJ-02"
+                }
+              },
+              "departure_time": "2026-10-14T10:20:00+08:00",
+              "arrival_time": "2026-10-14T11:40:00+08:00",
+              "duration": 80,
+              "train_type": "高铁",
+              "price": 10000,
+              "availability": "unknown",
+              "seat_class": "二等座",
+              "evidence_id": "rail-南京-苏州-2026-10-14"
+            }
+          ],
+          "direct": true,
+          "transfer_minutes": []
+        },
+        "flight": null,
+        "activities": [
+          {
+            "poi": {
+              "id": "B020001R2Q",
+              "name": "拙政园",
+              "city": "苏州",
+              "coordinates": {
+                "longitude": 120.629211,
+                "latitude": 31.324194,
+                "system": "GCJ-02"
+              },
+              "category": "attraction",
+              "environment": "unknown",
+              "visit_minutes": 90,
+              "ticket_price": null,
+              "opening_start": null,
+              "opening_end": null,
+              "evidence_id": "poi-苏州-attraction-bc0d35aa",
+              "tags": []
+            },
+            "start": "2026-10-14T12:40:00+08:00",
+            "end": "2026-10-14T14:10:00+08:00"
+          }
+        ],
+        "local_legs": [
+          {
+            "route": {
+              "id": "B001907TGR:nj-station:transit",
+              "origin": {
+                "id": "B001907TGR",
+                "name": "南京博物院",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.825064,
+                  "latitude": 32.040802,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "nj-station",
+                "name": "南京南站",
+                "city": "南京",
+                "coordinates": {
+                  "longitude": 118.797,
+                  "latitude": 31.969,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 53,
+              "distance": 16190,
+              "price": 400,
+              "evidence_id": "route-B001907TGR:nj-station:transit"
+            },
+            "departure": "2026-10-14T08:42:00+08:00",
+            "arrival": "2026-10-14T09:35:00+08:00"
+          },
+          {
+            "route": {
+              "id": "sz-station:B020001R2Q:transit",
+              "origin": {
+                "id": "sz-station",
+                "name": "苏州站",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.61,
+                  "latitude": 31.326,
+                  "system": "GCJ-02"
+                }
+              },
+              "destination": {
+                "id": "B020001R2Q",
+                "name": "拙政园",
+                "city": "苏州",
+                "coordinates": {
+                  "longitude": 120.629211,
+                  "latitude": 31.324194,
+                  "system": "GCJ-02"
+                }
+              },
+              "mode": "transit",
+              "duration": 45,
+              "distance": 3709,
+              "price": 200,
+              "evidence_id": "route-sz-station:B020001R2Q:transit"
+            },
+            "departure": "2026-10-14T11:55:00+08:00",
+            "arrival": "2026-10-14T12:40:00+08:00"
+          }
+        ],
+        "costs": [
+          {
+            "id": "4-rail-0",
+            "category": "inter_city",
+            "amount": 10000,
+            "label": "南京南站 → 苏州站",
+            "source": "dataset"
+          },
+          {
+            "id": "4-ticket-B020001R2Q",
+            "category": "tickets",
+            "amount": null,
+            "label": "拙政园",
+            "source": "live"
+          },
+          {
+            "id": "4-local-0",
+            "category": "local_transport",
+            "amount": 400,
+            "label": "南京博物院 → 南京南站",
+            "source": "live"
+          },
+          {
+            "id": "4-local-1",
+            "category": "local_transport",
+            "amount": 200,
+            "label": "苏州站 → 拙政园",
+            "source": "live"
+          },
+          {
+            "id": "4-accommodation",
+            "category": "accommodation",
+            "amount": 0,
+            "label": "住宿预算",
+            "source": "estimate"
+          },
+          {
+            "id": "4-food",
+            "category": "food",
+            "amount": 10000,
+            "label": "餐饮估算",
+            "source": "estimate"
+          },
+          {
+            "id": "4-reserve",
+            "category": "reserve",
+            "amount": 3000,
+            "label": "备用金",
+            "source": "estimate"
+          }
+        ],
+        "estimated_cost": 23600
+      }
+    ],
+    "costs": {
+      "categories": {
+        "inter_city": 29000,
+        "local_transport": 1800,
+        "accommodation": 80000,
+        "tickets": 0,
+        "food": 50000,
+        "reserve": 15000
+      },
+      "estimated_total": 175800,
+      "unknown_items": [
+        "0-ticket-B023B13L9M",
+        "1-ticket-B023B15DKJ",
+        "2-ticket-B00190ANHZ",
+        "3-ticket-B001907TGR",
+        "4-ticket-B020001R2Q"
+      ],
+      "budget": 400000,
+      "delta": -224200
+    },
+    "assumptions": [
+      "默认 1 位成人；费用为人民币估算；不自动添加返程。",
+      "一键演示采用 2026-10-10 起的合成日期与证据。",
+      "住宿为预算占位，不包含酒店预订；餐饮与备用金为估算。",
+      "首日从出发火车站开始；未提供住址和酒店位置，不含其接驳。"
+    ],
+    "warnings": [],
+    "evidence_ids": [
+      "route-B023B15DKJ:hz-station:transit",
+      "distance-02d24ef909",
+      "route-hz-station:B023B13L9M:transit",
+      "route-B023B02UB8:hz-station:transit",
+      "distance-6133b03a03",
+      "route-B020001285:sz-station:transit",
+      "hotel-df9eb8dc3a61",
+      "route-sz-station:B020001285:transit",
+      "poi-杭州-attraction-e3b0c442",
+      "rail-杭州-南京-2026-10-12",
+      "route-nj-station:B00190ANHZ:transit",
+      "rail-南京-苏州-2026-10-14",
+      "poi-杭州-attraction-b69153f0",
+      "poi-苏州-attraction-e3b0c442",
+      "weather-杭州",
+      "route-B0JB9PVLQU:B020001R2Q:transit",
+      "route-B023B02UB8:B023B13L9M:transit",
+      "route-nj-station:B001907TGR:transit",
+      "weather-南京",
+      "poi-南京-attraction-5b6fa541",
+      "route-hz-station:B023B15DKJ:transit",
+      "hotel-1dbe0c03de3b",
+      "route-B0HR6K7BSZ:B00190ANHZ:transit",
+      "route-B0HR6K7BSZ:nj-station:transit",
+      "weather-苏州",
+      "poi-南京-attraction-d465c12e",
+      "route-B0JB9PVLQU:sz-station:transit",
+      "distance-36fe6fac86",
+      "poi-苏州-attraction-bc0d35aa",
+      "poi-南京-attraction-e3b0c442",
+      "rail-上海-杭州-2026-10-10",
+      "poi-苏州-attraction-67faa83b",
+      "route-B001907TGR:nj-station:transit",
+      "hotel-d16b3a92f921",
+      "poi-杭州-attraction-af85e1b5",
+      "route-sz-station:B020001R2Q:transit"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "issues": [
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 1,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "WEATHER_UNKNOWN",
+        "severity": "medium",
+        "message": "天气不适合户外活动或预报暂不可用。",
+        "suggestion": "严重天气改为室内活动，缺失预报需临行确认。",
+        "day": 1,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 2,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "WEATHER_UNKNOWN",
+        "severity": "medium",
+        "message": "天气不适合户外活动或预报暂不可用。",
+        "suggestion": "严重天气改为室内活动，缺失预报需临行确认。",
+        "day": 2,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 3,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "WEATHER_UNKNOWN",
+        "severity": "medium",
+        "message": "天气不适合户外活动或预报暂不可用。",
+        "suggestion": "严重天气改为室内活动，缺失预报需临行确认。",
+        "day": 3,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 4,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "WEATHER_UNKNOWN",
+        "severity": "medium",
+        "message": "天气不适合户外活动或预报暂不可用。",
+        "suggestion": "严重天气改为室内活动，缺失预报需临行确认。",
+        "day": 4,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "OPENING_TIME_UNKNOWN",
+        "severity": "medium",
+        "message": "活动不在开放时间内或开放时间未知。",
+        "suggestion": "调整时间或确认官方开放信息。",
+        "day": 5,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "WEATHER_UNKNOWN",
+        "severity": "medium",
+        "message": "天气不适合户外活动或预报暂不可用。",
+        "suggestion": "严重天气改为室内活动，缺失预报需临行确认。",
+        "day": 5,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "BUDGET_UNKNOWN",
+        "severity": "medium",
+        "message": "部分费用未知，不能确认预算合规。",
+        "suggestion": "确认缺失票价与费用。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "HOTEL_ROUTE_INEFFICIENT",
+        "severity": "medium",
+        "message": "酒店至主要景点路线过长或未知。",
+        "suggestion": "重新选择住宿区域。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "HOTEL_STATION_ACCESS_POOR",
+        "severity": "medium",
+        "message": "酒店至车站接驳较差或未知。",
+        "suggestion": "选择车站接驳更方便的住宿。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "HOTEL_ROUTE_INEFFICIENT",
+        "severity": "medium",
+        "message": "酒店至主要景点路线过长或未知。",
+        "suggestion": "重新选择住宿区域。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "HOTEL_STATION_ACCESS_POOR",
+        "severity": "medium",
+        "message": "酒店至车站接驳较差或未知。",
+        "suggestion": "选择车站接驳更方便的住宿。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      },
+      {
+        "type": "HOTEL_ROUTE_INEFFICIENT",
+        "severity": "medium",
+        "message": "酒店至主要景点路线过长或未知。",
+        "suggestion": "重新选择住宿区域。",
+        "day": null,
+        "evidence_ids": [],
+        "observed": null,
+        "allowed": null
+      }
+    ],
+    "checked_constraints": [
+      "DAY_COUNT",
+      "MISSING_DESTINATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_UNKNOWN",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_UNKNOWN",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TRAIN_DEPARTURE_RISK",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_UNKNOWN",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "LOCAL_DURATION",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_UNKNOWN",
+      "DATE_CONFLICT",
+      "EMPTY_DAY",
+      "EXCESSIVE_DENSITY",
+      "EXCESSIVE_TRAVEL",
+      "MISSING_TRANSPORT",
+      "TRANSPORT_HALLUCINATION",
+      "TRANSPORT_UNAVAILABLE",
+      "TRAIN_DEPARTURE_RISK",
+      "TIME_CONFLICT",
+      "ACTIVITY_WINDOW",
+      "OPENING_TIME_UNKNOWN",
+      "WEATHER_UNKNOWN",
+      "LOCAL_ROUTE_FEASIBILITY",
+      "LOCAL_DURATION",
+      "LOCAL_DURATION",
+      "COST_RECONCILIATION",
+      "DAILY_COST_TOTAL",
+      "BUDGET_EXCEEDED",
+      "BUDGET_UNKNOWN",
+      "HOTEL_TOO_FAR",
+      "HOTEL_ROUTE_INEFFICIENT",
+      "HOTEL_STATION_ACCESS_POOR",
+      "HOTEL_TOO_FAR",
+      "HOTEL_ROUTE_INEFFICIENT",
+      "HOTEL_STATION_ACCESS_POOR",
+      "HOTEL_TOO_FAR",
+      "HOTEL_ROUTE_INEFFICIENT",
+      "HOTEL_STATION_ACCESS_POOR"
+    ],
+    "unverified_checks": [
+      "OPENING_TIME_UNKNOWN:1",
+      "WEATHER_UNKNOWN:1",
+      "OPENING_TIME_UNKNOWN:2",
+      "WEATHER_UNKNOWN:2",
+      "OPENING_TIME_UNKNOWN:3",
+      "WEATHER_UNKNOWN:3",
+      "OPENING_TIME_UNKNOWN:4",
+      "WEATHER_UNKNOWN:4",
+      "OPENING_TIME_UNKNOWN:5",
+      "WEATHER_UNKNOWN:5",
+      "BUDGET_UNKNOWN:trip",
+      "HOTEL_ROUTE_INEFFICIENT:trip",
+      "HOTEL_STATION_ACCESS_POOR:trip",
+      "HOTEL_ROUTE_INEFFICIENT:trip",
+      "HOTEL_STATION_ACCESS_POOR:trip",
+      "HOTEL_ROUTE_INEFFICIENT:trip"
+    ],
+    "passed_checks": 58,
+    "total_checks": 74
+  },
+  "trace": [
+    {
+      "sequence": 1,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Memory",
+      "status": "succeeded",
+      "summary": "已加载旅行偏好",
+      "timestamp": "2026-09-22T02:15:41.730804+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 2,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Supervisor",
+      "status": "running",
+      "summary": "正在理解旅行需求与约束",
+      "timestamp": "2026-09-22T02:15:41.733795+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 3,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Supervisor",
+      "status": "succeeded",
+      "summary": "约束已提取，已选择所需研究智能体",
+      "timestamp": "2026-09-22T02:15:47.875229+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 4,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "A2A Transport Agent",
+      "status": "running",
+      "summary": "正在通过 A2A 专家获取结构化研究结果",
+      "timestamp": "2026-09-22T02:15:47.900434+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 5,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_rail",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016683+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 6,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_flights",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016693+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 7,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_rail",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016697+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 8,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_flights",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016700+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 9,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_rail",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016703+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 10,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_flights",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:15:48.016705+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 11,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Rail DATASET",
+      "status": "succeeded",
+      "summary": "数据来源由专家实际工具调用结果确认",
+      "timestamp": "2026-09-22T02:15:48.016707+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 12,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "A2A Transport Agent",
+      "status": "succeeded",
+      "summary": "A2A Task Artifact 已校验并合并到工作流",
+      "timestamp": "2026-09-22T02:15:48.016709+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 13,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Rail Search",
+      "status": "succeeded",
+      "summary": "专家研究已完成",
+      "timestamp": "2026-09-22T02:15:48.016711+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 14,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "A2A Local Travel Agent",
+      "status": "running",
+      "summary": "正在通过 A2A 专家获取结构化研究结果",
+      "timestamp": "2026-09-22T02:15:48.027760+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 15,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427438+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 16,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427450+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 17,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427455+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 18,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP get_weather",
+      "status": "failed",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427458+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 19,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427462+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 20,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427465+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 21,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427468+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 22,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427471+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 23,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427474+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 24,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427477+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 25,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP get_weather",
+      "status": "failed",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427480+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 26,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427483+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 27,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427486+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 28,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427488+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 29,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427491+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 30,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427494+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 31,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_poi",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427497+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 32,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP get_weather",
+      "status": "failed",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427500+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 33,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427503+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 34,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427506+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 35,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_hotels",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427509+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 36,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP calculate_distance",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427512+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 37,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427515+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 38,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427518+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 39,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_hotels",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427521+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 40,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP calculate_distance",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427523+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 41,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427526+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 42,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427529+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 43,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP search_hotels",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427532+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 44,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP calculate_distance",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427535+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 45,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "failed",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427538+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 46,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "A2A 专家已通过 MCP 返回工具结果",
+      "timestamp": "2026-09-22T02:16:01.427541+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 47,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Amap LIVE",
+      "status": "succeeded",
+      "summary": "数据来源由专家实际工具调用结果确认",
+      "timestamp": "2026-09-22T02:16:01.427544+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 48,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "A2A Local Travel Agent",
+      "status": "succeeded",
+      "summary": "A2A Task Artifact 已校验并合并到工作流",
+      "timestamp": "2026-09-22T02:16:01.427546+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 49,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Amap POI",
+      "status": "succeeded",
+      "summary": "专家研究已完成",
+      "timestamp": "2026-09-22T02:16:01.427548+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 50,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在组合景点、交通与每日节奏",
+      "timestamp": "2026-09-22T02:16:01.428037+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 51,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在查询补充证据，完善景点间交通",
+      "timestamp": "2026-09-22T02:16:06.065304+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 52,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Amap Route",
+      "status": "running",
+      "summary": "景点间交通路线查询进行中",
+      "timestamp": "2026-09-22T02:16:06.065372+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 53,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "running",
+      "summary": "正在通过 MCP 查询旅行数据",
+      "timestamp": "2026-09-22T02:16:06.084614+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 54,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "MCP plan_route",
+      "status": "succeeded",
+      "summary": "MCP 工具返回已验证结构化结果",
+      "timestamp": "2026-09-22T02:16:06.594555+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 55,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Amap Route",
+      "status": "succeeded",
+      "summary": "景点间交通路线查询已完成",
+      "timestamp": "2026-09-22T02:16:06.594579+08:00",
+      "duration_ms": 529,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 56,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Travel Planner",
+      "status": "succeeded",
+      "summary": "行程草案已生成，交由 Critic 校验",
+      "timestamp": "2026-09-22T02:16:12.727959+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 57,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Critic",
+      "status": "running",
+      "summary": "正在校验时间、天气、路线与预算约束",
+      "timestamp": "2026-09-22T02:16:12.730788+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 58,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Critic",
+      "status": "failed",
+      "summary": "住宿存在绕路风险，执行一次受控住宿重选",
+      "timestamp": "2026-09-22T02:16:12.733752+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 59,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Supervisor",
+      "status": "running",
+      "summary": "正在理解旅行需求与约束",
+      "timestamp": "2026-09-22T02:16:12.735454+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 60,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Supervisor",
+      "status": "succeeded",
+      "summary": "已保留原始约束，将校验反馈交给规划器",
+      "timestamp": "2026-09-22T02:16:12.735467+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 61,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Travel Planner",
+      "status": "running",
+      "summary": "正在组合景点、交通与每日节奏",
+      "timestamp": "2026-09-22T02:16:12.736670+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 62,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Travel Planner",
+      "status": "succeeded",
+      "summary": "行程草案已生成，交由 Critic 校验",
+      "timestamp": "2026-09-22T02:16:18.978942+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 63,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Critic",
+      "status": "running",
+      "summary": "正在校验时间、天气、路线与预算约束",
+      "timestamp": "2026-09-22T02:16:18.980545+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    },
+    {
+      "sequence": 64,
+      "run_id": "7ff21f3e-fb6b-4d3d-82da-4aa326f2e242",
+      "itinerary_version": 1,
+      "agent": "Critic",
+      "status": "succeeded",
+      "summary": "已完成约束校验",
+      "timestamp": "2026-09-22T02:16:18.982117+08:00",
+      "duration_ms": 0,
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "route-B023B15DKJ:hz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:50.215775+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "distance-02d24ef909",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:59.025728+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-hz-station:B023B13L9M:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:51.185354+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B023B02UB8:hz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:58.369786+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "distance-6133b03a03",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:16:00.634826+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B020001285:sz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:56.367364+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "hotel-df9eb8dc3a61",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:16:00.326787+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-sz-station:B020001285:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:56.827808+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-杭州-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:48.486210+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "rail-杭州-南京-2026-10-12",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-12"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "route-nj-station:B00190ANHZ:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:54.249605+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "rail-南京-苏州-2026-10-14",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-14"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "poi-杭州-attraction-b69153f0",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:49.439235+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-苏州-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:54.779594+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-杭州",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:49.829497+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B0JB9PVLQU:B020001R2Q:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:16:00.957903+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B023B02UB8:B023B13L9M:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:57.968212+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-nj-station:B001907TGR:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:53.857715+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-南京",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:52.961506+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-5b6fa541",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:52.619320+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-hz-station:B023B15DKJ:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:50.679117+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "hotel-1dbe0c03de3b",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:58.734992+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B0HR6K7BSZ:B00190ANHZ:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:59.496842+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B0HR6K7BSZ:nj-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:59.904444+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "weather-苏州",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:55.965616+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-d465c12e",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:52.118506+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B0JB9PVLQU:sz-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:16:01.389432+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "distance-36fe6fac86",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:57.555847+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-苏州-attraction-bc0d35aa",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:55.180270+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-南京-attraction-e3b0c442",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:51.608649+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "rail-上海-杭州-2026-10-10",
+      "provider": "DatasetRailProvider",
+      "source_kind": "dataset",
+      "source": null,
+      "retrieved_at": "2026-10-01T08:00:00+08:00",
+      "valid_for": [
+        "2026-10-10"
+      ],
+      "stale": false,
+      "notes": "版本化合成数据集；余票未知。"
+    },
+    {
+      "id": "poi-苏州-attraction-67faa83b",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:55.657725+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-B001907TGR:nj-station:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:53.368778+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "hotel-d16b3a92f921",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:57.216931+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "poi-杭州-attraction-af85e1b5",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:15:48.963827+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    },
+    {
+      "id": "route-sz-station:B020001R2Q:transit",
+      "provider": "AmapProvider",
+      "source_kind": "live",
+      "source": "amap_live",
+      "retrieved_at": "2026-09-22T02:16:06.529080+08:00",
+      "valid_for": [],
+      "stale": false,
+      "notes": "高德 Web Service API"
+    }
+  ],
+  "metrics": {
+    "agent_steps": {
+      "Travel Planner": 3
+    },
+    "tool_attempts": 39,
+    "model_attempts": 4,
+    "tokens": 30451,
+    "replanning_count": 1
+  },
+  "error": null
+}

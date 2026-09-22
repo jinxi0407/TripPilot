@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "complete": true,
+    "fifty_unique_cases": true,
+    "same_fifty_cases": true,
+    "single_signature": true,
+    "frozen_code_and_data": true,
+    "same_model": true,
+    "metrics_recomputed": true,
+    "per_case_guard": true
+  },
+  "passed": true,
+  "qwen_calls": 487,
+  "reported_tokens": 2385621,
+  "unavailable_usage_calls": 0
+}

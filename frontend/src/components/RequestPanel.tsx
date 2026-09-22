@@ -2,14 +2,15 @@ import {ArrowUpRight,ArrowRight,Sparkles,MapPin,CalendarDays,Wallet,ChevronDown,
 import {useState} from 'react'
 import {DEMO_QUERY} from '../api/client'
 import type {PlanInput,Run,Constraint} from '../api/types'
-interface Props {busy:boolean;run:Run|null;onSubmit:(input:PlanInput)=>void;onClarify:(answers:Constraint)=>void}
-export function RequestPanel({busy,run,onSubmit,onClarify}:Props){
+interface Props {demoMode?:boolean;busy:boolean;run:Run|null;onSubmit:(input:PlanInput)=>void;onClarify:(answers:Constraint)=>void}
+export function RequestPanel({demoMode=false,busy,run,onSubmit,onClarify}:Props){
  const [query,setQuery]=useState(DEMO_QUERY)
  const [mode,setMode]=useState<'auto'|'fixture'|'live'>('auto')
  const [date,setDate]=useState('')
  const [answerOrigin,setAnswerOrigin]=useState('')
  const [answerDest,setAnswerDest]=useState('')
  const [answerDays,setAnswerDays]=useState(5)
+ const missing=run?.missing_fields??(run?.questions??[]).map(q=>({'出发城市':'origin','目的地':'destinations','出行天数':'days','出发日期':'start_date'}[q]??q))
  return <aside className="request-panel">
   <div className="panel-heading"><span className="section-kicker">YOUR NEXT CHAPTER</span><span className="small-icon"><MessageSquare size={16}/></span></div>
   <h2>下一站，想去哪？</h2><p className="muted intro">把想法交给我们，把时间留给旅行。</p>
@@ -19,20 +20,20 @@ export function RequestPanel({busy,run,onSubmit,onClarify}:Props){
    <div className="input-count">{query.length} / 4000<span>中文自然语言输入</span></div>
    <label className="field-label" htmlFor="date"><CalendarDays size={14}/> 出发日期</label>
    <input id="date" type="date" value={date} onChange={e=>setDate(e.target.value)}/>
-   <label className="field-label" htmlFor="mode">运行模式</label>
-   <div className="select-wrap"><select id="mode" value={mode} onChange={e=>setMode(e.target.value as typeof mode)}><option value="fixture">Mock · 无需 API Key</option><option value="auto">自动 · 按服务配置选择</option><option value="live">Qwen · 需配置模型</option></select><ChevronDown size={15}/></div>
+   <details className="execution-settings" open={demoMode}><summary>数据与运行设置</summary><label className="field-label" htmlFor="mode">运行模式</label>
+   <div className="select-wrap"><select id="mode" value={mode} onChange={e=>setMode(e.target.value as typeof mode)}><option value="fixture">Mock · 无需 API Key</option><option value="auto">自动 · 按服务配置选择</option><option value="live">Qwen · 需配置模型</option></select><ChevronDown size={15}/></div></details>
    <button className="primary-button" disabled={busy||!query.trim()} type="submit"><Sparkles size={17}/>{busy?'正在为你规划…':'生成我的旅行计划'}<ArrowRight size={17}/></button>
   </form>
-  {run?.status==='needs_clarification'&&<form className="clarification" onSubmit={e=>{e.preventDefault();onClarify({...date?{start_date:date}:{},...answerOrigin?{origin:answerOrigin}:{},...answerDest?{destinations:answerDest.split(/[、，,]/).filter(Boolean)}:{},...run.questions.includes('出行天数')?{days:answerDays}:{}})}}>
-   <strong>再补充一点，就能出发</strong><p>请提供：{run.questions.join('、')}。出发日期可在上方填写。</p>
-   {run.questions.includes('出发城市')&&<input aria-label="补充出发城市" value={answerOrigin} onChange={e=>setAnswerOrigin(e.target.value)} placeholder="出发城市" required/>}
-   {run.questions.includes('目的地')&&<input aria-label="补充目的地" value={answerDest} onChange={e=>setAnswerDest(e.target.value)} placeholder="目的地，用逗号分隔" required/>}
-   {run.questions.includes('出行天数')&&<input aria-label="补充天数" type="number" min="1" max="7" value={answerDays} onChange={e=>setAnswerDays(+e.target.value)}/>}
+  {run?.status==='needs_clarification'&&<form className="clarification" onSubmit={e=>{e.preventDefault();onClarify({...date?{start_date:date}:{},...answerOrigin?{origin:answerOrigin}:{},...answerDest?{destinations:answerDest.split(/[、，,]/).filter(Boolean)}:{},...missing.includes('days')?{days:answerDays}:{}})}}>
+   <strong>还差一点信息</strong><p>为了继续规划，请告诉我：</p><ul>{run.questions.map(q=><li key={q}>{q}</li>)}</ul>{missing.includes("start_date")&&<p>请在上方填写出发日期。</p>}
+   {missing.includes('origin')&&<input aria-label="补充出发城市" value={answerOrigin} onChange={e=>setAnswerOrigin(e.target.value)} placeholder="出发城市" required/>}
+   {missing.includes('destinations')&&<input aria-label="补充目的地" value={answerDest} onChange={e=>setAnswerDest(e.target.value)} placeholder="目的地，用逗号分隔" required/>}
+   {missing.includes('days')&&<input aria-label="补充天数" type="number" min="1" max="7" value={answerDays} onChange={e=>setAnswerDays(+e.target.value)}/>}
    <button className="secondary-button" type="submit">补充并继续 <ArrowRight size={14}/></button>
   </form>}
   <div className="divider"/>
   <div className="panel-heading"><span className="field-label">从一段江南旅程开始</span><span className="tiny-pill">精选 Demo</span></div>
-  <button className="demo-card" disabled={busy} onClick={()=>{setQuery(DEMO_QUERY);setDate('2026-10-10');onSubmit({query:DEMO_QUERY,mode,demo:true})}}>
+  <button className="demo-card" disabled={busy} onClick={()=>{setQuery(DEMO_QUERY);setDate('2026-10-10');onSubmit({query:DEMO_QUERY,mode,demo:true,constraints:{start_date:"2026-10-10"}})}}>
    <div className="demo-art" aria-hidden="true"><span className="art-sun"/><span className="art-hill hill-one"/><span className="art-hill hill-two"/><span className="art-bridge"/><span className="art-boat"/><div className="demo-art-label">江南<br/><small>JIANGNAN JOURNEY</small></div></div>
    <div className="demo-content"><div><strong>三城慢游 · 历史与夜色</strong><span>杭州 · 南京 · 苏州</span></div><ArrowUpRight size={20}/></div>
    <div className="demo-meta"><span><CalendarDays size={13}/>5 天</span><span><Wallet size={13}/>¥4,000</span><span>轻松节奏</span></div>

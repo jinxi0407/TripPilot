@@ -31,7 +31,7 @@ class MockRailProvider:
             frozenset(["杭州", "苏州"]): (90, 11000),
             frozenset(["苏州", "南京"]): (80, 10000),
         }
-        duration, price = pairs[frozenset([query.origin, query.destination])]
+        duration, price = pairs.get(frozenset([query.origin, query.destination]), (270, 55000))
         eid = f"rail-{query.origin}-{query.destination}-{query.date}"
         evidence = Evidence(
             id=eid,
@@ -61,11 +61,15 @@ class MockRailProvider:
 
 class DatasetRailProvider:
     def __init__(self, path: Path | None = None) -> None:
+        self.additional = path is None
         self.path = path or Path(__file__).parent / "data" / "rail.json"
 
     async def search(self, query: RailQuery) -> ToolResult[list[RailOption]]:
         try:
-            records = [RailOption.model_validate(r) for r in json.loads(self.path.read_text())["options"]]
+            rows = json.loads(self.path.read_text())["options"]
+            if self.additional:
+                rows += json.loads((Path(__file__).parent / "data" / "rail_v12.json").read_text())["options"]
+            records = [RailOption.model_validate(r) for r in rows]
         except (OSError, ValueError, KeyError):
             raise ControlledError("INVALID_OUTPUT") from None
         matches = [

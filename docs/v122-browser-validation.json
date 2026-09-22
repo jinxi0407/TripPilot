@@ -1,0 +1,74 @@
+{
+  "console_errors": 0,
+  "page_errors": 0,
+  "checks": [
+    "actual backend run rendered",
+    "real Amap JS map",
+    "all five day markers",
+    "traveler groups",
+    "demo categories",
+    "detail expansion",
+    "conditional budget controls",
+    "mobile overflow"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "activities": [
+        "杭州西湖风景名胜区"
+      ],
+      "markers": 1,
+      "day_validation": "2 项待确认"
+    },
+    {
+      "day": 2,
+      "activities": [
+        "浙江省博物馆(孤山馆区)",
+        "中国丝绸博物馆"
+      ],
+      "markers": 2,
+      "day_validation": "2 项待确认"
+    },
+    {
+      "day": 3,
+      "activities": [
+        "南京夫子庙",
+        "老门东"
+      ],
+      "markers": 2,
+      "day_validation": "2 项待确认"
+    },
+    {
+      "day": 4,
+      "activities": [
+        "中国科举博物馆(江南贡院)",
+        "南京博物院"
+      ],
+      "markers": 2,
+      "day_validation": "2 项待确认"
+    },
+    {
+      "day": 5,
+      "activities": [
+        "拙政园"
+      ],
+      "markers": 1,
+      "day_validation": "2 项待确认"
+    }
+  ],
+  "run_id": "9270d5b9-1e76-4b6f-ac14-40c7262c50fe",
+  "status": "partial",
+  "banner": "✓\n行程已生成\n部分外部信息待临行确认",
+  "traveler_summary": "5 项出行前待确认",
+  "traveler_groups": [
+    "8 个景点开放时间待确认",
+    "未来天气待临近出发确认",
+    "部分费用或预算估算待确认",
+    "住宿路线、实时价格与房态待确认",
+    "Rail / Flight 为演示数据，请核对实时班次"
+  ],
+  "demo_counts": "Confirmed Conflicts 0\nUnverified 18\nInfo 2",
+  "detail_expanded": true,
+  "literal_svg": false,
+  "mobile_no_overflow": true
+}

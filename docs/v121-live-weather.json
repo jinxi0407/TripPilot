@@ -1,0 +1,41 @@
+{
+  "tool": "MCP get_weather",
+  "forecast": [
+    {
+      "city": "杭州",
+      "forecast_date": "2026-09-22",
+      "weather_condition": "多云",
+      "min_temperature": 23.0,
+      "max_temperature": 31.0,
+      "precipitation": null,
+      "precipitation_probability": null,
+      "source": "amap_live",
+      "status": "live",
+      "evidence_id": "weather-杭州"
+    },
+    {
+      "city": "南京",
+      "forecast_date": "2026-09-22",
+      "weather_condition": "多云",
+      "min_temperature": 21.0,
+      "max_temperature": 27.0,
+      "precipitation": null,
+      "precipitation_probability": null,
+      "source": "amap_live",
+      "status": "live",
+      "evidence_id": "weather-南京"
+    },
+    {
+      "city": "苏州",
+      "forecast_date": "2026-09-22",
+      "weather_condition": "晴",
+      "min_temperature": 22.0,
+      "max_temperature": 28.0,
+      "precipitation": null,
+      "precipitation_probability": null,
+      "source": "amap_live",
+      "status": "live",
+      "evidence_id": "weather-苏州"
+    }
+  ]
+}

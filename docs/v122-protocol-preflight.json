@@ -1,0 +1,194 @@
+[
+  {
+    "system": "baseline",
+    "status": "completed",
+    "metrics": {
+      "task_success": true,
+      "correct_rejection": false,
+      "hard_constraints": {
+        "destinations": true,
+        "days": true,
+        "start_date": true,
+        "budget": true
+      },
+      "constraint_satisfaction": {
+        "passed": 4,
+        "total": 4
+      },
+      "routing_accuracy": null,
+      "tool_selection": {
+        "exact": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "predicted": 4,
+        "required": 4,
+        "actual": [
+          "get_weather",
+          "plan_route",
+          "search_poi",
+          "search_rail"
+        ]
+      },
+      "replanning_success": null,
+      "legacy_replanning_success": null,
+      "preference_adherence": null,
+      "memory_override": null,
+      "accommodation_validity": null,
+      "transport_feasibility": true,
+      "unsupported_claims": {
+        "unsupported": 0,
+        "claims": 6
+      },
+      "failure_reasons": []
+    },
+    "runtime": {
+      "mcp": {
+        "state": "CONNECTED",
+        "tools": [
+          "calculate_distance",
+          "get_weather",
+          "plan_route",
+          "search_flights",
+          "search_hotels",
+          "search_poi",
+          "search_rail"
+        ]
+      },
+      "a2a": {
+        "transport": "PENDING",
+        "local": "PENDING"
+      },
+      "harness": {
+        "state": "ACTIVE",
+        "policy": {
+          "max_react_steps": 8,
+          "max_replanning_attempts": 2,
+          "max_tool_calls": 60,
+          "max_model_calls": 12,
+          "max_external_calls": 160,
+          "total_timeout_seconds": 239.9995838329778,
+          "react_timeout_seconds": 90,
+          "tool_timeout_seconds": 10,
+          "model_timeout_seconds": 30,
+          "a2a_timeout_seconds": 60,
+          "mcp_timeout_seconds": 15,
+          "health_timeout_seconds": 3,
+          "max_retries": 1,
+          "duplicate_call_threshold": 2,
+          "transport_tool_allowance": 6,
+          "local_tool_allowance": 42
+        },
+        "tool_calls": 19,
+        "external_calls": 20,
+        "model_calls": 0,
+        "elapsed_ms": 1161,
+        "failure_reason": null,
+        "events": []
+      },
+      "memory": {
+        "state": "ACTIVE",
+        "long_term_loaded": false,
+        "session_loaded": false
+      }
+    },
+    "tool_calls": 19
+  },
+  {
+    "system": "trippilot",
+    "status": "completed",
+    "metrics": {
+      "task_success": true,
+      "correct_rejection": false,
+      "hard_constraints": {
+        "destinations": true,
+        "days": true,
+        "start_date": true,
+        "budget": true
+      },
+      "constraint_satisfaction": {
+        "passed": 4,
+        "total": 4
+      },
+      "routing_accuracy": true,
+      "tool_selection": {
+        "exact": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "predicted": 4,
+        "required": 4,
+        "actual": [
+          "get_weather",
+          "plan_route",
+          "search_poi",
+          "search_rail"
+        ]
+      },
+      "replanning_success": null,
+      "legacy_replanning_success": null,
+      "preference_adherence": null,
+      "memory_override": null,
+      "accommodation_validity": null,
+      "transport_feasibility": true,
+      "unsupported_claims": {
+        "unsupported": 0,
+        "claims": 6
+      },
+      "failure_reasons": []
+    },
+    "runtime": {
+      "mcp": {
+        "state": "CONNECTED",
+        "tools": [
+          "calculate_distance",
+          "get_weather",
+          "plan_route",
+          "search_flights",
+          "search_hotels",
+          "search_poi",
+          "search_rail"
+        ]
+      },
+      "a2a": {
+        "transport": "ONLINE",
+        "local": "ONLINE"
+      },
+      "harness": {
+        "state": "ACTIVE",
+        "policy": {
+          "max_react_steps": 8,
+          "max_replanning_attempts": 2,
+          "max_tool_calls": 60,
+          "max_model_calls": 12,
+          "max_external_calls": 160,
+          "total_timeout_seconds": 239.99970279203262,
+          "react_timeout_seconds": 90,
+          "tool_timeout_seconds": 10,
+          "model_timeout_seconds": 30,
+          "a2a_timeout_seconds": 60,
+          "mcp_timeout_seconds": 15,
+          "health_timeout_seconds": 3,
+          "max_retries": 1,
+          "duplicate_call_threshold": 2,
+          "transport_tool_allowance": 6,
+          "local_tool_allowance": 42
+        },
+        "tool_calls": 30,
+        "external_calls": 37,
+        "model_calls": 5,
+        "elapsed_ms": 768,
+        "failure_reason": null,
+        "events": []
+      },
+      "memory": {
+        "state": "ACTIVE",
+        "long_term_loaded": false,
+        "session_loaded": false
+      }
+    },
+    "tool_calls": 30
+  }
+]

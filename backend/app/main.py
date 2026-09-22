@@ -53,6 +53,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/health", response_model=HealthResponse)
     async def health() -> dict:
         runtime = await runtime_health(settings)
+        runtime["memory"] = {
+            "state": "ACTIVE" if service.preferences.db.execute("SELECT 1").fetchone() else "FAILED"
+        }
         return {
             "runtime_status": runtime,
             "main_backend": "ONLINE",

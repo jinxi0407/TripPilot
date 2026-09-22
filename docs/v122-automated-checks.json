@@ -1,0 +1,22 @@
+{
+  "backend": {
+    "passed": 215,
+    "warnings": 1,
+    "warning": "Starlette anyio deprecated alias; third-party warning"
+  },
+  "frontend_unit": {
+    "passed": 1
+  },
+  "browser": {
+    "passed": 24
+  },
+  "ruff": "passed",
+  "build": "passed",
+  "openspec_strict": {
+    "passed": 6
+  },
+  "benchmark_fixture_preflight": {
+    "executed": 100,
+    "paid_model": false
+  }
+}

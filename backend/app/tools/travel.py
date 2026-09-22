@@ -1,10 +1,15 @@
 from app.core.budget import ExecutionBudget
 from app.providers.amap import LocalProvider
+from app.providers.flight import DatasetFlightProvider
+from app.providers.hotel import hotel_provider
 from app.providers.rail import RailProvider
+from app.schemas.product import HotelCandidate, HotelQuery
 from app.schemas.travel import (
     POI,
     DistanceQuery,
     DistanceResult,
+    FlightOption,
+    FlightQuery,
     POIQuery,
     RailOption,
     RailQuery,
@@ -45,7 +50,9 @@ class AmapWeatherTool(Tool):
         )
 
 
-def create_registry(rail: RailProvider, local: LocalProvider, budget: ExecutionBudget) -> ToolRegistry:
+def create_registry(
+    rail: RailProvider, local: LocalProvider, budget: ExecutionBudget, flight=None
+) -> ToolRegistry:
     registry = ToolRegistry(
         [
             Tool(
@@ -54,6 +61,20 @@ def create_registry(rail: RailProvider, local: LocalProvider, budget: ExecutionB
                 ToolResult[list[RailOption]],
                 rail.search,
                 frozenset({"Transport", "Travel Planner"}),
+            ),
+            Tool(
+                "flight_search",
+                FlightQuery,
+                ToolResult[list[FlightOption]],
+                (flight or DatasetFlightProvider()).search,
+                frozenset({"Transport", "Travel Planner"}),
+            ),
+            Tool(
+                "amap_hotels",
+                HotelQuery,
+                ToolResult[list[HotelCandidate]],
+                hotel_provider(local).search,
+                LOCAL_AGENTS,
             ),
             AmapPOITool(local),
             AmapRouteTool(local),

@@ -44,6 +44,34 @@ class Place(Schema):
     coordinates: Coordinates | None = None
 
 
+class FlightQuery(Schema):
+    origin: str = Field(min_length=1, max_length=40)
+    destination: str = Field(min_length=1, max_length=40)
+    date: date
+    passengers: int = Field(default=1, ge=1, le=6)
+
+
+class FlightOption(Schema):
+    id: str
+    flight_no: str
+    origin_airport: Place
+    destination_airport: Place
+    departure_time: AwareDatetime
+    arrival_time: AwareDatetime
+    duration_minutes: int = Field(gt=0)
+    price: int | None = Field(default=None, ge=0)
+    source: str
+    evidence_id: str
+    availability_status: Literal["unknown", "available", "unavailable"] = "unknown"
+    provider_mode: Literal["DATASET", "LIVE"] = "DATASET"
+
+    @model_validator(mode="after")
+    def consistent_time(self):
+        if abs((self.arrival_time - self.departure_time).total_seconds() / 60 - self.duration_minutes) > 1:
+            raise ValueError("inconsistent flight timing")
+        return self
+
+
 class RailQuery(Schema):
     origin: str = Field(min_length=1, max_length=40)
     destination: str = Field(min_length=1, max_length=40)
@@ -150,10 +178,25 @@ class WeatherRecord(Schema):
     condition: str
     severity: Literal["normal", "adverse", "severe", "unknown"]
     temperature: str | None = None
+    min_temperature: float | None = None
+    max_temperature: float | None = None
+    precipitation: float | None = Field(default=None, ge=0)
+    precipitation_probability: float | None = Field(default=None, ge=0, le=100)
     evidence_id: str
 
 
 class Constraints(Schema):
+    travel_pace: Literal["relaxed", "balanced", "compact"] = "balanced"
+    transport_preference: Literal["high_speed_rail", "flight", "no_preference"] = "no_preference"
+    transport_mode: Literal["rail", "flight"] | None = None
+    avoid_early_departure: bool = False
+    walking_tolerance: Literal["low", "medium", "high"] = "medium"
+    accommodation_preferences: list[str] = Field(default_factory=list, max_length=3)
+    indoor_days: list[int] = Field(default_factory=list, max_length=7)
+    recommend_hotels: bool = False
+    compare_transport: bool = False
+    arrival_deadline: time | None = None
+
     origin: str | None = None
     destinations: list[str] = Field(default_factory=list, max_length=4)
     start_date: date | None = None
@@ -190,10 +233,36 @@ class Constraints(Schema):
         return [self.start_date + timedelta(days=n) for n in range(self.days)]
 
 
+class DayWeather(Schema):
+    city: str
+    forecast_date: date
+    weather_condition: str | None = None
+    min_temperature: float | None = None
+    max_temperature: float | None = None
+    precipitation: float | None = None
+    precipitation_probability: float | None = None
+    source: str = "unavailable"
+    status: Literal["live", "pending", "simulated"] = "pending"
+    evidence_id: str | None = None
+
+
+class RestBreak(Schema):
+    label: str
+    start: AwareDatetime
+    end: AwareDatetime
+
+
 class Activity(Schema):
     poi: POI
     start: AwareDatetime
     end: AwareDatetime
+    time_period: Literal["morning", "afternoon", "evening"] = "morning"
+    estimated_duration: int | None = None
+    route_from_previous: RouteOption | None = None
+    travel_minutes: int | None = None
+    source: str = "unknown"
+    optional: bool = False
+    notes: list[str] = Field(default_factory=list)
 
 
 class LocalLeg(Schema):
@@ -216,6 +285,10 @@ class CostItem(Schema):
 class CostSummary(Schema):
     categories: dict[str, int] = Field(default_factory=dict)
     estimated_total: int = 0
+    known_cost: int = 0
+    estimated_cost: int = 0
+    unknown_cost_items: list[str] = Field(default_factory=list)
+    budget_limit: int | None = None
     unknown_items: list[str] = Field(default_factory=list)
     budget: int | None = None
     delta: int | None = None
@@ -227,10 +300,14 @@ class DayPlan(Schema):
     city: str
     origin_city: str
     rail: RailOption | None = None
+    flight: FlightOption | None = None
     activities: list[Activity] = Field(default_factory=list)
     local_legs: list[LocalLeg] = Field(default_factory=list)
     costs: list[CostItem] = Field(default_factory=list)
     estimated_cost: int = 0
+    weather: DayWeather | None = None
+    breaks: list[RestBreak] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
 
 
 class Itinerary(Schema):
@@ -245,7 +322,13 @@ class Itinerary(Schema):
 
 class Issue(Schema):
     type: str
-    severity: Literal["low", "medium", "high"]
+    severity: Literal["info", "warning", "error"]
+    status: Literal["confirmed", "unverified", "informational"]
+    blocking: bool = False
+    activity_id: str | None = None
+    target: str | None = None
+    source: str = "validator"
+    evidence: dict = Field(default_factory=dict)
     message: str
     suggestion: str
     day: int | None = None
@@ -253,9 +336,23 @@ class Issue(Schema):
     observed: str | None = None
     allowed: str | None = None
 
+    @model_validator(mode="after")
+    def blocking_requires_proof(self):
+        if self.blocking and (self.status != "confirmed" or self.severity != "error"):
+            raise ValueError("blocking requires a confirmed error")
+        if self.status == "unverified" and self.severity != "warning":
+            raise ValueError("unverified issues must be warnings")
+        if self.status == "informational" and self.severity != "info":
+            raise ValueError("informational issues must be info")
+        return self
+
 
 class ValidationResult(Schema):
     valid: bool
+    confirmed_count: int = 0
+    blocking_confirmed_count: int = 0
+    unverified_count: int = 0
+    informational_count: int = 0
     issues: list[Issue] = Field(default_factory=list)
     checked_constraints: list[str] = Field(default_factory=list)
     unverified_checks: list[str] = Field(default_factory=list)

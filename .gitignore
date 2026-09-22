@@ -34,6 +34,7 @@ coverage/
 *.tsbuildinfo
 .cache/
 *.log
+*.pid
 test-results/
 playwright-report/
 
@@ -47,3 +48,6 @@ playwright-report/
 .idea/
 *.swp
 *.swo
+
+# Interrupted benchmark record backups
+*.jsonl.partial

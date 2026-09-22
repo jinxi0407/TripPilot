@@ -3,10 +3,12 @@ from typing import Literal, TypedDict
 
 from pydantic import Field
 
+from app.schemas.product import AccommodationRecommendation, TransportComparison
 from app.schemas.travel import (
     POI,
     Constraints,
     Evidence,
+    FlightOption,
     Itinerary,
     RailOption,
     RouteOption,
@@ -33,6 +35,12 @@ class TraceEvent(Schema):
 
 
 class AgentState(TypedDict, total=False):
+    flight_options: list[FlightOption]
+    transport_comparisons: list[TransportComparison]
+    accommodation: list[AccommodationRecommendation]
+    accommodation_reselections: int
+    session_id: str
+    memory_preferences: dict
     user_query: str
     origin: str | None
     destinations: list[str]
@@ -46,6 +54,7 @@ class AgentState(TypedDict, total=False):
     route_data: list[RouteOption]
     draft_itinerary: Itinerary | None
     validation_result: ValidationResult | None
+    validation_history: list[dict]
     replanning_count: int
     agent_trace: list[TraceEvent]
     final_itinerary: Itinerary | None

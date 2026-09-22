@@ -48,7 +48,9 @@ class TravelMCPClient:
             self.context.emit("MCP " + canonical, "running", "正在通过 MCP 查询旅行数据")
             # Reserve the provider's possible outbound operation before sending.
             # On unknown completion, keep it charged rather than refunding it.
-            remote_external = canonical != "search_rail" and self.source_mode == "live"
+            remote_external = (
+                canonical not in {"search_rail", "search_flights"} and self.source_mode == "live"
+            )
             if remote_external:
                 self.runtime.consume("external")
 
@@ -73,10 +75,12 @@ class TravelMCPClient:
                 raise ControlledError("INVALID_OUTPUT")
             if remote_external and reply.external_calls == 0:
                 self.context.budget.external -= 1
-            key = "rail" if canonical == "search_rail" else "amap"
+            key = {"search_rail": "rail", "search_flights": "flight", "search_hotels": "hotel"}.get(
+                canonical, "amap"
+            )
             self.provider_states[key] = {"state": reply.provider_state}
             self.context.remote_provider_status.update(self.provider_states)
-            if key == "amap" and hasattr(self.context.local_provider, "status"):
+            if key in {"amap", "hotel"} and hasattr(self.context.local_provider, "status"):
                 self.context.local_provider.status = reply.provider_state
             if reply.result.status == "error" and reply.result.error:
                 raise ControlledError(reply.result.error.code, reply.result.error.retryable)

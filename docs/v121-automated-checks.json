@@ -1,0 +1,29 @@
+{
+  "backend": {
+    "passed": 197,
+    "added": 16
+  },
+  "frontend_unit": {
+    "passed": 1
+  },
+  "browser": {
+    "passed": 19,
+    "added": 8
+  },
+  "ruff": "passed",
+  "frontend_build": "passed",
+  "openspec_strict": {
+    "passed_changes": 5
+  },
+  "live_run_id": "4fa4e6d4-ab11-461d-979c-63c64e5d8301",
+  "live_status": "partial",
+  "live_activity_counts": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "console_errors": 0,
+  "benchmark_rerun": false
+}

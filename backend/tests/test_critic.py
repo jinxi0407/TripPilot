@@ -47,7 +47,7 @@ async def test_critic_detects_mutated_draft():
     draft.days[-1].activities = []
     result = validate_itinerary(draft, state["constraints"], state)
     types = {i.type for i in result.issues}
-    assert {"TIME_CONFLICT", "OPENING_TIME_CONFLICT", "MISSING_DESTINATION"} <= types
+    assert {"TIME_CONFLICT", "OPENING_HOURS_CONFLICT", "MISSING_DESTINATION"} <= types
 
 
 async def test_cost_unknown_and_duplicate():
@@ -56,7 +56,7 @@ async def test_cost_unknown_and_duplicate():
     draft.days[0].costs[0].amount = None
     draft.costs = reconcile(draft, state["constraints"].total_budget)
     result = validate_itinerary(draft, state["constraints"], state)
-    assert "BUDGET_UNKNOWN" in {i.type for i in result.issues}
+    assert "BUDGET_PARTIAL" in {i.type for i in result.issues}
     draft.days[1].costs.append(draft.days[0].costs[0])
     with pytest.raises(ValueError):
         reconcile(draft, 400000)

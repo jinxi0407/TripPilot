@@ -186,12 +186,19 @@ async def test_a2a_invalid_data_part_returns_standard_failed_task(protocol_clust
     from a2a.types import a2a_pb2 as wire
 
     from app.a2a.service import data_part
+
     settings, _, _ = protocol_cluster
     async with httpx.AsyncClient() as http:
         card = await discover_card(http, settings.a2a_transport_url, "transport")
         client = ClientFactory(ClientConfig(httpx_client=http, streaming=False)).create(card)
-        message = wire.Message(message_id=str(uuid4()), role=wire.ROLE_USER, parts=[data_part({"invalid": True})])
-        tasks = [chunk.task async for chunk in client.send_message(wire.SendMessageRequest(message=message)) if chunk.HasField("task")]
+        message = wire.Message(
+            message_id=str(uuid4()), role=wire.ROLE_USER, parts=[data_part({"invalid": True})]
+        )
+        tasks = [
+            chunk.task
+            async for chunk in client.send_message(wire.SendMessageRequest(message=message))
+            if chunk.HasField("task")
+        ]
     assert len(tasks) == 1 and tasks[0].status.state == wire.TASK_STATE_FAILED
     assert not tasks[0].artifacts
 
@@ -201,10 +208,52 @@ async def test_a2a_card_endpoint_validation_prevents_redirection():
 
     from app.a2a.service import agent_card
     from app.core.errors import ControlledError
+
     config = Settings(_env_file=None)
     card = agent_card("transport", config)
     card.supported_interfaces[0].url = "http://untrusted.example/"
-    async with httpx.AsyncClient(transport=httpx.MockTransport(lambda r: httpx.Response(200, json=agent_card_to_dict(card)))) as http:
+    async with httpx.AsyncClient(
+        transport=httpx.MockTransport(lambda r: httpx.Response(200, json=agent_card_to_dict(card)))
+    ) as http:
         with pytest.raises(ControlledError) as error:
             await discover_card(http, config.a2a_transport_url, "transport")
     assert error.value.error.code == "INVALID_OUTPUT"
+
+
+async def test_v12_seven_tools_hotels_flights_real_protocol(protocol_cluster):
+    settings, _, _ = protocol_cluster
+    async with Client(settings.mcp_url) as client:
+        discovered = await client.list_tools()
+        assert len(discovered.tools) == 7
+        hotels = await client.call_tool(
+            "search_hotels", {"query": {"city": "杭州"}, "source_mode": "fixture"}
+        )
+        assert hotels.structured_content["result"]["data"][0]["source"] == "hotel_fixture"
+        flights = await client.call_tool(
+            "search_flights",
+            {
+                "query": {"origin": "北京", "destination": "上海", "date": "2026-10-10"},
+                "source_mode": "fixture",
+            },
+        )
+        assert flights.structured_content["provider_state"] == "DATASET"
+        assert flights.structured_content["result"]["data"][0]["provider_mode"] == "DATASET"
+
+
+async def test_v12_specialists_return_hotel_flight_artifacts(protocol_cluster):
+    from app.schemas.travel import Constraints
+
+    settings, _, _ = protocol_cluster
+    ctx = create_context(settings, mode="fixture", demo=True)
+    state = await execute(
+        {
+            "user_query": "2026-10-10 北京到上海两天，预算4000元",
+            "constraints": Constraints(recommend_hotels=True, compare_transport=True),
+        },
+        ctx,
+    )
+    assert state["flight_options"] and state["accommodation"] and state["transport_comparisons"]
+    assert ctx.runtime_status()["a2a"] == {"transport": "ONLINE", "local": "ONLINE"}
+    names = {t.agent for t in ctx.trace}
+    assert {"MCP search_flights", "MCP search_hotels"} <= names
+    assert len(ctx.runtime_status()["mcp"]["tools"]) == 7

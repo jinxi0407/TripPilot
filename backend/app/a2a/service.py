@@ -89,7 +89,9 @@ class SpecialistExecutor(AgentExecutor):
                 )
             providers = child.provider_status()
             providers = {
-                k: v for k, v in providers.items() if k == ("rail" if self.role == "transport" else "amap")
+                k: v
+                for k, v in providers.items()
+                if k in ({"rail", "flight"} if self.role == "transport" else {"amap", "hotel"})
             }
             reply = SpecialistReply(
                 delta=SpecialistDelta.model_validate(delta),

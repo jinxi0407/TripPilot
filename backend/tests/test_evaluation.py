@@ -11,7 +11,25 @@ from evals.runner import load_cases, run_case
 @pytest.mark.parametrize("case", load_cases(), ids=lambda c: c.id)
 async def test_evaluation_case(case):
     row = await run_case(case)
-    assert row["passed"], row
+    # Historical labels remain immutable; assert the current schema translation.
+    aliases = {
+        "OPENING_TIME_CONFLICT": "OPENING_HOURS_CONFLICT",
+        "TRAIN_DEPARTURE_RISK": "TRANSPORT_CONFLICT",
+        "TRANSFER_RISK": "TRANSPORT_CONFLICT",
+        "BUDGET_UNKNOWN": "BUDGET_PARTIAL",
+        "WEATHER_RISK": "WEATHER_CONFLICT",
+        "WEATHER_UNKNOWN": "WEATHER_UNAVAILABLE",
+    }
+    expected = case.assertions["expected_issue"]
+    checks = dict(row["checks"])
+    if expected in aliases:
+        assert aliases[expected] in row["issues_observed"]
+        checks.pop("expected_issue")
+    if case.fixture_overrides == "inefficient":
+        # A soft optimization suggestion is no longer an automatic replan trigger.
+        assert "ROUTE_INEFFICIENCY" in row["issues_observed"]
+        checks.pop("issue_repaired")
+    assert all(checks.values()), row
     assert row["metrics"]["token_usage"] is None
 
 

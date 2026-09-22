@@ -40,7 +40,7 @@ async def test_station_buffer_requires_more_than_fifteen_minutes():
     access = next(l for l in day.local_legs if l.route.destination.id == day.rail.legs[0].origin_station.id)
     access.arrival = day.rail.legs[0].departure_time - timedelta(minutes=15)
     result = validate_itinerary(draft, state["constraints"], state)
-    assert not result.valid and any(i.type == "TRAIN_DEPARTURE_RISK" for i in result.issues)
+    assert not result.valid and any(i.type == "TRANSPORT_CONFLICT" for i in result.issues)
 
 
 async def test_density_travel_and_missing_route():
@@ -50,7 +50,7 @@ async def test_density_travel_and_missing_route():
     draft.days[0].local_legs[0].route.duration = 200
     draft.days[1].local_legs = []
     result = validate_itinerary(draft, state["constraints"], state)
-    assert {"EXCESSIVE_DENSITY", "EXCESSIVE_TRAVEL", "LOCAL_ROUTE_FEASIBILITY"} <= {
+    assert {"EXCESSIVE_DENSITY", "EXCESSIVE_TRAVEL", "LOCAL_ROUTE_UNVERIFIED"} <= {
         i.type for i in result.issues
     }
     assert result.unverified_checks
@@ -62,7 +62,7 @@ async def test_unknown_opening_and_weather():
     draft.days[0].activities[0].poi.opening_start = None
     state["weather_data"] = []
     result = validate_itinerary(draft, state["constraints"], state)
-    assert {"OPENING_TIME_UNKNOWN", "WEATHER_UNKNOWN"} <= {i.type for i in result.issues}
+    assert {"OPENING_HOURS_UNVERIFIED", "WEATHER_UNAVAILABLE"} <= {i.type for i in result.issues}
     assert result.valid and result.unverified_checks
 
 
@@ -75,7 +75,10 @@ async def test_budget_overflow_exact_fen_and_roundtrip():
     assert draft.costs.delta == 10000
     assert sum(d.estimated_cost for d in draft.days) == 410000
     result = validate_itinerary(draft, state["constraints"], state)
-    assert any(i.type == "BUDGET_EXCEEDED" and i.observed == "410000" for i in result.issues)
+    assert any(
+        i.type == "BUDGET_RISK" and not i.blocking and i.evidence["estimated_cost"] == 410000
+        for i in result.issues
+    )
 
 
 async def test_retry_cannot_exceed_global_tool_limit():

@@ -1,6 +1,6 @@
 # Setup and specification report
 
-Date: 2026-09-21. Workspace: `/Users/jinxi/Downloads/TripPilot`.
+Date: 2026-09-21. Workspace: repository root (`.`).
 
 ## Environment
 

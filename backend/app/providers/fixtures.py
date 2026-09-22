@@ -6,7 +6,7 @@ from app.schemas.travel import POI, Coordinates, Place
 TZ = ZoneInfo("Asia/Shanghai")
 FIXED_NOW = datetime(2026, 10, 1, 8, tzinfo=TZ)
 FIXTURE_VERSION = "synthetic-jiangnan-v1"
-CITY_CODES = {"上海": "310100", "杭州": "330100", "南京": "320100", "苏州": "320500"}
+CITY_CODES = {"北京": "110100", "上海": "310100", "杭州": "330100", "南京": "320100", "苏州": "320500"}
 STATIONS = {
     "上海": Place(
         id="sh-station",
@@ -33,8 +33,17 @@ STATIONS = {
         coordinates=Coordinates(longitude=120.610, latitude=31.326),
     ),
 }
+STATIONS["北京"] = Place(
+    id="bj-station", name="北京南站", city="北京", coordinates=Coordinates(longitude=116.379, latitude=39.865)
+)
 # Geographic labels are illustrative; schedules, prices and opening hours are synthetic demo evidence.
 POI_ROWS = {
+    "北京": [
+        ("bj-palace", "故宫", 116.397, 39.917, "outdoor", 6000, ["历史"]),
+        ("bj-museum", "中国国家博物馆", 116.401, 39.905, "indoor", 0, ["历史"]),
+        ("bj-night", "前门大街", 116.397, 39.898, "outdoor", 0, ["夜景"]),
+        ("bj-art", "首都博物馆", 116.341, 39.906, "indoor", 0, ["历史"]),
+    ],
     "杭州": [
         ("hz-west", "西湖", 120.149, 30.243, "outdoor", 0, ["自然", "夜景"]),
         ("hz-museum", "浙江省博物馆", 120.143, 30.251, "indoor", 0, ["历史"]),

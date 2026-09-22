@@ -1,0 +1,23 @@
+{
+  "files_scanned": 301,
+  "history_objects_scanned": 272,
+  "working_candidates": {},
+  "history_candidates": {},
+  "log_candidates": {},
+  "ignored": {
+    ".env": true,
+    ".env.local": true,
+    ".env.test.local": true,
+    ".tooling/preferences.sqlite3": true,
+    "local.sqlite3": true
+  },
+  "env_tracked": false,
+  "benchmark_frozen_files_changed": [],
+  "date": "2026-09-22",
+  "scope": "working files, reachable Git history blobs, local runtime logs; no secret values emitted",
+  "passed": true,
+  "staged_files_scanned": 301,
+  "staged_forbidden_files": [],
+  "staged_secret_matches": [],
+  "staged_matches_working_tree": true
+}

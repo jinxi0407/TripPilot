@@ -1,0 +1,40 @@
+{
+  "backend": {
+    "passed": 181,
+    "total": 181,
+    "files": {
+      "tests/test_api.py": 6,
+      "tests/test_benchmark_v12.py": 12,
+      "tests/test_config.py": 10,
+      "tests/test_constraints_limits.py": 15,
+      "tests/test_critic.py": 6,
+      "tests/test_evaluation.py": 26,
+      "tests/test_harness.py": 14,
+      "tests/test_health.py": 3,
+      "tests/test_hotel_flight.py": 11,
+      "tests/test_live_integration.py": 14,
+      "tests/test_memory.py": 15,
+      "tests/test_model.py": 12,
+      "tests/test_planner.py": 5,
+      "tests/test_protocols.py": 12,
+      "tests/test_supervisor.py": 5,
+      "tests/test_tools.py": 15
+    },
+    "warning": "第三方Starlette/AnyIO弃用警告1条"
+  },
+  "frontend": {
+    "passed": 1,
+    "total": 1
+  },
+  "browser": {
+    "passed": 11,
+    "total": 11
+  },
+  "ruff": "passed",
+  "frontend_build": "passed",
+  "openspec_strict": {
+    "passed": 4,
+    "total": 4
+  },
+  "external_provider_mode": "Mock/Fixture；本地MCP/A2A协议真实TCP，真实LIVE另测"
+}

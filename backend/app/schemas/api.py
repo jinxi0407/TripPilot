@@ -4,10 +4,15 @@ from pydantic import Field
 
 from app.core.errors import SafeError
 from app.graph.state import RunStatus, TraceEvent
+from app.schemas.product import AccommodationRecommendation, TransportComparison, TravelPreferences
 from app.schemas.travel import Constraints, Evidence, Itinerary, Schema, ValidationResult
 
 
 class PlanRequest(Schema):
+    session_id: str | None = Field(default=None, max_length=64)
+    remember_preferences: bool = False
+    travel_preferences: TravelPreferences | None = None
+    product_features: bool = False
     query: str = Field(min_length=1, max_length=4000)
     constraints: Constraints | None = None
     mode: Literal["auto", "fixture", "live"] = "auto"
@@ -35,6 +40,10 @@ class RunMetrics(Schema):
 
 
 class PlanResponse(Schema):
+    session_id: str | None = None
+    memory: dict = Field(default_factory=dict)
+    accommodation: list[AccommodationRecommendation] = Field(default_factory=list)
+    transport_comparisons: list[TransportComparison] = Field(default_factory=list)
     run_id: str
     task_id: str
     status: RunStatus
@@ -47,9 +56,12 @@ class PlanResponse(Schema):
     simulated_rain: bool = False
     poll_url: str
     constraints: Constraints | None
+    needs_clarification: bool = False
+    missing_fields: list[str] = Field(default_factory=list)
     questions: list[str]
     itinerary: Itinerary | None
     validation: ValidationResult | None
+    validation_history: list[dict] = Field(default_factory=list)
     trace: list[TraceEvent]
     evidence: list[Evidence]
     metrics: RunMetrics

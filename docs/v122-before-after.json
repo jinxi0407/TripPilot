@@ -1,0 +1,96 @@
+{
+  "before": {
+    "status": "partial",
+    "total": 21,
+    "confirmed": 0,
+    "types": {
+      "OPENING_TIME_UNKNOWN": 8,
+      "WEATHER_UNKNOWN": 8,
+      "BUDGET_UNKNOWN": 1,
+      "HOTEL_ROUTE_INEFFICIENT": 3,
+      "HOTEL_STATION_ACCESS_POOR": 1
+    }
+  },
+  "after": {
+    "status": "partial",
+    "total": 20,
+    "confirmed_count": 0,
+    "blocking_confirmed_count": 0,
+    "unverified_count": 18,
+    "informational_count": 2,
+    "types": {
+      "OPENING_HOURS_UNVERIFIED": 8,
+      "WEATHER_UNAVAILABLE": 5,
+      "BUDGET_PARTIAL": 1,
+      "HOTEL_ROUTE_UNVERIFIED": 4,
+      "RAIL_DATASET": 1,
+      "HOTEL_AVAILABILITY_INFO": 1
+    }
+  },
+  "activities_before": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "activities_after": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "costs": {
+    "categories": {
+      "inter_city": 29000,
+      "local_transport": 2500,
+      "accommodation": 80000,
+      "tickets": 0,
+      "food": 50000,
+      "reserve": 15000
+    },
+    "estimated_total": 176500,
+    "known_cost": 31500,
+    "estimated_cost": 176500,
+    "unknown_cost_items": [
+      "0-ticket-B023B13L9M",
+      "1-ticket-B023B06XVX",
+      "1-ticket-B023B09JLL",
+      "2-ticket-B00190ANHZ",
+      "2-ticket-B00190BU4S",
+      "3-ticket-B0KUO6U0QZ",
+      "3-ticket-B001907TGR",
+      "4-ticket-B020001R2Q"
+    ],
+    "budget_limit": 400000,
+    "unknown_items": [
+      "0-ticket-B023B13L9M",
+      "1-ticket-B023B06XVX",
+      "1-ticket-B023B09JLL",
+      "2-ticket-B00190ANHZ",
+      "2-ticket-B00190BU4S",
+      "3-ticket-B0KUO6U0QZ",
+      "3-ticket-B001907TGR",
+      "4-ticket-B020001R2Q"
+    ],
+    "budget": 400000,
+    "delta": -223500
+  },
+  "validation_history": [
+    {
+      "pass": 0,
+      "replanning_requested": false,
+      "blocking": [],
+      "unverified_count": 18
+    }
+  ],
+  "traveler_displayed_groups": 5,
+  "day_displayed_groups": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ]
+}

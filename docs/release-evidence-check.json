@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-22",
+  "cases": 50,
+  "frozen_code_files_verified": 71,
+  "eval_files_unchanged": 31,
+  "results": {
+    "v1_2/trippilot": {
+      "rows": 50,
+      "passed": 44,
+      "sha256": "244c82e67b44be4dd25db98a202cfad1f4f8941f57663a570d1552d03cb58ede"
+    },
+    "v1_2/baseline": {
+      "rows": 50,
+      "passed": 32,
+      "sha256": "f6251756d168f584594db8c67d20baede97a11bc107f1962c6528e901cd25753"
+    },
+    "v1_2_2/trippilot": {
+      "rows": 50,
+      "passed": 48,
+      "sha256": "623762ba6400cc4a748ba86ab6eb4af5d5a03580d5afc4fe91ae1cfe2d53ecab"
+    },
+    "v1_2_2/baseline": {
+      "rows": 50,
+      "passed": 32,
+      "sha256": "14255d145a752e0553678e7b9884fcd3fa02cd9e6015797ad25e1330361bb4cb"
+    }
+  },
+  "broken_markdown_links": [],
+  "machine_absolute_paths_in_markdown": []
+}

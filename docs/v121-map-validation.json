@@ -1,0 +1,42 @@
+{
+  "purpose": "重新展示服务端已完成的真实 LIVE 结果，仅复用行程，不改写 Provider 或 SDK 响应",
+  "run_id": "4fa4e6d4-ab11-461d-979c-63c64e5d8301",
+  "console_errors": 0,
+  "page_errors": 0,
+  "map_days": [
+    {
+      "day": 1,
+      "labels": [
+        "1. 杭州西湖风景名胜区"
+      ]
+    },
+    {
+      "day": 2,
+      "labels": [
+        "1. 浙江省博物馆(孤山馆区)",
+        "2. 中国丝绸博物馆"
+      ]
+    },
+    {
+      "day": 3,
+      "labels": [
+        "1. 南京夫子庙",
+        "2. 老门东"
+      ]
+    },
+    {
+      "day": 4,
+      "labels": [
+        "1. 中国科举博物馆(江南贡院)",
+        "2. 南京博物院"
+      ]
+    },
+    {
+      "day": 5,
+      "labels": [
+        "1. 拙政园"
+      ]
+    }
+  ],
+  "mobile_no_overflow": true
+}

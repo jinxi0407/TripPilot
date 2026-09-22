@@ -4,10 +4,12 @@ from typing import Literal
 from pydantic import Field
 
 from app.harness.runtime import RuntimeEvent
+from app.schemas.product import AccommodationRecommendation, TransportComparison
 from app.schemas.travel import (
     POI,
     Constraints,
     Evidence,
+    FlightOption,
     RailOption,
     RouteOption,
     Schema,
@@ -32,6 +34,9 @@ class SpecialistRequest(Schema):
 
 
 class SpecialistDelta(Schema):
+    flight_options: list[FlightOption] | None = None
+    transport_comparisons: list[TransportComparison] | None = None
+    accommodation: list[AccommodationRecommendation] | None = None
     transport_options: list[RailOption] | None = None
     poi_candidates: list[POI] | None = None
     weather_data: list[WeatherRecord] | None = None
@@ -46,7 +51,15 @@ class ProviderState(Schema):
 
 
 class ToolObservation(Schema):
-    tool: Literal["rail_search", "amap_poi", "amap_weather", "amap_route", "amap_distance"]
+    tool: Literal[
+        "rail_search",
+        "amap_poi",
+        "amap_weather",
+        "amap_route",
+        "amap_distance",
+        "flight_search",
+        "amap_hotels",
+    ]
     status: str = Field(max_length=64, pattern=r"^[A-Za-z_]+$")
     cached: bool
 

@@ -15,6 +15,8 @@ REASONS = {
 }
 TOOL_NAMES = {
     "rail_search": "search_rail",
+    "flight_search": "search_flights",
+    "amap_hotels": "search_hotels",
     "amap_poi": "search_poi",
     "amap_weather": "get_weather",
     "amap_distance": "calculate_distance",

@@ -1,0 +1,107 @@
+{
+  "console_errors": 0,
+  "page_errors": 0,
+  "checks": [
+    "initial traveler mode",
+    "actual loading progress",
+    "trip summary",
+    "hotels",
+    "transport comparison",
+    "Day 1 map and all activities",
+    "Day 2 map and all activities",
+    "Day 3 map and all activities",
+    "Day 4 map and all activities",
+    "Day 5 map and all activities",
+    "day detail expansion",
+    "demo actual statuses",
+    "transport detail expansion",
+    "mobile readable layout",
+    "live missing date clarification"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "activities": [
+        "杭州西湖风景名胜区"
+      ],
+      "map_markers": 1,
+      "weather": "pending"
+    },
+    {
+      "day": 2,
+      "activities": [
+        "浙江省博物馆(孤山馆区)",
+        "中国丝绸博物馆"
+      ],
+      "map_markers": 2,
+      "weather": "pending"
+    },
+    {
+      "day": 3,
+      "activities": [
+        "南京夫子庙",
+        "老门东"
+      ],
+      "map_markers": 2,
+      "weather": "pending"
+    },
+    {
+      "day": 4,
+      "activities": [
+        "中国科举博物馆(江南贡院)",
+        "南京博物院"
+      ],
+      "map_markers": 2,
+      "weather": "pending"
+    },
+    {
+      "day": 5,
+      "activities": [
+        "拙政园"
+      ],
+      "map_markers": 1,
+      "weather": "pending"
+    }
+  ],
+  "status": "partial",
+  "run_id": "4fa4e6d4-ab11-461d-979c-63c64e5d8301",
+  "providers": {
+    "qwen": {
+      "state": "LIVE",
+      "model": "qwen-plus",
+      "error_code": null
+    },
+    "amap": {
+      "state": "LIVE",
+      "model": null,
+      "error_code": null
+    },
+    "rail": {
+      "state": "DATASET",
+      "model": null,
+      "error_code": null
+    },
+    "flight": {
+      "state": "DATASET",
+      "model": null,
+      "error_code": null
+    },
+    "hotel": {
+      "state": "LIVE",
+      "model": null,
+      "error_code": null
+    }
+  },
+  "mobile_no_overflow": true,
+  "fonts": {
+    "activity_title": "18px"
+  },
+  "clarification": {
+    "missing_fields": [
+      "start_date"
+    ],
+    "questions": [
+      "你计划哪天出发？"
+    ]
+  }
+}

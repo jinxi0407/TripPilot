@@ -12,6 +12,7 @@ from app.graph.state import AgentState
 from app.graph.workflow import build_graph
 from app.providers.amap import AmapProvider, MockAmapProvider
 from app.providers.fixtures import FIXED_NOW, TZ
+from app.providers.flight import RealFlightProvider
 from app.providers.rail import DatasetRailProvider, MockRailProvider, RealRailProvider
 from app.services.context import RunContext
 from app.services.model_client import get_model
@@ -24,18 +25,24 @@ def create_context(
     demo: bool = False,
     scenario: str = "normal",
     now: datetime | None = None,
+    provider_mode: str | None = None,
 ) -> RunContext:
     policy = settings.runtime_policy
-    budget = ExecutionBudget(seconds=policy.total_timeout_seconds, max_tools=policy.max_tool_calls,
-                             max_models=policy.max_model_calls, max_external=policy.max_external_calls,
-                             policy=policy)
+    budget = ExecutionBudget(
+        seconds=policy.total_timeout_seconds,
+        max_tools=policy.max_tool_calls,
+        max_models=policy.max_model_calls,
+        max_external=policy.max_external_calls,
+        policy=policy,
+    )
     model = get_model(settings, mode)
     rail = {"mock": MockRailProvider, "dataset": DatasetRailProvider, "real": RealRailProvider}[
         settings.rail_provider or "mock"
     ]()
     if isinstance(rail, MockRailProvider):
         rail.disruption = scenario == "transport"
-    use_live = mode != "fixture" and settings.amap_ready
+    source_mode = provider_mode or ("fixture" if mode == "fixture" else "live")
+    use_live = source_mode == "live" and settings.amap_ready
     local = (
         AmapProvider(settings.amap_api_key.get_secret_value(), timeout=policy.tool_timeout_seconds)
         if use_live
@@ -43,9 +50,12 @@ def create_context(
     )
     context = RunContext(
         model,
-        create_registry(rail, local, budget),
+        create_registry(
+            rail, local, budget, flight=RealFlightProvider() if settings.flight_provider == "real" else None
+        ),
         budget,
         settings=settings,
+        source_mode=source_mode,
         demo=demo,
         local_provider=local,
         rail_mode=settings.rail_provider or "mock",
@@ -55,7 +65,8 @@ def create_context(
 
     if settings.protocols_enabled and (mode != "fixture" or settings.protocol_fixture):
         from app.services.protocols import ProtocolRuntime
-        context.protocols = ProtocolRuntime(context, "fixture" if model.name == "fixture" else "live")
+
+        context.protocols = ProtocolRuntime(context, source_mode)
     return context
 
 

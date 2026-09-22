@@ -5,7 +5,9 @@ from pydantic import ValidationError
 
 from app.core.errors import ControlledError
 from app.graph.state import AgentState
+from app.persistence.memory import extract_preferences, normalize_default_window, preference_constraints
 from app.providers.fixtures import CITY_CODES
+from app.schemas.product import TravelPreferences
 from app.schemas.travel import Constraints
 from app.services.context import RunContext
 from app.services.model_client import MockModelClient, structured_call
@@ -18,7 +20,7 @@ def parse_fixture(query: str, now: date) -> dict:
         raise ControlledError("INVALID_INPUT")
     cities = [city for city in CITY_CODES if city in query]
     cities.sort(key=query.index)
-    origin_match = re.search(r"(?:从)?(上海|杭州|南京|苏州)(?:出发|去|到)", query)
+    origin_match = re.search(r"(?:从)?(北京|上海|杭州|南京|苏州)(?:出发|去|到)", query)
     origin = origin_match.group(1) if origin_match else (cities[0] if cities else None)
     destinations = [c for c in cities if c != origin] or ([origin] if origin else [])
     nums = {
@@ -55,6 +57,7 @@ def parse_fixture(query: str, now: date) -> dict:
         found = [now + timedelta(days=1)]
     preferences = [p for p in ["历史", "夜景", "自然"] if p in query]
     return {
+        "transport_mode": "flight" if "只坐飞机" in query else "rail" if "只坐高铁" in query else None,
         "origin": origin,
         "destinations": destinations,
         "days": days,
@@ -92,6 +95,8 @@ async def supervise(state: AgentState, context: RunContext) -> dict:
         {
             "task": "extract_constraints",
             "query": state["user_query"],
+            "session_constraints": existing.model_dump(mode="json", exclude_unset=True) if existing else None,
+            "travel_preferences": context.memory_preferences,
             "today": context.now.date().isoformat(),
             "instruction": "提取实际指定的约束，未知必填信息留 null。不要推断出行日期。total_budget 单位是人民币分（4000元=400000分）。origin 出发城市不重复加入 destinations。轻松节奏保留默认密度和交通时长限制。",
         },
@@ -100,13 +105,35 @@ async def supervise(state: AgentState, context: RunContext) -> dict:
         context.usage,
     )
     data = constraints.model_dump()
+    # Preserve explicit facts if structured extraction omitted them. Never infer a departure
+    # city merely from a destination mention, and never supply an invented travel date.
+    explicit = parse_fixture(state["user_query"], context.now.date())
+    for field in ("days", "start_date", "end_date"):
+        if not data.get(field) and explicit.get(field):
+            data[field] = explicit[field]
+    origin_match = re.search(r"从(北京|上海|杭州|南京|苏州)(?:出发|去|到)", state["user_query"])
+    if not data.get("origin") and origin_match:
+        data["origin"] = origin_match[1]
+    if not data.get("destinations") and origin_match:
+        data["destinations"] = explicit["destinations"]
     if existing:
         data.update(existing.model_dump(exclude_unset=True))
+    if context.memory_preferences:
+        data.update(preference_constraints(TravelPreferences.model_validate(context.memory_preferences)))
+    # Explicit current preference phrases and API fields override inherited memory.
+    if existing:
+        data.update(existing.model_dump(exclude_unset=True))
+    data.update(
+        preference_constraints(TravelPreferences.model_validate(extract_preferences(state["user_query"])))
+    )
+    data = normalize_default_window(data, existing, state["user_query"])
     if context.demo and not data.get("start_date"):
         data["start_date"] = date(2026, 10, 10)
         data["assumptions"] = data.get("assumptions", []) + ["一键演示采用 2026-10-10 起的合成日期与证据。"]
     if data.get("start_date") and data.get("end_date") and not data.get("days"):
         data["days"] = (data["end_date"] - data["start_date"]).days + 1
+    if data.get("start_date") and data.get("days") and not data.get("end_date"):
+        data["end_date"] = data["start_date"] + timedelta(days=data["days"] - 1)
     try:
         constraints = Constraints.model_validate(data)
     except ValidationError:

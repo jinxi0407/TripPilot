@@ -1,0 +1,21 @@
+{
+  "files_scanned": 295,
+  "credential_matches": [],
+  "log_credential_matches": [],
+  "private_bundle_matches": [],
+  "env_ignored": true,
+  "env_tracked": false,
+  "staged_files": [],
+  "backend_log_error_counts": {
+    "backend.log": 0,
+    "mcp.log": 0,
+    "transport.log": 0,
+    "local.log": 0
+  },
+  "protected_files_checked": 35,
+  "protected_changed": [],
+  "original_dataset_sha256": "029d726bcf6a835b8690de6ad30e1e6ff429874c2e35621777512458ed9b2c94",
+  "branch": "feat/v1.2-travel-product-benchmark",
+  "head": "b66dc59",
+  "passed": true
+}

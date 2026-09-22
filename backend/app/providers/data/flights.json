@@ -1,0 +1,2526 @@
+{
+  "version": "flight_dataset_v1",
+  "description": "合成固定数据，非实时航班/库存",
+  "options": [
+    {
+      "id": "flight-北京-上海-2026-10-10-0",
+      "flight_no": "DEMO-TP100",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-10-1",
+      "flight_no": "DEMO-TP101",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-10-0",
+      "flight_no": "DEMO-TP102",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-10-1",
+      "flight_no": "DEMO-TP103",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-10-0",
+      "flight_no": "DEMO-TP104",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-10-1",
+      "flight_no": "DEMO-TP105",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-10-0",
+      "flight_no": "DEMO-TP106",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-10-1",
+      "flight_no": "DEMO-TP107",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-10-0",
+      "flight_no": "DEMO-TP108",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-10-1",
+      "flight_no": "DEMO-TP109",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-10-0",
+      "flight_no": "DEMO-TP110",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T07:20:00+08:00",
+      "arrival_time": "2026-10-10T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-10-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-10-1",
+      "flight_no": "DEMO-TP111",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-10T11:20:00+08:00",
+      "arrival_time": "2026-10-10T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-10-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-11-0",
+      "flight_no": "DEMO-TP112",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-11-1",
+      "flight_no": "DEMO-TP113",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-11-0",
+      "flight_no": "DEMO-TP114",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-11-1",
+      "flight_no": "DEMO-TP115",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-11-0",
+      "flight_no": "DEMO-TP116",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-11-1",
+      "flight_no": "DEMO-TP117",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-11-0",
+      "flight_no": "DEMO-TP118",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-11-1",
+      "flight_no": "DEMO-TP119",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-11-0",
+      "flight_no": "DEMO-TP120",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-11-1",
+      "flight_no": "DEMO-TP121",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-11-0",
+      "flight_no": "DEMO-TP122",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T07:20:00+08:00",
+      "arrival_time": "2026-10-11T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-11-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-11-1",
+      "flight_no": "DEMO-TP123",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-11T11:20:00+08:00",
+      "arrival_time": "2026-10-11T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-11-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-12-0",
+      "flight_no": "DEMO-TP124",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-12-1",
+      "flight_no": "DEMO-TP125",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-12-0",
+      "flight_no": "DEMO-TP126",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-12-1",
+      "flight_no": "DEMO-TP127",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-12-0",
+      "flight_no": "DEMO-TP128",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-12-1",
+      "flight_no": "DEMO-TP129",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-12-0",
+      "flight_no": "DEMO-TP130",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-12-1",
+      "flight_no": "DEMO-TP131",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-12-0",
+      "flight_no": "DEMO-TP132",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-12-1",
+      "flight_no": "DEMO-TP133",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-12-0",
+      "flight_no": "DEMO-TP134",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T07:20:00+08:00",
+      "arrival_time": "2026-10-12T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-12-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-12-1",
+      "flight_no": "DEMO-TP135",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-12T11:20:00+08:00",
+      "arrival_time": "2026-10-12T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-12-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-13-0",
+      "flight_no": "DEMO-TP136",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-13-1",
+      "flight_no": "DEMO-TP137",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-13-0",
+      "flight_no": "DEMO-TP138",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-13-1",
+      "flight_no": "DEMO-TP139",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-13-0",
+      "flight_no": "DEMO-TP140",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-13-1",
+      "flight_no": "DEMO-TP141",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-13-0",
+      "flight_no": "DEMO-TP142",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-13-1",
+      "flight_no": "DEMO-TP143",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-13-0",
+      "flight_no": "DEMO-TP144",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-13-1",
+      "flight_no": "DEMO-TP145",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-13-0",
+      "flight_no": "DEMO-TP146",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T07:20:00+08:00",
+      "arrival_time": "2026-10-13T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-13-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-13-1",
+      "flight_no": "DEMO-TP147",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-13T11:20:00+08:00",
+      "arrival_time": "2026-10-13T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-13-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-14-0",
+      "flight_no": "DEMO-TP148",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-14-1",
+      "flight_no": "DEMO-TP149",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-14-0",
+      "flight_no": "DEMO-TP150",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-14-1",
+      "flight_no": "DEMO-TP151",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-14-0",
+      "flight_no": "DEMO-TP152",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-14-1",
+      "flight_no": "DEMO-TP153",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-14-0",
+      "flight_no": "DEMO-TP154",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-14-1",
+      "flight_no": "DEMO-TP155",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-14-0",
+      "flight_no": "DEMO-TP156",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-14-1",
+      "flight_no": "DEMO-TP157",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-14-0",
+      "flight_no": "DEMO-TP158",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T07:20:00+08:00",
+      "arrival_time": "2026-10-14T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-14-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-14-1",
+      "flight_no": "DEMO-TP159",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-14T11:20:00+08:00",
+      "arrival_time": "2026-10-14T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-14-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-15-0",
+      "flight_no": "DEMO-TP160",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-15-1",
+      "flight_no": "DEMO-TP161",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-15-0",
+      "flight_no": "DEMO-TP162",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-15-1",
+      "flight_no": "DEMO-TP163",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-15-0",
+      "flight_no": "DEMO-TP164",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-15-1",
+      "flight_no": "DEMO-TP165",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-15-0",
+      "flight_no": "DEMO-TP166",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-15-1",
+      "flight_no": "DEMO-TP167",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-15-0",
+      "flight_no": "DEMO-TP168",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-15-1",
+      "flight_no": "DEMO-TP169",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-15-0",
+      "flight_no": "DEMO-TP170",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T07:20:00+08:00",
+      "arrival_time": "2026-10-15T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-15-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-15-1",
+      "flight_no": "DEMO-TP171",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-15T11:20:00+08:00",
+      "arrival_time": "2026-10-15T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-15-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-16-0",
+      "flight_no": "DEMO-TP172",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-上海-2026-10-16-1",
+      "flight_no": "DEMO-TP173",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-上海-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-16-0",
+      "flight_no": "DEMO-TP174",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-上海-北京-2026-10-16-1",
+      "flight_no": "DEMO-TP175",
+      "origin_airport": {
+        "id": "SHA",
+        "name": "上海虹桥国际机场",
+        "city": "上海",
+        "coordinates": {
+          "longitude": 121.337,
+          "latitude": 31.198
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:30:00+08:00",
+      "duration_minutes": 130,
+      "price": 68000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-上海-北京-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-16-0",
+      "flight_no": "DEMO-TP176",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-杭州-2026-10-16-1",
+      "flight_no": "DEMO-TP177",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-杭州-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-16-0",
+      "flight_no": "DEMO-TP178",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-杭州-北京-2026-10-16-1",
+      "flight_no": "DEMO-TP179",
+      "origin_airport": {
+        "id": "HGH",
+        "name": "杭州萧山国际机场",
+        "city": "杭州",
+        "coordinates": {
+          "longitude": 120.434,
+          "latitude": 30.235
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:45:00+08:00",
+      "duration_minutes": 145,
+      "price": 72000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-杭州-北京-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-16-0",
+      "flight_no": "DEMO-TP180",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-北京-南京-2026-10-16-1",
+      "flight_no": "DEMO-TP181",
+      "origin_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "destination_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-北京-南京-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-16-0",
+      "flight_no": "DEMO-TP182",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T07:20:00+08:00",
+      "arrival_time": "2026-10-16T09:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-16-0",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    },
+    {
+      "id": "flight-南京-北京-2026-10-16-1",
+      "flight_no": "DEMO-TP183",
+      "origin_airport": {
+        "id": "NKG",
+        "name": "南京禄口国际机场",
+        "city": "南京",
+        "coordinates": {
+          "longitude": 118.872,
+          "latitude": 31.743
+        }
+      },
+      "destination_airport": {
+        "id": "PEK",
+        "name": "北京首都国际机场",
+        "city": "北京",
+        "coordinates": {
+          "longitude": 116.603,
+          "latitude": 40.08
+        }
+      },
+      "departure_time": "2026-10-16T11:20:00+08:00",
+      "arrival_time": "2026-10-16T13:15:00+08:00",
+      "duration_minutes": 115,
+      "price": 61000,
+      "source": "flight_dataset_v1",
+      "evidence_id": "flight-南京-北京-2026-10-16-1",
+      "availability_status": "unknown",
+      "provider_mode": "DATASET"
+    }
+  ]
+}

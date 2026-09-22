@@ -17,6 +17,8 @@ class Settings(BaseSettings):
         env_nested_delimiter="__",
     )
     runtime_policy: RuntimePolicy = Field(default_factory=RuntimePolicy)
+    memory_database: str = str(Path(__file__).resolve().parents[3] / ".tooling" / "preferences.sqlite3")
+    flight_provider: Literal["dataset", "real"] = "dataset"
     protocols_enabled: bool = False
     protocol_fixture: bool = False
     mcp_url: str = "http://127.0.0.1:8200/mcp"
@@ -28,7 +30,15 @@ class Settings(BaseSettings):
     @classmethod
     def local_protocol_address(cls, value: str) -> str:
         parsed = urlparse(value)
-        if parsed.scheme != "http" or parsed.hostname not in {"127.0.0.1", "localhost"} or not parsed.port or parsed.username or parsed.password or parsed.query or parsed.fragment:
+        if (
+            parsed.scheme != "http"
+            or parsed.hostname not in {"127.0.0.1", "localhost"}
+            or not parsed.port
+            or parsed.username
+            or parsed.password
+            or parsed.query
+            or parsed.fragment
+        ):
             raise ValueError("Protocol services require credential-free loopback HTTP URLs")
         return value.rstrip("/")
 

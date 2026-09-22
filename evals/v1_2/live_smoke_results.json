@@ -1,0 +1,672 @@
+{
+  "provider_mode": "live",
+  "rail": "dataset",
+  "flight": "dataset",
+  "console_errors": 0,
+  "page_errors": 0,
+  "http_errors": [],
+  "cases": [
+    {
+      "id": "normal",
+      "passed": true,
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "hotel_provenance": true,
+        "mcp_live": true,
+        "a2a_local": true,
+        "a2a_transport": true,
+        "harness_active": true,
+        "memory_active": true,
+        "itinerary": true,
+        "five_days": true,
+        "critic_pass": true,
+        "three_hotel_cities": true,
+        "rail_dataset": true,
+        "flight_dataset": true
+      },
+      "reason": null,
+      "status": "partial",
+      "providers": {
+        "qwen": {
+          "state": "LIVE",
+          "model": "qwen-plus",
+          "error_code": null
+        },
+        "amap": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        },
+        "rail": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "flight": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "hotel": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        }
+      },
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 60,
+            "mcp_timeout_seconds": 15,
+            "health_timeout_seconds": 3,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 39,
+          "external_calls": 83,
+          "model_calls": 4,
+          "elapsed_ms": 37253,
+          "failure_reason": null,
+          "events": []
+        },
+        "memory": {
+          "state": "ACTIVE",
+          "long_term_loaded": false,
+          "session_loaded": false
+        }
+      },
+      "metrics": {
+        "agent_steps": {
+          "Travel Planner": 3
+        },
+        "tool_attempts": 39,
+        "model_attempts": 4,
+        "tokens": 30451,
+        "replanning_count": 1
+      },
+      "high_issues": [],
+      "latency_seconds": 39.79
+    },
+    {
+      "id": "rain",
+      "passed": true,
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "hotel_provenance": true,
+        "mcp_live": true,
+        "a2a_local": true,
+        "a2a_transport": true,
+        "harness_active": true,
+        "memory_active": true,
+        "itinerary": true,
+        "simulated_explicit": true,
+        "critic_pass": true,
+        "replanned": true,
+        "indoors": true
+      },
+      "reason": null,
+      "status": "partial",
+      "providers": {
+        "qwen": {
+          "state": "LIVE",
+          "model": "qwen-plus",
+          "error_code": null
+        },
+        "amap": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        },
+        "rail": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "flight": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "hotel": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        }
+      },
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 60,
+            "mcp_timeout_seconds": 15,
+            "health_timeout_seconds": 3,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 39,
+          "external_calls": 83,
+          "model_calls": 4,
+          "elapsed_ms": 37021,
+          "failure_reason": null,
+          "events": []
+        },
+        "memory": {
+          "state": "ACTIVE",
+          "long_term_loaded": false,
+          "session_loaded": true
+        }
+      },
+      "metrics": {
+        "agent_steps": {
+          "Travel Planner": 3
+        },
+        "tool_attempts": 39,
+        "model_attempts": 4,
+        "tokens": 31235,
+        "replanning_count": 1
+      },
+      "high_issues": [],
+      "latency_seconds": 39.815
+    },
+    {
+      "id": "budget",
+      "passed": true,
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "hotel_provenance": true,
+        "mcp_live": true,
+        "a2a_local": true,
+        "a2a_transport": true,
+        "harness_active": true,
+        "memory_active": true,
+        "itinerary": true,
+        "conflict": true,
+        "budget_issue": true,
+        "replanning_attempt": true
+      },
+      "reason": null,
+      "status": "conflict",
+      "providers": {
+        "qwen": {
+          "state": "LIVE",
+          "model": "qwen-plus",
+          "error_code": null
+        },
+        "amap": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        },
+        "rail": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "flight": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "hotel": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        }
+      },
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 60,
+            "mcp_timeout_seconds": 15,
+            "health_timeout_seconds": 3,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 39,
+          "external_calls": 84,
+          "model_calls": 5,
+          "elapsed_ms": 43496,
+          "failure_reason": null,
+          "events": []
+        },
+        "memory": {
+          "state": "ACTIVE",
+          "long_term_loaded": false,
+          "session_loaded": true
+        }
+      },
+      "metrics": {
+        "agent_steps": {
+          "Travel Planner": 4
+        },
+        "tool_attempts": 39,
+        "model_attempts": 5,
+        "tokens": 41996,
+        "replanning_count": 2
+      },
+      "high_issues": [
+        "BUDGET_EXCEEDED"
+      ],
+      "latency_seconds": 45.853
+    },
+    {
+      "id": "memory",
+      "passed": true,
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "hotel_provenance": true,
+        "mcp_live": true,
+        "a2a_local": true,
+        "a2a_transport": true,
+        "harness_active": true,
+        "memory_active": true,
+        "itinerary": true,
+        "loaded": true,
+        "preferences": true,
+        "safe_trace": true,
+        "three_days": true,
+        "critic_pass": true
+      },
+      "reason": null,
+      "clarification_assumption": "南京同城游；通过正常澄清表单补充出发地/目的地，日期不变",
+      "status": "partial",
+      "providers": {
+        "qwen": {
+          "state": "LIVE",
+          "model": "qwen-plus",
+          "error_code": null
+        },
+        "amap": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        },
+        "rail": {
+          "state": "PENDING",
+          "model": null,
+          "error_code": null
+        },
+        "flight": {
+          "state": "PENDING",
+          "model": null,
+          "error_code": null
+        },
+        "hotel": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        }
+      },
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "PENDING",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 60,
+            "mcp_timeout_seconds": 15,
+            "health_timeout_seconds": 3,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 10,
+          "external_calls": 26,
+          "model_calls": 3,
+          "elapsed_ms": 19573,
+          "failure_reason": null,
+          "events": []
+        },
+        "memory": {
+          "state": "ACTIVE",
+          "long_term_loaded": true,
+          "session_loaded": false
+        }
+      },
+      "metrics": {
+        "agent_steps": {
+          "Travel Planner": 1
+        },
+        "tool_attempts": 10,
+        "model_attempts": 3,
+        "tokens": 6634,
+        "replanning_count": 0
+      },
+      "high_issues": [],
+      "latency_seconds": 22.777
+    },
+    {
+      "id": "transport",
+      "passed": true,
+      "checks": {
+        "qwen_live": true,
+        "amap_live": true,
+        "hotel_live": true,
+        "hotel_provenance": true,
+        "mcp_live": true,
+        "a2a_local": true,
+        "a2a_transport": true,
+        "harness_active": true,
+        "memory_active": true,
+        "itinerary": true,
+        "comparison": true,
+        "datasets": true,
+        "consistent_totals": true,
+        "critic_pass": true
+      },
+      "reason": null,
+      "status": "partial",
+      "providers": {
+        "qwen": {
+          "state": "LIVE",
+          "model": "qwen-plus",
+          "error_code": null
+        },
+        "amap": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        },
+        "rail": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "flight": {
+          "state": "DATASET",
+          "model": null,
+          "error_code": null
+        },
+        "hotel": {
+          "state": "LIVE",
+          "model": null,
+          "error_code": null
+        }
+      },
+      "runtime": {
+        "mcp": {
+          "state": "CONNECTED",
+          "tools": [
+            "calculate_distance",
+            "get_weather",
+            "plan_route",
+            "search_flights",
+            "search_hotels",
+            "search_poi",
+            "search_rail"
+          ]
+        },
+        "a2a": {
+          "transport": "ONLINE",
+          "local": "ONLINE"
+        },
+        "harness": {
+          "state": "ACTIVE",
+          "policy": {
+            "max_react_steps": 8,
+            "max_replanning_attempts": 2,
+            "max_tool_calls": 60,
+            "max_model_calls": 30,
+            "max_external_calls": 160,
+            "total_timeout_seconds": 180,
+            "react_timeout_seconds": 90,
+            "tool_timeout_seconds": 10,
+            "model_timeout_seconds": 30,
+            "a2a_timeout_seconds": 60,
+            "mcp_timeout_seconds": 15,
+            "health_timeout_seconds": 3,
+            "max_retries": 1,
+            "duplicate_call_threshold": 2,
+            "transport_tool_allowance": 6,
+            "local_tool_allowance": 42
+          },
+          "tool_calls": 13,
+          "external_calls": 34,
+          "model_calls": 3,
+          "elapsed_ms": 19431,
+          "failure_reason": null,
+          "events": []
+        },
+        "memory": {
+          "state": "ACTIVE",
+          "long_term_loaded": false,
+          "session_loaded": false
+        }
+      },
+      "metrics": {
+        "agent_steps": {
+          "Travel Planner": 2
+        },
+        "tool_attempts": 13,
+        "model_attempts": 3,
+        "tokens": 13379,
+        "replanning_count": 0
+      },
+      "high_issues": [],
+      "latency_seconds": 21.777
+    }
+  ],
+  "map_checks": [
+    {
+      "day": 1,
+      "passed": true,
+      "expected": [
+        "1. 杭州西湖风景名胜区"
+      ],
+      "labels": [
+        "1. 杭州西湖风景名胜区"
+      ],
+      "within_view": true
+    },
+    {
+      "day": 3,
+      "passed": true,
+      "expected": [
+        "1. 南京夫子庙"
+      ],
+      "labels": [
+        "1. 南京夫子庙"
+      ],
+      "within_view": true
+    },
+    {
+      "day": 5,
+      "passed": true,
+      "expected": [
+        "1. 拙政园"
+      ],
+      "labels": [
+        "1. 拙政园"
+      ],
+      "within_view": true
+    }
+  ],
+  "preference_save": true,
+  "health": {
+    "mcp": {
+      "state": "CONNECTED",
+      "tools": [
+        "calculate_distance",
+        "get_weather",
+        "plan_route",
+        "search_flights",
+        "search_hotels",
+        "search_poi",
+        "search_rail"
+      ]
+    },
+    "a2a": {
+      "transport": "ONLINE",
+      "local": "ONLINE"
+    },
+    "a2a_transport": {
+      "state": "ONLINE",
+      "skills": [
+        "rail-search",
+        "transfer-analysis",
+        "transport-feasibility"
+      ]
+    },
+    "a2a_local": {
+      "state": "ONLINE",
+      "skills": [
+        "poi-search",
+        "weather-search",
+        "local-route-planning",
+        "distance-calculation"
+      ]
+    },
+    "harness": {
+      "state": "ACTIVE",
+      "policy": {
+        "max_react_steps": 8,
+        "max_replanning_attempts": 2,
+        "max_tool_calls": 60,
+        "max_model_calls": 30,
+        "max_external_calls": 160,
+        "total_timeout_seconds": 180,
+        "react_timeout_seconds": 90,
+        "tool_timeout_seconds": 10,
+        "model_timeout_seconds": 30,
+        "a2a_timeout_seconds": 60,
+        "mcp_timeout_seconds": 15,
+        "health_timeout_seconds": 3,
+        "max_retries": 1,
+        "duplicate_call_threshold": 2,
+        "transport_tool_allowance": 6,
+        "local_tool_allowance": 42
+      }
+    },
+    "memory": {
+      "state": "ACTIVE"
+    }
+  },
+  "provider_labels": "Qwen ● LIVE\nAmap ● LIVE\nRail ● DATASET\nFlight ● DATASET\nHotel ● LIVE",
+  "runtime_labels": "MCP CONNECTED · 7 tools\nA2A 2/2 ONLINE\nHarness ACTIVE\nMemory ACTIVE",
+  "preferences_restored": true,
+  "success_count": 5,
+  "executed": 5,
+  "passed": true,
+  "rain_trigger_audit": {
+    "observed_critic_failure_summaries": [
+      "住宿存在绕路风险，执行一次受控住宿重选"
+    ],
+    "weather_specific_critic_chain_demonstrated": false,
+    "interpretation": "暴雨后活动已换为室内；本次自动重规划由酒店绕路触发，不能把通用replanning_count当作天气触发链的证据。5/5指Provider/协议/浏览器及场景结果验收，不代表该严格天气触发路径通过。"
+  }
+}

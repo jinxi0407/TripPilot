@@ -14,6 +14,7 @@ def isolated_configuration(monkeypatch):
     monkeypatch.setitem(Settings.model_config, "env_file", None)
     for field in Settings.model_fields:
         monkeypatch.delenv(field.upper(), raising=False)
+    monkeypatch.setenv("MEMORY_DATABASE", ":memory:")
     monkeypatch.delenv("QWEN_CHAT_MODEL", raising=False)
     for name in list(os.environ):
         if name.startswith("RUNTIME_POLICY__"):

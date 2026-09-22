@@ -27,6 +27,9 @@ class RunContext:
     rail_mode: str = "mock"
     simulated_rain: bool = False
     settings: Settings = field(default_factory=Settings, repr=False)
+    source_mode: str = "fixture"
+    memory_status: dict = field(default_factory=lambda: {"state": "DISABLED"})
+    memory_preferences: dict = field(default_factory=dict)
     protocols: Any = field(default=None, repr=False)
     remote_provider_status: dict = field(default_factory=dict)
 
@@ -60,15 +63,29 @@ class RunContext:
             "rail": {"state": rail_state if rail_state != "REAL" else "FAILED"},
         }
 
+        for key, name, default in [
+            ("flight", "flight_search", self.settings.flight_provider.upper()),
+            ("hotel", "amap_hotels", getattr(self.local_provider, "status", "MOCK")),
+        ]:
+            calls = [r for r in self.registry.calls if r["tool"] == name]
+            status[key] = {
+                "state": default
+                if calls and any(r["status"] in {"ok", "empty"} for r in calls)
+                else ("FAILED" if calls else "PENDING")
+            }
         status.update(self.remote_provider_status)
         return status
 
     def runtime_status(self) -> dict:
-        protocols = self.protocols.snapshot() if self.protocols else {
-            "mcp": {"state": "DISABLED", "tools": []},
-            "a2a": {"transport": "DISABLED", "local": "DISABLED"},
-        }
-        return {**protocols, "harness": self.runtime.snapshot()}
+        protocols = (
+            self.protocols.snapshot()
+            if self.protocols
+            else {
+                "mcp": {"state": "DISABLED", "tools": []},
+                "a2a": {"transport": "DISABLED", "local": "DISABLED"},
+            }
+        )
+        return {**protocols, "harness": self.runtime.snapshot(), "memory": self.memory_status}
 
     @property
     def runtime(self):
@@ -76,11 +93,15 @@ class RunContext:
 
     def __post_init__(self) -> None:
         self.budget.runtime = self.runtime
+
         def runtime_event(event):
             self.emit(event.component, event.status, event.code.replace("_FALLBACK", " FALLBACK"))
+
         self.runtime.on_event = runtime_event
         labels = {
             "rail_search": "Rail Search",
+            "flight_search": "Flight Search",
+            "amap_hotels": "Hotel Search",
             "amap_poi": "Amap POI",
             "amap_route": "Amap Route",
             "amap_distance": "Amap Distance",
@@ -88,6 +109,8 @@ class RunContext:
         }
         summaries = {
             "rail_search": "铁路信息查询",
+            "flight_search": "航空候选查询",
+            "amap_hotels": "住宿候选查询",
             "amap_poi": "本地景点查询",
             "amap_route": "景点间交通路线查询",
             "amap_distance": "地理距离查询",

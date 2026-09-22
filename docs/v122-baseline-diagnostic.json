@@ -1,0 +1,75 @@
+{
+  "not_a_benchmark_row": true,
+  "case": "A01",
+  "paid_calls": 2,
+  "usage": {
+    "agent_steps": 2,
+    "tool_calls": 6,
+    "external_calls": 9,
+    "qwen_calls": 2,
+    "input_tokens": 4478,
+    "output_tokens": 708,
+    "total_tokens": 5186,
+    "reported_tokens": 5186,
+    "unavailable_usage_calls": 0
+  },
+  "calls": [
+    {
+      "tool": "search_rail",
+      "arguments": {},
+      "status": "ok",
+      "data_count": 2,
+      "error_code": null
+    },
+    {
+      "tool": "search_rail",
+      "arguments": {},
+      "status": "ok",
+      "data_count": 2,
+      "error_code": null
+    },
+    {
+      "tool": "search_rail",
+      "arguments": {},
+      "status": "ok",
+      "data_count": 2,
+      "error_code": null
+    },
+    {
+      "tool": "search_poi",
+      "arguments": {
+        "city": "杭州",
+        "keywords": "历史 夜景",
+        "category": "attraction",
+        "limit": 12
+      },
+      "status": "empty",
+      "data_count": 0,
+      "error_code": null
+    },
+    {
+      "tool": "search_poi",
+      "arguments": {
+        "city": "南京",
+        "keywords": "历史 夜景",
+        "category": "attraction",
+        "limit": 12
+      },
+      "status": "empty",
+      "data_count": 0,
+      "error_code": null
+    },
+    {
+      "tool": "search_poi",
+      "arguments": {
+        "city": "苏州",
+        "keywords": "历史 夜景",
+        "category": "attraction",
+        "limit": 12
+      },
+      "status": "empty",
+      "data_count": 0,
+      "error_code": null
+    }
+  ]
+}

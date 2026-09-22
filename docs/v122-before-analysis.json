@@ -1,0 +1,101 @@
+{
+  "run_id": "d0918748-d95d-4f3f-9483-002f073e7004",
+  "date": "2026-10-10",
+  "status": "partial",
+  "valid": true,
+  "total": 21,
+  "by_type": {
+    "OPENING_TIME_UNKNOWN": 8,
+    "WEATHER_UNKNOWN": 8,
+    "BUDGET_UNKNOWN": 1,
+    "HOTEL_ROUTE_INEFFICIENT": 3,
+    "HOTEL_STATION_ACCESS_POOR": 1
+  },
+  "unverified_checks": [
+    "OPENING_TIME_UNKNOWN:1",
+    "WEATHER_UNKNOWN:1",
+    "OPENING_TIME_UNKNOWN:2",
+    "WEATHER_UNKNOWN:2",
+    "OPENING_TIME_UNKNOWN:2",
+    "WEATHER_UNKNOWN:2",
+    "OPENING_TIME_UNKNOWN:3",
+    "WEATHER_UNKNOWN:3",
+    "OPENING_TIME_UNKNOWN:3",
+    "WEATHER_UNKNOWN:3",
+    "OPENING_TIME_UNKNOWN:4",
+    "WEATHER_UNKNOWN:4",
+    "OPENING_TIME_UNKNOWN:4",
+    "WEATHER_UNKNOWN:4",
+    "OPENING_TIME_UNKNOWN:5",
+    "WEATHER_UNKNOWN:5",
+    "BUDGET_UNKNOWN:trip",
+    "HOTEL_ROUTE_INEFFICIENT:trip",
+    "HOTEL_STATION_ACCESS_POOR:trip",
+    "HOTEL_ROUTE_INEFFICIENT:trip",
+    "HOTEL_ROUTE_INEFFICIENT:trip"
+  ],
+  "old_high_count": 0,
+  "duplicate_groups": [
+    {
+      "day": 2,
+      "type": "OPENING_TIME_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": 2,
+      "type": "WEATHER_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": 3,
+      "type": "OPENING_TIME_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": 3,
+      "type": "WEATHER_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": 4,
+      "type": "OPENING_TIME_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": 4,
+      "type": "WEATHER_UNKNOWN",
+      "count": 2
+    },
+    {
+      "day": null,
+      "type": "HOTEL_ROUTE_INEFFICIENT",
+      "count": 3
+    }
+  ],
+  "transport": [
+    {
+      "day": 1,
+      "rail": true,
+      "route": [
+        "上海",
+        "杭州"
+      ]
+    },
+    {
+      "day": 3,
+      "rail": true,
+      "route": [
+        "杭州",
+        "南京"
+      ]
+    },
+    {
+      "day": 5,
+      "rail": true,
+      "route": [
+        "南京",
+        "苏州"
+      ]
+    }
+  ]
+}

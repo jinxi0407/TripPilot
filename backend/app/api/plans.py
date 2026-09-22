@@ -35,3 +35,28 @@ async def revise(task_id: str, payload: RevisionRequest, request: Request) -> di
 async def cancel(task_id: str, request: Request) -> dict:
     service = request.app.state.runs
     return service.public(service.cancel(task_id))
+
+
+@router.get("/api/v1/preferences")
+async def get_preferences(request: Request):
+    return {"preferences": request.app.state.runs.preferences.load().model_dump(), "state": "ACTIVE"}
+
+
+from app.persistence.memory import extract_preferences
+from app.schemas.product import PreferenceRequest, TravelPreferences
+
+
+@router.post("/api/v1/preferences")
+async def save_preferences(payload: PreferenceRequest, request: Request):
+    data = extract_preferences(payload.query or "")
+    data.update(payload.preferences.model_dump(exclude_unset=True))
+    result = request.app.state.runs.preferences.update(
+        TravelPreferences.model_validate(data), payload.remember_preferences
+    )
+    return {"preferences": result.model_dump(), "saved": payload.remember_preferences}
+
+
+@router.post("/api/v1/preferences/clear")
+async def clear_preferences(request: Request):
+    request.app.state.runs.preferences.clear()
+    return {"preferences": TravelPreferences().model_dump(), "cleared": True}

@@ -1,0 +1,29 @@
+{
+  "tracked_and_unignored_files_scanned": 234,
+  "credential_matches": [],
+  "staged_files": 0,
+  "staged_credential_matches": [],
+  "logs_scanned": 20,
+  "log_credential_matches": [],
+  "private_credential_bundle_matches": [],
+  "env_ignored": true,
+  "env_local_ignored": true,
+  "env_variants_ignored": true,
+  "example_not_ignored": true,
+  "example_nonempty_placeholders": [],
+  "sqlite_ignored": true,
+  "env_tracked": false,
+  "production_ground_truth_references": [],
+  "old_openspec_changes_modified": [],
+  "current_backend_log_error_counts": {
+    ".tooling/v11/backend.log": 0,
+    ".tooling/v11/mcp.log": 0,
+    ".tooling/v11/transport.log": 0,
+    ".tooling/v11/local.log": 0
+  },
+  "branch": "feat/v1.2-travel-product-benchmark",
+  "head": "b66dc59",
+  "v02_checkpoint": "209918f",
+  "v11_checkpoint": "b66dc59",
+  "passed": true
+}
